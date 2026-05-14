@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { ColumnDef } from '@tanstack/react-table'
+import { userEvent, waitFor, within } from '@storybook/test'
 import { Checkbox } from '../checkbox'
 import { Button } from '../button'
 import { DataTable, DataTableColumnHeader, DataTablePagination, DataTableToolbar } from '../data-table'
@@ -177,4 +178,18 @@ export const ExpandableRows: Story = {
       )}
     />
   ),
+}
+
+export const ExpandableRowsToggled: Story = {
+  args: {} as React.ComponentProps<typeof DataTable>,
+  tags: ['visual-expandable-toggle'],
+  parameters: {
+    snapshot: { animationDelay: 100 },
+  },
+  render: ExpandableRows.render,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    await userEvent.click(canvas.getAllByRole('button', { name: 'Expand row' })[0])
+    await waitFor(() => canvas.queryByText(/Detailed payment information for/i), { timeout: 1500 })
+  },
 }
