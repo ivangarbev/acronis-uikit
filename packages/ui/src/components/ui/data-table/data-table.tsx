@@ -19,9 +19,12 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 export interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  /** Enables row expansion for rows that return true. */
+  /** Enables row expansion for rows that return true. Pair with `renderExpandedRow`. */
   getRowCanExpand?: (row: Row<TData>) => boolean
-  /** Renders the expanded content row for a given table row. */
+  /**
+   * Renders expanded content for expanded rows.
+   * This is used only when a row is expanded and should be used together with `getRowCanExpand`.
+   */
   renderExpandedRow?: (row: Row<TData>) => ReactNode
 }
 
