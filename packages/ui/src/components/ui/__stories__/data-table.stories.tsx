@@ -191,9 +191,14 @@ export const ExpandableRowsToggled: Story = {
     const canvas = within(canvasElement)
     const [firstExpandButton] = await canvas.findAllByRole('button', { name: 'Expand row' })
     await userEvent.click(firstExpandButton)
-    await waitFor(
-      () => canvas.getByText(/Detailed payment information for\s*p1:\s*amount \$316\.00 via ken99@example\.com/i),
-      { timeout: 1500 }
-    )
+    await waitFor(() => {
+      canvas.getByText((_, element) => {
+        if (element?.tagName !== 'DIV') {
+          return false
+        }
+        const text = element?.textContent?.replace(/\s+/g, ' ').trim()
+        return text === 'Detailed payment information for p1: amount $316.00 via ken99@example.com'
+      })
+    }, { timeout: 1500 })
   },
 }
