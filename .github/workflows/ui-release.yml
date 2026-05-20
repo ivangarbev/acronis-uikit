@@ -1,4 +1,4 @@
-name: UI - Release
+name: UI - Release && Publish to NPM
 
 on:
   release:
