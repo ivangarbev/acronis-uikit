@@ -6,8 +6,7 @@ on:
   workflow_dispatch:      # Enables manual trigger via GitHub web
 
 permissions:
-  contents: write
-  packages: write  # For GitHub packages (optional)
+  contents: read
   id-token: write  # Required for OIDC trusted publishing
 
 jobs:
@@ -58,4 +57,5 @@ jobs:
         run: pnpm --filter ./packages/ui run build
 
       - name: Publish package on NPM
-        run: pnpm publish packages/ui --access public --no-git-checks
+        working-directory: packages/ui
+        run: pnpm publish --access public --no-git-checks --provenance
