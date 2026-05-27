@@ -2,6 +2,8 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true
   }
 }
