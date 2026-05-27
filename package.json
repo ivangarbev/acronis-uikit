@@ -1,13 +1,8 @@
 {
   "name": "shadcn-uikit-monorepo",
-  "version": "0.4.0",
+  "private": true,
   "description": "The Acronis UI Shadcn UI components library with color schemes and demos",
   "type": "module",
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "packages/legacy/*"
-  ],
   "scripts": {
     "husky": "pnpm run lint-staged && pnpm run lint:ts",
     "lint-staged": "lint-staged",
