@@ -1,5 +1,2 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
 pnpm run lint-staged
