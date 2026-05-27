@@ -349,6 +349,16 @@ shadcn-uikit/
 │   └── legacy/
 │       └── ui/                # Published library (@acronis-platform/shadcn-uikit)
 │           ├── src/           # React components, hooks, lib, styles, types, utils
+│           │   ├── components/    # React components
+│           │   ├── hooks/         # Custom React hooks
+│           │   ├── lib/           # Utility functions
+│           │   ├── styles/        # SCSS source — themes, tokens, base
+│           │   │   ├── themes/    # Theme SCSS files + template
+│           │   │   └── tokens/    # Design tokens (CSS variables)
+│           │   ├── types/         # Shared TypeScript types
+│           │   ├── utils/         # Additional utilities
+│           │   ├── index.ts       # Main entry (all exports)
+│           │   └── react.ts       # React-only entry
 │           ├── docker-compose.storybook.yml      # Storybook visual-regression compose
 │           ├── Dockerfile.storybook              # ... and its image
 │           └── package.json
