@@ -3,9 +3,22 @@
 `@acronis-platform/shadcn-uikit` — the only **published** workspace in
 this monorepo.
 
-Cross-cutting topics (conventions, testing, releasing, theming, commits)
-live in the repo root's `./context/*.md`. This file documents only what
-is specific to this workspace.
+This workspace owns its conventions, testing setup, and theming in
+[`./context/`](./context/). Repo-wide rules (TypeScript, file naming,
+editing rules, Conventional Commits, Changesets) live in the repo
+root's `./context/` and apply on top.
+
+## Always-loaded workspace context
+
+@context/conventions.md
+
+## Read on demand
+
+- [`./context/testing.md`](./context/testing.md) — Vitest 4, React
+  Testing Library, Storybook visual regression, happy-dom + localStorage
+  polyfill.
+- [`./context/theming.md`](./context/theming.md) — `--av-*` CSS vars,
+  Tailwind v4 specifics, the 4 shipped themes.
 
 ## What ships
 
@@ -30,14 +43,10 @@ is specific to this workspace.
 3. `build:llms` — `tsx scripts/generate-llms-txt.ts`. Writes `llms.txt`
    alongside `dist/`.
 
-`tsconfig.build.json` excludes `*.test.tsx` and `*.stories.tsx` from
-the published type output. Keep test/story filenames using those exact
-suffixes so the exclusion globs catch them.
-
 ## Stack specifics
 
-- **Stack**: React 19 (catalog), TypeScript 5.9, Vite 6, Vitest 4,
-  Storybook 10, Tailwind v4.
+- React 19 (catalog), TypeScript 5.9, Vite 6, Vitest 4, Storybook 10,
+  Tailwind v4.
 - **Primitives**: `@radix-ui/react-slot`, `@radix-ui/react-navigation-menu`
   as direct deps. **Base UI** (`@base-ui/react`) is a peer dep — the
   library uses it; consumers must install it.
@@ -46,17 +55,6 @@ suffixes so the exclusion globs catch them.
 - **zod 4** (intentional — `apps/demos` is still on zod 3; aligning is
   a tracked follow-up).
 - **Color**: `culori` for theme generation utilities.
-
-## Testing
-
-See `../../../context/testing.md` for the full guide. Workspace specifics:
-
-- DOM environment: `happy-dom` (configured in `vitest.config.ts`).
-- `vitest.setup.ts` polyfills `localStorage` because happy-dom@20.x +
-  vitest@4.x stopped auto-attaching it.
-- Visual regression runs via `@storybook/test-runner` + Playwright. Two
-  flavors: bare (`storybook:test:visual`) and Dockerized
-  (`storybook:test:visual:docker`) for deterministic CI runs.
 
 ## Icons
 
@@ -71,7 +69,7 @@ overwritten on the next regen. Edit the generator scripts instead.
 
 ## When you change anything in `src/`
 
-1. Add a Vitest test in `__tests__/`.
+1. Add a Vitest test in `__tests__/` (see [`./context/testing.md`](./context/testing.md)).
 2. Add a Storybook story in `__stories__/` covering all variants.
 3. Add a Changeset: `pnpm changeset` (from repo root).
 4. Verify it renders in `apps/demo` and, if it has a doc page, `apps/docs`.

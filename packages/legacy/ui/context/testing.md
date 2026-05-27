@@ -1,10 +1,15 @@
-# Testing
+# Testing — `packages/legacy/ui`
 
-The UI library is the only workspace with a real test suite. The three
-apps (`apps/demo`, `apps/docs`, `apps/demos`) have `test` scripts that
-are no-ops by design — see each app's `AGENTS.md`.
+Testing setup for the published UI library. This is the only workspace
+in the monorepo with a real test suite; the apps have no-op `test`
+scripts by design.
 
-## Stack (packages/legacy/ui)
+This file is workspace-specific. The choices below (Vitest, RTL,
+Storybook + Playwright visual regression, happy-dom, the `__tests__/`
+and `__stories__/` layout) are not assumed for any future non-legacy
+package — each new workspace picks its own approach.
+
+## Stack
 
 - **Vitest 4** — test runner, assertions, mocking.
 - **React Testing Library** — render + query DOM.
@@ -15,8 +20,8 @@ are no-ops by design — see each app's `AGENTS.md`.
 
 ## File placement
 
-- Unit tests: `packages/legacy/ui/src/components/ui/<component>/__tests__/<component>.test.tsx`.
-- Stories: `packages/legacy/ui/src/components/ui/<component>/__stories__/<component>.stories.tsx`.
+- Unit tests: `src/components/ui/<component>/__tests__/<component>.test.tsx`.
+- Stories: `src/components/ui/<component>/__stories__/<component>.stories.tsx`.
 
 `tsconfig.build.json` excludes both `.test.tsx` and `.stories.tsx` from
 the published type output. Keep the file extensions consistent so the
@@ -27,8 +32,7 @@ exclusion globs catch them.
 - Run all UI tests: `pnpm --filter @acronis-platform/shadcn-uikit test`.
 - Watch mode: `pnpm --filter @acronis-platform/shadcn-uikit test:watch`.
 - Coverage: `pnpm --filter @acronis-platform/shadcn-uikit test:coverage`.
-- DOM environment: **happy-dom** (not jsdom). Configured in
-  `packages/legacy/ui/vitest.config.ts`.
+- DOM environment: **happy-dom** (not jsdom). Configured in `vitest.config.ts`.
 - A `localStorage` polyfill is registered in `vitest.setup.ts` because
   happy-dom@20.x + vitest@4.x stopped auto-attaching `window.localStorage`.
   Components that read/write storage (theme toggle, etc.) work without

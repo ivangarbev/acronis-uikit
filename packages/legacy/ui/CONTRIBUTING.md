@@ -61,9 +61,8 @@ pnpm --filter @acronis-platform/shadcn-uikit storybook:test:visual:docker
 pnpm --filter @acronis-platform/shadcn-uikit storybook:test:visual:update
 ```
 
-See [`../../../context/testing.md`](../../../context/testing.md) for
-deeper testing guidance (happy-dom, localStorage polyfill, reliability
-rules).
+See [`./context/testing.md`](./context/testing.md) for deeper testing
+guidance (happy-dom, localStorage polyfill, reliability rules).
 
 ## Changesets — bump type
 

@@ -1,8 +1,13 @@
-# Theming
+# Theming — `packages/legacy/ui`
 
-The library ships a CSS-variable based theming system. Consumers can
-swap themes by changing the values of `--av-*` custom properties; no
+The library ships a CSS-variable based theming system. Consumers swap
+themes by changing the values of `--av-*` custom properties; no
 JavaScript or component-level state is involved at the styling layer.
+
+The choices below (`--av-*` prefix, Tailwind v4, the shipped themes)
+are specific to this workspace. A future non-legacy package may pick a
+different theming approach entirely — don't apply this file outside
+`packages/legacy/ui`.
 
 ## CSS variable prefix
 
@@ -21,20 +26,19 @@ All themeable tokens use the `--av-` prefix:
 
 ## Where theme files live
 
-`packages/legacy/ui/src/styles/themes/` — each theme is a CSS file that
-sets the `--av-*` variables for `:root` (light) and `.dark` (dark mode).
+`src/styles/themes/` — each theme is a CSS file that sets the `--av-*`
+variables for `:root` (light) and `.dark` (dark mode).
 
 The base styles file (also under `src/styles/`) is what consumers import
 via `@acronis-platform/shadcn-uikit/styles`.
 
 ## Tailwind v4
 
-This repo is on **Tailwind v4** (not v3). Notable consequences:
+This workspace is on **Tailwind v4** (not v3). Notable consequences:
 
-- `tailwind.config.ts` is still used by `packages/legacy/ui` for content
-  paths and a few extensions, but the theming primitives are driven from
-  CSS via `@theme` / CSS variables rather than the v3 `theme: { ... }`
-  JS config.
+- `tailwind.config.ts` is still used for content paths and a few
+  extensions, but the theming primitives are driven from CSS via
+  `@theme` / CSS variables rather than the v3 `theme: { ... }` JS config.
 - `@tailwindcss/postcss` is the PostCSS plugin (catalog: `4.2.2`).
 - `tw-animate-css` provides the animation utilities (replaces the v3
   `tailwindcss-animate` plugin).
@@ -43,7 +47,7 @@ This repo is on **Tailwind v4** (not v3). Notable consequences:
 
 ```ts
 // In a consuming app
-import '@acronis-platform/shadcn-uikit/styles'
+import '@acronis-platform/shadcn-uikit/styles';
 ```
 
 Then toggle a CSS class (`light` / `dark` / a custom theme name) on a

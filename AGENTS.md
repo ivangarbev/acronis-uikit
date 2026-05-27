@@ -52,12 +52,16 @@ no-ops because the package is consumed via source-file exports.
 ## How agents should navigate this repo
 
 1. **Always read this file first** — it tells you which workspace owns
-   your task and which `./context/` topic applies.
+   your task.
 2. **Read the workspace's `AGENTS.md`** for the area you're editing.
-   Workspace files only document workspace-specific quirks; they
-   intentionally do not duplicate cross-cutting content.
-3. **Pull from `./context/<topic>.md` when relevant** — testing,
-   releasing, theming, etc. The always-loaded topics are imported below.
+   The workspace owns its own conventions, testing, theming, etc. in a
+   workspace-local `context/` directory.
+3. **Pull from this repo's root `./context/<topic>.md`** when relevant
+   — it holds only the truly cross-workspace topics.
+
+Cross-workspace context is intentionally minimal. Anything specific to
+how a particular workspace is built, tested, or styled lives **inside
+that workspace**, never here.
 
 ## Always-loaded cross-cutting context
 
@@ -66,32 +70,21 @@ no-ops because the package is consumed via source-file exports.
 
 ## Cross-cutting context (read on demand)
 
-Read these when your task touches the topic — they are not auto-imported
-to keep this index small.
-
-- `context/testing.md` — Vitest, RTL, Storybook visual regression, a11y
-- `context/releasing.md` — Changesets workflow, Version PR, publish targets
-- `context/theming.md` — `--av-*` CSS vars, theme files, Tailwind v4
+- `context/releasing.md` — Changesets workflow that applies to any
+  published workspace in the monorepo.
 
 ## Tooling preconditions
 
 - **Package manager**: pnpm `10.27.0` (declared in root `packageManager`).
   Enable via `corepack enable` or `npm install -g pnpm@10.27.0`.
 - **Node**: 22.x (CI uses Node 22).
-- **Stack**: React 19, TypeScript 5.9, Vite 6, Vitest 4, Tailwind v4.
-  The catalog block in `pnpm-workspace.yaml` is the single source of
+- **TypeScript** for all new source code.
+- The catalog block in `pnpm-workspace.yaml` is the single source of
   truth for shared dependency versions — bump there, not per workspace.
+  Respect intentional drift noted in catalog comments.
 - Use `pnpm --filter <package> <script>` over `cd <workspace> && pnpm <script>`.
 - **Never** use `--no-verify` to bypass commit hooks; fix the underlying
   issue. The pre-commit hook runs `lint-staged` + `typecheck`.
-
-## When you add or change library code
-
-1. Implement in `packages/legacy/ui/src/components/ui/`.
-2. Add a Storybook story (`__stories__/`) and a Vitest test (`__tests__/`).
-3. Verify in `apps/demo` (and `apps/docs` if it has a demo page).
-4. Add a Changeset: `pnpm changeset` — required for any change that
-   affects the published surface. See `context/releasing.md`.
 
 ## What this repo does NOT have
 
@@ -101,6 +94,3 @@ To prevent agents inventing things from outdated knowledge:
 - **No VitePress**. Docs are Next.js + Fumadocs at `apps/docs/`.
 - **No `packages/documentation/` or `packages/examples/`**. Those paths
   never existed in this repo.
-- **No `--av-` BEM classes on Vue components**. The `--av-*` prefix is
-  used only for CSS custom properties (theme tokens); see
-  `context/theming.md`.
