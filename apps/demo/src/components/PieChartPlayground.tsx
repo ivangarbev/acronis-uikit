@@ -335,9 +335,17 @@ export function PieChartPlayground() {
     const enabledKeys = Object.entries(enabledSlices)
       .filter(([, v]) => v !== false)
       .map(([k]) => k);
+    const escapeForJsCode = (str: string) =>
+      str
+        .replace(/</g, '\\u003C')
+        .replace(/>/g, '\\u003E')
+        .replace(/\//g, '\\u002F')
+        .replace(/\u2028/g, '\\u2028')
+        .replace(/\u2029/g, '\\u2029');
     if (enabledKeys.length !== currentSource.data.length) {
+      const safeEnabledKeys = escapeForJsCode(JSON.stringify(enabledKeys));
       lines.unshift(
-        `const filteredData = data.filter((d) => ${JSON.stringify(enabledKeys)}.includes(String(d["${nameKey}"])) )`
+        `const filteredData = data.filter((d) => ${safeEnabledKeys}.includes(String(d["${nameKey}"])) )`
       );
     } else {
       lines.unshift(`const filteredData = data`);
