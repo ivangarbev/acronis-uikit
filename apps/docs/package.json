@@ -11,7 +11,7 @@
     "start": "next start",
     "test": "echo \"no tests in this workspace\" && exit 0",
     "test:watch": "echo \"no tests in this workspace\" && exit 0",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "contentlayer build && tsc --noEmit"
   },
   "dependencies": {
     "@acronis-platform/shadcn-uikit": "workspace:*",
