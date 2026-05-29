@@ -10,6 +10,7 @@
   "scripts": {
     "build": "echo \"no build (consumed via source by demo/docs)\" && exit 0",
     "clean": "echo \"nothing to clean\" && exit 0",
+    "dev": "echo \"no dev server in this workspace\" && exit 0",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "test": "echo \"no tests in this workspace\" && exit 0",
