@@ -1,0 +1,85 @@
+# Release flow driven by changesets.
+#
+# On every push to main, this workflow does ONE of:
+#   1. If unpublished changesets exist (.changeset/*.md), it opens
+#      (or updates) a "Version Packages" PR that bumps versions in
+#      package.json files and rewrites CHANGELOG.md.
+#   2. If no unpublished changesets exist but the previous PR was just
+#      merged, it publishes the bumped packages to npm and then to
+#      GitHub Packages, and creates a GitHub Release per published tag.
+#
+# Required secrets:
+#   ACV_TOKEN              GitHub PAT used to commit the version PR
+#                          AND trigger downstream workflows on its merge.
+#   NPMJS_PUBLISH_TOKEN    Token for registry.npmjs.org publish.
+#
+# secrets.GITHUB_TOKEN is used for the second publish (GitHub Packages).
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  release:
+    if: github.repository == 'acronis/uikit'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js (npm registry)
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build UI library
+        run: pnpm --filter @acronis-platform/shadcn-uikit build
+
+      - name: Run tests
+        run: pnpm --filter @acronis-platform/shadcn-uikit test
+
+      - name: Create release PR or publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          version: pnpm run version
+          publish: pnpm run release
+          commit: 'chore(release): version packages'
+          title: 'chore(release): version packages'
+          createGithubReleases: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACV_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_PUBLISH_TOKEN }}
+
+      # The same artefacts that just went to npm also go to GitHub
+      # Packages so consumers behind the GH-scoped registry stay in sync.
+      - name: Setup Node.js (GitHub Packages registry)
+        if: steps.changesets.outputs.published == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@acronis-platform'
+
+      - name: Publish to GitHub Packages
+        if: steps.changesets.outputs.published == 'true'
+        run: pnpm publish -r --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

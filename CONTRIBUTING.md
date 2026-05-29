@@ -1,109 +1,134 @@
-# Contributing
+# Acronis UI Component Library Contributing Guide
 
-Thanks for your interest in contributing to `acronis/shadcn-uikit`. This
-file covers the **umbrella** process — forking, branching, commits, and
-the things that apply across the whole repo.
-
-**The contribution process differs per workspace.** Each app and package
-has its own `CONTRIBUTING.md` describing what's expected when changing
-that workspace specifically (tests required? changeset? doc updates?).
-Start there once you've read this.
-
-| Workspace | What it is | Workspace-specific guide |
-|---|---|---|
-| `packages/legacy/ui` | Published UI library | [packages/legacy/ui/CONTRIBUTING.md](packages/legacy/ui/CONTRIBUTING.md) |
-| `apps/demo` | Vite SPA for manual verification | [apps/demo/CONTRIBUTING.md](apps/demo/CONTRIBUTING.md) |
-| `apps/demos` | Shared source-only demo components | [apps/demos/CONTRIBUTING.md](apps/demos/CONTRIBUTING.md) |
-| `apps/docs` | Next.js + Fumadocs documentation site | [apps/docs/CONTRIBUTING.md](apps/docs/CONTRIBUTING.md) |
-
-For repo structure, tooling, and conventions, see [AGENTS.md](AGENTS.md)
-and the [`./context/`](context/) directory.
+We appreciate your contributions to Acronis UI Component Library.
+Before submitting your contribution, please make sure to take a moment to read through the following guidelines.
 
 ## Forms of contribution
 
-We welcome any of:
+We welcome contributions in any form, including but not limited to the following:
 
-- Bug reports and reproductions
-- Documentation improvements
-- New components, variants, or fixes to existing ones
-- Better tests or visual regression coverage
-- Discussions, design feedback, and questions
+* Problem suggestions
+* Improve documentation
+* Provide examples
+* Improve testing
+* Improve components
+* Submit PR
+* Participate in discussions
+* Share project
 
-## Issue reporting
+## Issue Reporting
 
-File bugs and feature requests via
-[GitHub Issues](https://github.com/acronis/shadcn-uikit/issues). A clean
-reproduction is the single most useful thing you can include — link a
-minimal sandbox or paste a focused snippet.
+You can file a ticket for the bug/issue you found through [Issues](https://github.com/acronis/shadcn-uikit/issues) under project **UI component library**.
+A clear reproduce steps will be very helpful to identify the root cause.
+For the complicated scenario, you can also create an example in the [Sandbox](https://github.com/acronis/shadcn-uikit/sandbox/index.vue), or provide the example code in the ticket.
 
-## Universal workflow
+## Pull Request for Feature request/Bug Fixing/Improvements
 
-Regardless of which workspace you touch, the outer flow is the same:
+Pull requests are welcomed for bug fixing/improvement in Acronis UI Component Library.
+You can find a lot of useful information (e.g. "Directory structure" and "Setup and configuration") about the Acronis UI Component Library in the [README.md](Link to setup).
+General [CI Git Workflow](Link to git docs) need to be followed when you prepare a pull request.
+Meanwhile, below a checklist for the items need to do before raised a pull request,
+and you can find the details for each point in the remaining part of this document:
 
-1. Fork [the repo](https://github.com/acronis/shadcn-uikit).
-2. Install dependencies from the repo root: `pnpm install` (requires
-   pnpm `10.27.0` and Node 22.x).
-3. Create a branch off `main`.
-4. **Read the target workspace's `CONTRIBUTING.md`** for the specific
-   requirements that apply to that change.
-5. Make the change. Follow [`./context/conventions.md`](context/conventions.md).
-6. Run the relevant scripts: `pnpm --filter <package> typecheck` and
-   `pnpm --filter <package> test` for the workspace you changed.
-7. If you touched `packages/legacy/ui`, add a Changeset (see below).
-8. Commit with [Conventional Commits](https://www.conventionalcommits.org/)
-   prefixes (`feat`, `fix`, `docs`, `chore`, `refactor`, `test`,
-   `ci`, `build`, `perf`, `style`, `revert`). Husky runs lint-staged
-   + typecheck on every commit; **don't use `--no-verify`** to skip it.
-9. Open a PR. Keep it focused — PRs over ~250 lines are slower to
-   review and easier to break.
+1. Fork [This repo](https://github.com/acronis/shadcn-uikit)
+2. Enter the local project root directory and use ```pnpm i``` to install dependencies.
+3. Use ```pnpm run docs:dev``` to start the project and view the document.
+4. Please pull the latest code before submitting to avoid file conflicts.
+5. Commit your changes with a clear commit message, please abide by it at the same time. [Commit Standard](https://acronis.github.io/ui-component-library/guide/commitlint.html)。
+6. Ensure the code follows [Style Guide for Front-end development](Link to styleguide).
+7. Update unit test case
+8. Update visual regression test case (if applicable)
+9. Update performance test case (if applicable)
+10. Update component documentation to:
+   - Include the description of the feature's API
+   - Provide an example of the feature if needed
+11. Update component types for TypeScript support
+12. Run the test to ensure all lint/unit/regression/performance tests pass
+13. Submit a Pull Request。
 
-## Commit conventions
+### Pull Request
 
-Conventional Commits with scope. Use the workspace or component as the
-scope:
+- Pull request should give details on what has been changed and why.
+- Pull request should be small and focused on a single change. A pull request with more than 250 lines of code tend to tkake more than 1 hour to review.
+- The title should be self-explanatory, describing what the pull request does.
+- The description should provide a clear explanation of the changes made and why they were made.
 
-- `feat(button): add loading state`
-- `fix(card): correct padding on header`
-- `chore(deps): bump vitest`
-- `docs(agents): clarify per-workspace context loading`
+### Commit types
 
-See [`./context/commits.md`](context/commits.md) for the full list of
-types and pre-commit hook behavior.
+The following is a list of commit types:
 
-## Changesets (published library only)
+- feat: A new feature or functionality
+- fix: A bug fix
+- docs: Documentation only changes
+- style: Code formatting or component style changes
+- refactor: Code changes that neither fixes a bug nor adds a feature.
+- perf: Improve performance
+- test: Add missing or correct existing tests
+- build: Changes that affect the build system or external dependencies;
+- ci: Changes to our CI configuration files and scripts
+- chore: Other commits that don’t modify src or test files;
+- revert: Revert to a previous commit.
 
-Any change to `@acronis-platform/shadcn-uikit` (the only published
-workspace) must include a changeset. From the repo root:
+### Testing source code
+
+#### Unit tests
+
+[Vitest](https://vitest.dev/) and [Vue-test-utils](https://test-utils.vuejs.org/) are used for the unit testing.
+The spec files must be located at the `src` folder.
+
+#### Visual regression tests
+
+You can find more information about visual regression tests in the [Visual regression tests section](https://acronis.github.io/ui-component-library/guide/testing.html#visual-regression-testing-with-cypress)
+
+#### Performance tests
+
+You can find more information about performance tests in the [Performance tests section](https://acronis.github.io/ui-component-library/guide/testing.html#performance-tests)
+
+### Component documentation
+
+The documentation for each component is located at [`apps/docs`](https://github.com/acronis/shadcn-uikit/tree/main/apps/docs) using Markdown/MDX format.
+The implementation examples are located at [`apps/demos`](https://github.com/acronis/shadcn-uikit/tree/main/apps/demos).
+For internal documentation we use Vitepress, you can find more information about Vitepress in the [Vitepress documentation](https://vitepress.dev/).
+
+Each document consists of highlights of the API(props, slots, events) with examples and complete details of these components.
+If the change in PR including the new API or API updates, you will need to update the API table at the end of the document.
+Meanwhile, it will be convenient for QA to check if an example of the function is provided.
+
+### Component types for TypeScript support
+
+As Acronis UI Component Library is being used in many TypeScript projects, when there is new API or API updates in the pull request,
+we will also need to update the declaration file for the UI Component Library.
+The files located at `types` folder. You can find more information about TypeScript declaration file at [Link](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
+
+### Bump Version & Update Changelog
+
+We use [changesets](https://github.com/changesets/changesets) to manage versions
+and changelogs. **Every PR that changes the published UI library
+(`@acronis-platform/shadcn-uikit`) must include a changeset**, otherwise the
+release PR won't know what to bump.
+
+From the repo root:
 
 ```bash
 pnpm changeset
 ```
 
-Answer the prompts (patch / minor / major + a one-line summary). Commit
-the generated `.changeset/*.md` file alongside your code.
+Answer the prompts (patch / minor / major + a one-line summary). A new
+markdown file is written under `.changeset/`. Commit it as part of your PR.
 
-You **do not need** a changeset for changes scoped to `apps/demo`,
-`apps/demos`, or `apps/docs` — they are private and listed under
-`ignore` in `.changeset/config.json`.
+You don't need a changeset for changes scoped to the apps (`apps/demo`,
+`apps/demos`, `apps/docs`) — they are private and listed as ignored in
+`.changeset/config.json`.
 
-On merge to `main`, the `Release` workflow opens (or updates) a "Version
-Packages" PR aggregating all pending changesets. Merging that PR
-publishes the bumped package to npm + GitHub Packages and creates the
-GitHub Release. Commit prefixes don't drive the version — **the
-changeset bump type does**.
+On merge to `main`, the `Release` workflow opens (or updates) a single
+"Version Packages" PR aggregating all pending changesets. Merging that PR
+publishes the bumped package to both npm and GitHub Packages and creates the
+corresponding GitHub Release.
 
-See [`./context/releasing.md`](context/releasing.md) for the full release flow.
-
-## Pull request etiquette
-
-- One change per PR. If you're tempted to bundle "and while I was in
-  there…", split it.
-- The PR title becomes the squash-merge commit message — it must also
-  follow Conventional Commits (commitlint runs on PR titles too).
-- The description should explain *why*, not restate the diff.
-- Link the issue if there is one.
+Commit messages still follow [Conventional Commits](https://www.conventionalcommits.org/)
+so the existing commitlint hook keeps working, but the **release version is
+driven by the changeset bump type, not the commit prefix**.
 
 ## License
 
-By contributing, you agree to license your contribution under the
-[MIT license](LICENSE).
+By contributing your code to the repository, you agree to license your contribution under the [MIT license](https://github.com/acronis/shadcn-uikit/blob/main/LICENSE).

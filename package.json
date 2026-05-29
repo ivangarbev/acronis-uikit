@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm -r build",
+    "changeset": "changeset",
     "clean": "pnpm -r clean",
     "format": "prettier --write . --ignore-unknown",
     "format:check": "prettier --check . --ignore-unknown",
@@ -13,9 +14,11 @@
     "lint:fix": "pnpm -r lint:fix",
     "lint-staged": "lint-staged",
     "prepare": "husky",
+    "release": "changeset publish",
     "test": "pnpm -r test",
     "test:watch": "pnpm -r test:watch",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "version": "changeset version"
   },
   "keywords": [
     "ui",
@@ -34,6 +37,8 @@
     "url": "https://github.com/acronis/shadcn-uikit/issues"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "0.5.1",
+    "@changesets/cli": "2.27.10",
     "@commitlint/cli": "20.3.1",
     "@commitlint/config-conventional": "20.3.1",
     "@eslint/js": "^9.15.0",
