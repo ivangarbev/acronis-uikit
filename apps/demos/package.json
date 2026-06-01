@@ -21,7 +21,6 @@
     "@acronis-platform/shadcn-uikit": "workspace:*",
     "@hookform/resolvers": "catalog:",
     "@tanstack/react-form": "1.33.0",
-    "@tanstack/zod-form-adapter": "0.42.1",
     "@tanstack/react-table": "catalog:",
     "recharts": "catalog:",
     "date-fns": "catalog:",
