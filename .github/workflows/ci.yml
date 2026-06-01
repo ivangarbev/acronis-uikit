@@ -57,6 +57,10 @@ jobs:
       - name: Lint
         run: pnpm -r lint
 
+      # Generate the fumadocs .source files needed by apps/docs typecheck.
+      - name: Generate fumadocs source
+        run: pnpm --filter @acronis-platform/shadcn-uikit-docs exec fumadocs-mdx
+
       - name: Typecheck
         run: pnpm -r typecheck
 

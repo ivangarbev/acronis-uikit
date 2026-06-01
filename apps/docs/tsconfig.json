@@ -13,7 +13,7 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"],
-      "@/.source": ["./.source/index"],
+      "@/.source": ["./.source/server"],
       "@/.source/*": ["./.source/*"]
     }
   },
