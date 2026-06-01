@@ -16,7 +16,7 @@ catalog:
 
   # Toolchain
   typescript: 6.0.3
-  eslint: 10.4.0
+  eslint: 9.39.4
   # Held on the Rollup-based Vite 6 line. Vite 8 defaults to the rolldown
   # bundler (rolldown@1.x), which miscompiles es-toolkit's CommonJS compat
   # modules (pulled in transitively via recharts) when bundled into the

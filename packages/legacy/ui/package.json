@@ -136,7 +136,7 @@
     "@vitest/browser-playwright": "4.1.7",
     "@tailwindcss/cli": "4.3.0",
     "@tailwindcss/postcss": "catalog:",
-    "eslint": "^9.38.0",
+    "eslint": "catalog:",
     "happy-dom": "20.9.0",
     "http-server": "14.1.1",
     "jest-image-snapshot": "6.5.2",
