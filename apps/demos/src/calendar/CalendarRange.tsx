@@ -16,7 +16,7 @@ export function CalendarRange() {
           mode="range"
           selected={rangeDate}
           onSelect={(range) =>
-            setRangeDate(range ?? { from: undefined, to: undefined })
+            setRangeDate(range || { from: undefined, to: undefined })
           }
         />
       </div>

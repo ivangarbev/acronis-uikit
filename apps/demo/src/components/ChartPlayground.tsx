@@ -609,7 +609,7 @@ export function ChartPlayground() {
           </CardHeader>
           <CardContent>
             <ChartContainer config={config} className="h-[400px] w-full">
-              <LineChart data={currentSource.data as readonly unknown[]} margin={{ right: 24 }}>
+              <LineChart data={currentSource.data} margin={{ right: 24 }}>
                 {showGrid && (
                   <CartesianGrid
                     strokeDasharray={gridDashed ? '3 3' : undefined}

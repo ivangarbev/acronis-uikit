@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useForm } from '@tanstack/react-form';
+import { zodValidator } from '@tanstack/zod-form-adapter';
 import * as z from 'zod';
 import {
   Field,
@@ -17,6 +18,7 @@ const usernameSchema = z
 export function FormTanstackBasic() {
   const form = useForm({
     defaultValues: { username: '' },
+    validatorAdapter: zodValidator(),
     onSubmit: async ({ value }) => {
       alert(JSON.stringify(value, null, 2));
     },
@@ -32,17 +34,7 @@ export function FormTanstackBasic() {
         }}
         className="space-y-4"
       >
-        <form.Field
-          name="username"
-          validators={{
-            onChange: ({ value }) => {
-              const result = usernameSchema.safeParse(value);
-              return result.success
-                ? undefined
-                : result.error.issues[0]?.message;
-            },
-          }}
-        >
+        <form.Field name="username" validators={{ onChange: usernameSchema }}>
           {(field) => (
             <Field
               data-invalid={

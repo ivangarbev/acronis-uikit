@@ -21,8 +21,8 @@ const formSchema = z.object({
   displayName: z.string().min(2, 'Display name must be at least 2 characters.'),
   email: z.string().email('Please enter a valid email address.'),
   bio: z.string().max(160, 'Bio must not exceed 160 characters.').optional(),
-  emailNotifications: z.boolean(),
-  marketingEmails: z.boolean(),
+  emailNotifications: z.boolean().default(true),
+  marketingEmails: z.boolean().default(false),
   currentPassword: z.string().optional(),
   newPassword: z
     .string()

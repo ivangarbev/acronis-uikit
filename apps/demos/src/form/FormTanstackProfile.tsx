@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useForm } from '@tanstack/react-form';
+import { zodValidator } from '@tanstack/zod-form-adapter';
 import * as z from 'zod';
 import {
   Field,
@@ -36,6 +37,8 @@ export function FormTanstackProfile() {
 
   const form = useForm({
     defaultValues: { username: '', email: '', role: '', bio: '' },
+    validatorAdapter: zodValidator(),
+    validators: { onChange: profileSchema },
     onSubmit: async ({ value }) => setSubmitted(value as ProfileValues),
   });
 
@@ -65,14 +68,7 @@ export function FormTanstackProfile() {
         <FieldGroup>
           <form.Field
             name="username"
-            validators={{
-              onChange: ({ value }) => {
-                const result = profileSchema.shape.username.safeParse(value);
-                return result.success
-                  ? undefined
-                  : result.error.issues[0]?.message;
-              },
-            }}
+            validators={{ onChange: profileSchema.shape.username }}
           >
             {(field) => (
               <Field
@@ -109,14 +105,7 @@ export function FormTanstackProfile() {
 
           <form.Field
             name="email"
-            validators={{
-              onChange: ({ value }) => {
-                const result = profileSchema.shape.email.safeParse(value);
-                return result.success
-                  ? undefined
-                  : result.error.issues[0]?.message;
-              },
-            }}
+            validators={{ onChange: profileSchema.shape.email }}
           >
             {(field) => (
               <Field
@@ -153,14 +142,7 @@ export function FormTanstackProfile() {
 
           <form.Field
             name="role"
-            validators={{
-              onChange: ({ value }) => {
-                const result = profileSchema.shape.role.safeParse(value);
-                return result.success
-                  ? undefined
-                  : result.error.issues[0]?.message;
-              },
-            }}
+            validators={{ onChange: profileSchema.shape.role }}
           >
             {(field) => (
               <Field
@@ -200,14 +182,7 @@ export function FormTanstackProfile() {
 
           <form.Field
             name="bio"
-            validators={{
-              onChange: ({ value }) => {
-                const result = profileSchema.shape.bio.safeParse(value);
-                return result.success
-                  ? undefined
-                  : result.error.issues[0]?.message;
-              },
-            }}
+            validators={{ onChange: profileSchema.shape.bio }}
           >
             {(field) => (
               <Field>

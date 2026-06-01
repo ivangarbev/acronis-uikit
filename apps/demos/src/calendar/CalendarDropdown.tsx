@@ -11,8 +11,8 @@ export function CalendarDropdown() {
         selected={date}
         onSelect={setDate}
         captionLayout="dropdown"
-        startMonth={new Date(1900, 0)}
-        endMonth={new Date(2100, 11)}
+        fromYear={1900}
+        toYear={2100}
       />
     </div>
   );

@@ -44,6 +44,7 @@ export function DatePickerForm() {
               mode="single"
               selected={appointmentDate}
               onSelect={setAppointmentDate}
+              initialFocus
               disabled={(date) => date < new Date()}
             />
           </PopoverContent>
@@ -71,7 +72,7 @@ export function DatePickerForm() {
             <span>Optional event date</span>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0">
-            <Calendar mode="single" />
+            <Calendar mode="single" initialFocus />
           </PopoverContent>
         </Popover>
       </div>

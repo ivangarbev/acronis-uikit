@@ -11,10 +11,8 @@ export function CalendarMinMax() {
           mode="single"
           selected={date}
           onSelect={setDate}
-          disabled={[
-            { before: new Date() },
-            { after: new Date(new Date().setMonth(new Date().getMonth() + 3)) },
-          ]}
+          fromDate={new Date()}
+          toDate={new Date(new Date().setMonth(new Date().getMonth() + 3))}
         />
       </div>
       <p className="mt-4 text-sm text-gray-500">

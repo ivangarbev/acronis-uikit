@@ -21,7 +21,7 @@ const formSchema = z.object({
   password: z.string().min(8, {
     message: 'Password must be at least 8 characters.',
   }),
-  remember: z.boolean(),
+  remember: z.boolean().default(false),
 });
 
 export function FormLogin() {

@@ -35,6 +35,7 @@ export function DatePickerFormats() {
             mode="single"
             selected={date}
             onSelect={setDate}
+            initialFocus
           />
         </PopoverContent>
       </Popover>
@@ -59,6 +60,7 @@ export function DatePickerFormats() {
             mode="single"
             selected={date}
             onSelect={setDate}
+            initialFocus
           />
         </PopoverContent>
       </Popover>
@@ -83,6 +85,7 @@ export function DatePickerFormats() {
             mode="single"
             selected={date}
             onSelect={setDate}
+            initialFocus
           />
         </PopoverContent>
       </Popover>
