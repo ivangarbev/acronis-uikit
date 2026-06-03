@@ -1,4 +1,4 @@
-# Coding conventions — `packages/legacy/ui`
+# Coding conventions — `packages/ui-legacy`
 
 Workspace-specific conventions for the published UI library. These
 build on the repo-wide rules in `<repo-root>/context/conventions.md`

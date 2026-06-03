@@ -1,4 +1,4 @@
-# Theming — `packages/legacy/ui`
+# Theming — `packages/ui-legacy`
 
 The library ships a CSS-variable based theming system. Consumers swap
 themes by changing the values of `--av-*` custom properties; no
@@ -7,7 +7,7 @@ JavaScript or component-level state is involved at the styling layer.
 The choices below (`--av-*` prefix, Tailwind v4, the shipped themes)
 are specific to this workspace. A future non-legacy package may pick a
 different theming approach entirely — don't apply this file outside
-`packages/legacy/ui`.
+`packages/ui-legacy`.
 
 ## CSS variable prefix
 

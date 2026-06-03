@@ -1,4 +1,4 @@
-# Testing — `packages/legacy/ui`
+# Testing — `packages/ui-legacy`
 
 Testing setup for the published UI library. This is the only workspace
 in the monorepo with a real test suite; the apps have no-op `test`

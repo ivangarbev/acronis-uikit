@@ -1,9 +1,9 @@
-# packages/legacy/ui/docker-compose.storybook.update.yml
+# packages/ui-legacy/docker-compose.storybook.update.yml
 # Override to regenerate visual regression baselines inside Docker (Linux).
 # Usage:
 #   docker compose \
-#     -f packages/legacy/ui/docker-compose.storybook.yml \
-#     -f packages/legacy/ui/docker-compose.storybook.update.yml \
+#     -f packages/ui-legacy/docker-compose.storybook.yml \
+#     -f packages/ui-legacy/docker-compose.storybook.update.yml \
 #     up --abort-on-container-exit --exit-code-from test-runner
 services:
   test-runner:

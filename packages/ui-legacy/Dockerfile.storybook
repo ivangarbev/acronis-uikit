@@ -12,7 +12,7 @@ RUN npm install -g pnpm@10.27.0
 
 # Copy workspace manifests only — invalidated on lockfile/manifest changes (rare)
 COPY pnpm-workspace.yaml package.json pnpm-lock.yaml ./
-COPY packages/legacy/ui/package.json ./packages/legacy/ui/
+COPY packages/ui-legacy/package.json ./packages/ui-legacy/
 COPY apps/demo/package.json ./apps/demo/
 
 # Install deps — pnpm content-addressable store is cached between builds
@@ -20,9 +20,9 @@ RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile
 
 # Copy only the Storybook/test-runner config — not the full source tree
-COPY packages/legacy/ui/.storybook ./packages/legacy/ui/.storybook
+COPY packages/ui-legacy/.storybook ./packages/ui-legacy/.storybook
 
-WORKDIR /app/packages/legacy/ui
+WORKDIR /app/packages/ui-legacy
 
 # storybook-static/ is mounted as a read-only volume from the host at runtime.
 # See docker-compose.storybook.yml for the volume declaration.

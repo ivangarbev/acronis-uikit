@@ -1,4 +1,4 @@
-# AGENTS.md — `packages/legacy/ui`
+# AGENTS.md — `packages/ui-legacy`
 
 `@acronis-platform/shadcn-uikit` — the only **published** workspace in
 this monorepo.
