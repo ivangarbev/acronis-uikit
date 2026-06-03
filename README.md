@@ -20,10 +20,6 @@ The core UI component library. Ships pre-built CSS — consumers do **not** need
 
 Acronis visual assets — DTCG-divergent JSON manifests for icons and illustrations, plus the bundled binaries they reference. Data only: no build, no runtime API.
 
-### [@acronis-platform/tokens](./packages/design/tokens)
-
-Acronis design tokens — DTCG-2025.10-conformant JSON (primitives, semantic, components). Data only: no build, no runtime API.
-
 ### [@acronis-platform/shadcn-uikit-demo](./apps/demo)
 
 Interactive demo application showcasing all components with multiple themes.
