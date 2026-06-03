@@ -49,7 +49,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Acronis shacn UI Component Library
-        run: pnpm --filter ./packages/legacy/ui run build
+        run: pnpm --filter ./packages/ui-legacy run build
 
       #      - name: Build icons
       #        run: pnpm --filter ./packages/icons run build

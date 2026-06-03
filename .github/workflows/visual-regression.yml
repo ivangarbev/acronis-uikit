@@ -39,9 +39,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            packages/legacy/ui/node_modules/.vite
-            packages/legacy/ui/node_modules/.cache/storybook
-          key: storybook-${{ runner.os }}-${{ hashFiles('packages/legacy/ui/src/**', 'packages/legacy/ui/.storybook/**', 'packages/legacy/ui/package.json') }}
+            packages/ui-legacy/node_modules/.vite
+            packages/ui-legacy/node_modules/.cache/storybook
+          key: storybook-${{ runner.os }}-${{ hashFiles('packages/ui-legacy/src/**', 'packages/ui-legacy/.storybook/**', 'packages/ui-legacy/package.json') }}
           restore-keys: storybook-${{ runner.os }}-
 
       - name: Build Storybook
@@ -50,11 +50,11 @@ jobs:
       # Docker only serves the pre-built static output and runs Playwright.
       # --build rebuilds the image when Dockerfile or .storybook config changes.
       - name: Run visual regression tests
-        run: docker compose -f packages/legacy/ui/docker-compose.storybook.yml up --build --abort-on-container-exit --exit-code-from test-runner
+        run: docker compose -f packages/ui-legacy/docker-compose.storybook.yml up --build --abort-on-container-exit --exit-code-from test-runner
 
       - name: Upload diff artifacts on failure
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: visual-regression-diffs
-          path: packages/legacy/ui/test/__snapshots__/__diff_output__/
+          path: packages/ui-legacy/test/__snapshots__/__diff_output__/
