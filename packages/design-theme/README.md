@@ -1,7 +1,7 @@
 # @acronis-platform/theme
 
 Consumable **CSS / SCSS / JS** design-theme artifacts, generated from
-[`@acronis-platform/tokens`](../tokens) (the raw DTCG token data) via
+[`@acronis-platform/tokens`](../design-tokens) (the raw DTCG token data) via
 [Style Dictionary](https://styledictionary.com/).
 
 The raw tokens are a Figma-exported, multi-dimensional DTCG variant that

@@ -1,7 +1,7 @@
-# AGENTS.md — `packages/design/theme`
+# AGENTS.md — `packages/design-theme`
 
 `@acronis-platform/theme` — consumable **CSS / SCSS / JS** artifacts
-generated from [`@acronis-platform/tokens`](../tokens) via
+generated from [`@acronis-platform/tokens`](../design-tokens) via
 [Style Dictionary](https://styledictionary.com/). Published.
 
 Repo-wide rules live in the repo root's `./context/`. This file documents
@@ -42,4 +42,4 @@ Outputs are gitignored — they're build artifacts. `dist/` is what ships.
 - Don't edit `dist/`. Don't fork token values here — change them upstream
   in `@acronis-platform/tokens` and rebuild.
 
-See `../../../context/releasing.md` for the Changesets / publish flow.
+See `../../context/releasing.md` for the Changesets / publish flow.
