@@ -21,14 +21,14 @@ design-data packages are published; the apps are private.
 
 ## Workspaces
 
-| Path                      | Package                                | Published? | Stack                                                                  | Workspace docs                                |
-| ------------------------- | -------------------------------------- | ---------- | ---------------------------------------------------------------------- | --------------------------------------------- |
-| `packages/ui-legacy/`     | `@acronis-platform/shadcn-uikit`       | **yes**    | Vite library, Storybook 10, Vitest + RTL                               | [AGENTS.md](packages/ui-legacy/AGENTS.md)     |
-| `apps/demo/`              | `@acronis-platform/shadcn-uikit-demo`  | no         | Vite SPA, React Router v7, Zustand                                     | [AGENTS.md](apps/demo/AGENTS.md)              |
-| `apps/docs/`              | `@acronis-platform/shadcn-uikit-docs`  | no         | Next.js 15 + Fumadocs                                                  | [AGENTS.md](apps/docs/AGENTS.md)              |
-| `apps/demos/`             | `@acronis-platform/shadcn-uikit-demos` | no         | source-only (no build, no dev server)                                  | [AGENTS.md](apps/demos/AGENTS.md)             |
-| `packages/design/tokens/` | `@acronis-platform/tokens`             | **yes**    | JSON data only (DTCG-2025.10 design tokens), ajv-validated             | [AGENTS.md](packages/design/tokens/AGENTS.md) |
-| `packages/design/assets/` | `@acronis-platform/assets`             | **yes**    | JSON data only (icon/illustration manifests + binaries), ajv-validated | [AGENTS.md](packages/design/assets/AGENTS.md) |
+| Path                             | Package                                | Published? | Stack                                                                  | Workspace docs                                |
+| -------------------------------- | -------------------------------------- | ---------- | ---------------------------------------------------------------------- | --------------------------------------------- |
+| `packages/ui-legacy/`            | `@acronis-platform/shadcn-uikit`       | **yes**    | Vite library, Storybook 10, Vitest + RTL                               | [AGENTS.md](packages/ui-legacy/AGENTS.md)     |
+| `apps/demo/`                     | `@acronis-platform/shadcn-uikit-demo`  | no         | Vite SPA, React Router v7, Zustand                                     | [AGENTS.md](apps/demo/AGENTS.md)              |
+| `apps/docs/`                     | `@acronis-platform/shadcn-uikit-docs`  | no         | Next.js 15 + Fumadocs                                                  | [AGENTS.md](apps/docs/AGENTS.md)              |
+| `apps/demos/`                    | `@acronis-platform/shadcn-uikit-demos` | no         | source-only (no build, no dev server)                                  | [AGENTS.md](apps/demos/AGENTS.md)             |
+| `packages/design/design-tokens/` | `@acronis-platform/tokens`             | **yes**    | JSON data only (DTCG-2025.10 design tokens), ajv-validated             | [AGENTS.md](packages/design/tokens/AGENTS.md) |
+| `packages/design/design-assets/` | `@acronis-platform/assets`             | **yes**    | JSON data only (icon/illustration manifests + binaries), ajv-validated | [AGENTS.md](packages/design/assets/AGENTS.md) |
 
 `packages/` groups workspaces by family under a parent directory:
 

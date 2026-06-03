@@ -16,11 +16,11 @@ The core UI component library. Ships pre-built CSS — consumers do **not** need
 - `react-dom` ^18.2.0 || ^19.0.0
 - `tw-animate-css` ^1.4.0
 
-### [@acronis-platform/tokens](./packages/design/tokens)
+### [@acronis-platform/design-tokens](./packages/design/tokens)
 
 Acronis design tokens — DTCG-2025.10-conformant JSON (primitives, semantic, components). Data only: no build, no runtime API.
 
-### [@acronis-platform/assets](./packages/design/assets)
+### [@acronis-platform/design-assets](./packages/design/assets)
 
 Acronis visual assets — DTCG-divergent JSON manifests for icons and illustrations, plus the bundled binaries they reference. Data only: no build, no runtime API.
 
