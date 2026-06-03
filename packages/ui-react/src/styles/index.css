@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+@import '@acronis-platform/theme/css';
+
+/* Theme switches via a `.dark` class (set by the consumer / next-themes),
+   not the OS media query — mirror that for the `dark:` variant. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Bridge: map the generated `--av-*` design-token custom properties onto the
+   Tailwind color names the components use. `inline` emits `var(--av-*)`
+   references rather than copying values, so the `:root` / `.dark` cascade
+   from @acronis-platform/theme drives light/dark mode with no rebuild. */
+@theme inline {
+  --color-background: var(--av-colors-background-surface-primary);
+  --color-foreground: var(--av-colors-text-on-surface-primary);
+
+  --color-primary: var(--av-colors-background-brand-primary);
+  --color-primary-foreground: var(--av-colors-glyph-on-brand-primary);
+
+  --color-secondary: var(--av-colors-background-brand-secondary);
+  --color-secondary-foreground: var(--av-colors-glyph-on-brand-secondary);
+
+  --color-destructive: var(--av-colors-background-status-danger);
+  --color-destructive-foreground: var(--av-colors-glyph-on-status-danger);
+
+  --color-muted: var(--av-colors-background-surface-secondary);
+  --color-muted-foreground: var(--av-colors-text-on-surface-secondary);
+
+  --color-accent: var(--av-colors-background-surface-hover);
+  --color-accent-foreground: var(--av-colors-text-on-surface-primary);
+
+  --color-border: var(--av-colors-border-on-surface-border);
+  --color-input: var(--av-colors-border-on-surface-border);
+  --color-ring: var(--av-colors-border-on-surface-border-active);
+}
