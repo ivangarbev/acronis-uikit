@@ -15,21 +15,30 @@ workspace's context when you work inside that subtree.
 ## Repository overview
 
 `acronis/shadcn-uikit` is a pnpm monorepo containing a React component
-library, a demo SPA, a documentation site, and a shared demos package.
-Only the library is published; the apps are private.
+library, a demo SPA, a documentation site, a shared demos package, and
+two design-data packages (assets and tokens). The library and the two
+design-data packages are published; the apps are private.
 
 ## Workspaces
 
-| Path                  | Package                                | Published? | Stack                                    | Workspace docs                            |
-| --------------------- | -------------------------------------- | ---------- | ---------------------------------------- | ----------------------------------------- |
-| `packages/legacy/ui/` | `@acronis-platform/shadcn-uikit`       | **yes**    | Vite library, Storybook 10, Vitest + RTL | [AGENTS.md](packages/legacy/ui/AGENTS.md) |
-| `apps/demo/`          | `@acronis-platform/shadcn-uikit-demo`  | no         | Vite SPA, React Router v7, Zustand       | [AGENTS.md](apps/demo/AGENTS.md)          |
-| `apps/docs/`          | `@acronis-platform/shadcn-uikit-docs`  | no         | Next.js 15 + Fumadocs                    | [AGENTS.md](apps/docs/AGENTS.md)          |
-| `apps/demos/`         | `@acronis-platform/shadcn-uikit-demos` | no         | source-only (no build, no dev server)    | [AGENTS.md](apps/demos/AGENTS.md)         |
+| Path                      | Package                                | Published? | Stack                                                      | Workspace docs                                |
+| ------------------------- | -------------------------------------- | ---------- | ---------------------------------------------------------- | --------------------------------------------- |
+| `packages/legacy/ui/`     | `@acronis-platform/shadcn-uikit`       | **yes**    | Vite library, Storybook 10, Vitest + RTL                   | [AGENTS.md](packages/legacy/ui/AGENTS.md)     |
+| `apps/demo/`              | `@acronis-platform/shadcn-uikit-demo`  | no         | Vite SPA, React Router v7, Zustand                         | [AGENTS.md](apps/demo/AGENTS.md)              |
+| `apps/docs/`              | `@acronis-platform/shadcn-uikit-docs`  | no         | Next.js 15 + Fumadocs                                      | [AGENTS.md](apps/docs/AGENTS.md)              |
+| `apps/demos/`             | `@acronis-platform/shadcn-uikit-demos` | no         | source-only (no build, no dev server)                      | [AGENTS.md](apps/demos/AGENTS.md)             |
+| `packages/design/tokens/` | `@acronis-platform/tokens`             | **yes**    | JSON data only (DTCG-2025.10 design tokens), ajv-validated | [AGENTS.md](packages/design/tokens/AGENTS.md) |
 
-`packages/legacy/` is a parent directory housing the current single
-published workspace. The `legacy` prefix anticipates a future split into
-non-legacy packages; nothing under that prefix is scheduled yet.
+`packages/` groups workspaces by family under a parent directory:
+
+- `packages/legacy/` houses the published UI library. The `legacy`
+  prefix anticipates a future split into non-legacy UI packages; nothing
+  else under that prefix is scheduled yet.
+- `packages/design/` houses the published **design-data** packages —
+  `assets` and `tokens`. These ship JSON (and, for assets, bundled
+  binaries) only: no build step, no runtime API. Their one real script
+  is `validate` (ajv); `build`/`dev`/`clean`/`lint`/`typecheck` are
+  no-ops and `test` aliases `validate`.
 
 ## Scripts vocabulary
 

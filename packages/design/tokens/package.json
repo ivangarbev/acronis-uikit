@@ -1,0 +1,46 @@
+{
+  "name": "@acronis-platform/tokens",
+  "version": "0.1.0",
+  "description": "Acronis design tokens. DTCG-2025.10-conformant JSON.",
+  "license": "MIT",
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "tokens/**",
+    "schemas/**",
+    "README.md",
+    "CONTRIBUTING.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./tokens/primitives.json": "./tokens/primitives.json",
+    "./tokens/semantic.json": "./tokens/semantic.json",
+    "./tokens/components.json": "./tokens/components.json",
+    "./schemas/*": "./schemas/*"
+  },
+  "scripts": {
+    "build": "echo \"no build (JSON data package)\" && exit 0",
+    "clean": "echo \"nothing to clean (JSON data package)\" && exit 0",
+    "dev": "echo \"no dev server (JSON data package)\" && exit 0",
+    "lint": "echo \"no lint (JSON data package; validated via test)\" && exit 0",
+    "lint:fix": "echo \"no lint (JSON data package; validated via test)\" && exit 0",
+    "test": "pnpm run validate",
+    "test:watch": "echo \"no watch mode (run test)\" && exit 0",
+    "typecheck": "echo \"no typecheck (JSON data package)\" && exit 0",
+    "validate": "ajv compile -s schemas/tokens.schema.json --spec=draft2020 --strict=false && ajv validate -s schemas/tokens.schema.json -d \"tokens/primitives.json\" -d \"tokens/semantic.json\" -d \"tokens/components.json\" --spec=draft2020 --strict=false"
+  },
+  "keywords": [
+    "design-tokens",
+    "dtcg",
+    "acronis"
+  ],
+  "devDependencies": {
+    "ajv": "catalog:",
+    "ajv-cli": "catalog:",
+    "ajv-formats": "catalog:"
+  }
+}

@@ -53,6 +53,9 @@ jobs:
       - name: Run tests
         run: pnpm --filter @acronis-platform/shadcn-uikit test
 
+      - name: Validate design packages
+        run: pnpm --filter "./packages/design/*" test
+
       - name: Create release PR or publish to npm
         id: changesets
         uses: changesets/action@v1
