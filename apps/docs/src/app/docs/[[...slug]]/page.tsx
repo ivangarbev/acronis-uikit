@@ -28,7 +28,7 @@ export default async function Page({
 
   const MDX = page.data.body;
 
-  const editUrl = `https://github.com/acronis/shadcn-uikit/edit/main/apps/docs/content/${page.path}`;
+  const editUrl = `https://github.com/acronis/uikit/edit/main/apps/docs/content/${page.path}`;
 
   return (
     <DocsPage toc={page.data.toc}>

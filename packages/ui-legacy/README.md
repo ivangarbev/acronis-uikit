@@ -256,6 +256,6 @@ See [CONTRIBUTING.md](../../CONTRIBUTING.md) for details.
 
 ## Links
 
-- [Documentation](https://github.com/acronis/shadcn-uikit)
-- [GitHub Repository](https://github.com/acronis/shadcn-uikit)
-- [Issue Tracker](https://github.com/acronis/shadcn-uikit/issues)
+- [Documentation](https://github.com/acronis/uikit)
+- [GitHub Repository](https://github.com/acronis/uikit)
+- [Issue Tracker](https://github.com/acronis/uikit/issues)

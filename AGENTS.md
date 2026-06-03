@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Single source of truth for AI agents working in `acronis/shadcn-uikit`.
+Single source of truth for AI agents working in `acronis/uikit`.
 
 This file is the **root index**. It is intentionally short (~120 lines) so
 it fits in any context window. Specifics live in:
@@ -14,7 +14,7 @@ workspace's context when you work inside that subtree.
 
 ## Repository overview
 
-`acronis/shadcn-uikit` is a pnpm monorepo containing a React component
+`acronis/uikit` is a pnpm monorepo containing a React component
 library, a demo SPA, a documentation site, a shared demos package, and
 two design-data packages (assets and tokens). The library and the two
 design-data packages are published; the apps are private.

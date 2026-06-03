@@ -171,7 +171,7 @@ export default function HomePage() {
   return (
     <HomeLayout
       nav={{ title: 'Acronis UIKit', transparentMode: 'top' }}
-      githubUrl="https://github.com/acronis/shadcn-uikit"
+      githubUrl="https://github.com/acronis/uikit"
       links={[
         { type: 'main', text: 'Documentation', url: '/docs' },
         { type: 'main', text: 'Components', url: '/docs/components' },
@@ -668,7 +668,7 @@ export default function HomePage() {
         </a>
         {'  ·  '}
         <a
-          href="https://github.com/acronis/shadcn-uikit"
+          href="https://github.com/acronis/uikit"
           className="underline underline-offset-4 hover:text-fd-foreground"
           target="_blank"
           rel="noopener noreferrer"

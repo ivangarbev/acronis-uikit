@@ -25,21 +25,21 @@ A template file for creating custom themes. Copy this file and customize the col
 ### Import All Themes
 
 ```scss
-@use '@acronis/shadcn-uikit/styles/themes';
+@use '@acronis/uikit/styles/themes';
 ```
 
 ### Import Specific Themes (Recommended)
 
 ```scss
-@use '@acronis/shadcn-uikit/styles/themes/acronis-default';
-@use '@acronis/shadcn-uikit/styles/themes/acronis-ocean';
-@use '@acronis/shadcn-uikit/styles/themes/cyber-chat';
+@use '@acronis/uikit/styles/themes/acronis-default';
+@use '@acronis/uikit/styles/themes/acronis-ocean';
+@use '@acronis/uikit/styles/themes/cyber-chat';
 ```
 
 ### Apply Theme via JavaScript
 
 ```typescript
-import { applyTheme } from '@acronis/shadcn-uikit';
+import { applyTheme } from '@acronis/uikit';
 
 applyTheme('acronis-ocean');
 // or

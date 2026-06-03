@@ -135,9 +135,9 @@ function generateLlmsTxt(): string {
 
   // Getting Started section
   content += `## Getting Started\n\n`;
-  content += `- [Installation Guide](https://github.com/acronis/shadcn-uikit/blob/main/apps/docs/GETTING_STARTED.md): Complete setup instructions with Tailwind configuration\n`;
-  content += `- [Architecture Overview](https://github.com/acronis/shadcn-uikit/blob/main/apps/docs/ARCHITECTURE.md): Project structure and design decisions\n`;
-  content += `- [Main README](https://github.com/acronis/shadcn-uikit/blob/main/README.md): Project overview and quick start\n\n`;
+  content += `- [Installation Guide](https://github.com/acronis/uikit/blob/main/apps/docs/GETTING_STARTED.md): Complete setup instructions with Tailwind configuration\n`;
+  content += `- [Architecture Overview](https://github.com/acronis/uikit/blob/main/apps/docs/ARCHITECTURE.md): Project structure and design decisions\n`;
+  content += `- [Main README](https://github.com/acronis/uikit/blob/main/README.md): Project overview and quick start\n\n`;
 
   // Basic Usage Examples
   content += `## Usage Examples\n\n`;
@@ -249,7 +249,7 @@ function generateLlmsTxt(): string {
 
   // Styling section
   content += `## Styling & Customization\n\n`;
-  content += `- [Tailwind Configuration](https://github.com/acronis/shadcn-uikit/blob/main/apps/docs/GETTING_STARTED.md#configure-tailwind-css): Required Tailwind setup\n`;
+  content += `- [Tailwind Configuration](https://github.com/acronis/uikit/blob/main/apps/docs/GETTING_STARTED.md#configure-tailwind-css): Required Tailwind setup\n`;
   content += `- CSS Variables: Override theme colors using \`--av-primary\`, \`--av-background\`, etc.\n`;
   content += `- Dark Mode: Add \`dark\` class to root element\n`;
   content += `- Custom Variants: Use \`cn()\` utility to merge classes\n\n`;

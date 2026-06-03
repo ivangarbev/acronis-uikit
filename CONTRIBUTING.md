@@ -18,9 +18,9 @@ We welcome contributions in any form, including but not limited to the following
 
 ## Issue Reporting
 
-You can file a ticket for the bug/issue you found through [Issues](https://github.com/acronis/shadcn-uikit/issues) under project **UI component library**.
+You can file a ticket for the bug/issue you found through [Issues](https://github.com/acronis/uikit/issues) under project **UI component library**.
 A clear reproduce steps will be very helpful to identify the root cause.
-For the complicated scenario, you can also create an example in the [Sandbox](https://github.com/acronis/shadcn-uikit/sandbox/index.vue), or provide the example code in the ticket.
+For the complicated scenario, you can also create an example in the [Sandbox](https://github.com/acronis/uikit/sandbox/index.vue), or provide the example code in the ticket.
 
 ## Working in the monorepo
 
@@ -55,7 +55,7 @@ Follow this guide's branching, pull request, and commit conventions when you pre
 Meanwhile, below a checklist for the items need to do before raised a pull request,
 and you can find the details for each point in the remaining part of this document:
 
-1. Fork [This repo](https://github.com/acronis/shadcn-uikit)
+1. Fork [This repo](https://github.com/acronis/uikit)
 2. Enter the local project root directory and use `pnpm i` to install dependencies.
 3. Use `pnpm --filter @acronis-platform/shadcn-uikit-docs dev` to start the documentation app.
 4. Please pull the latest code before submitting to avoid file conflicts.
@@ -113,8 +113,8 @@ You can find more information about performance tests in the [Performance tests 
 
 ### Component documentation
 
-The documentation for each component is located at [`apps/docs`](https://github.com/acronis/shadcn-uikit/tree/main/apps/docs) using Markdown/MDX format.
-The implementation examples are located at [`apps/demos`](https://github.com/acronis/shadcn-uikit/tree/main/apps/demos).
+The documentation for each component is located at [`apps/docs`](https://github.com/acronis/uikit/tree/main/apps/docs) using Markdown/MDX format.
+The implementation examples are located at [`apps/demos`](https://github.com/acronis/uikit/tree/main/apps/demos).
 For internal documentation we use Next.js with Fumadocs; see the [Fumadocs documentation](https://fumadocs.dev/docs/ui) for more information.
 
 Each document consists of highlights of the API(props, slots, events) with examples and complete details of these components.
@@ -158,4 +158,4 @@ driven by the changeset bump type, not the commit prefix**.
 
 ## License
 
-By contributing your code to the repository, you agree to license your contribution under the [MIT license](https://github.com/acronis/shadcn-uikit/blob/main/LICENSE).
+By contributing your code to the repository, you agree to license your contribution under the [MIT license](https://github.com/acronis/uikit/blob/main/LICENSE).

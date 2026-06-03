@@ -272,7 +272,7 @@ export function applyColorMode(mode: 'light' | 'dark') {
 
 ```typescript
 // Consumer usage
-import { applyTheme, applyColorMode } from '@acronis/shadcn-uikit';
+import { applyTheme, applyColorMode } from '@acronis/uikit';
 
 // Apply theme
 applyTheme('acronis-ocean');
