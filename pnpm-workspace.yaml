@@ -1,7 +1,6 @@
 packages:
   - 'apps/*'
   - 'packages/*'
-  - 'packages/legacy/*'
   - 'packages/design/*'
 
 # Single source of truth for dependency versions used by more than one
@@ -29,7 +28,7 @@ catalog:
   vitest: 4.1.7
 
   # Cross-workspace runtime deps. Versions intentionally match
-  # packages/legacy/ui (the published library) so its typecheck stays
+  # packages/ui-legacy (the published library) so its typecheck stays
   # stable; private apps adopt these versions to remove drift.
   react-hook-form: 7.76.1
   '@hookform/resolvers': 5.4.0

@@ -23,7 +23,7 @@ design-data packages are published; the apps are private.
 
 | Path                      | Package                                | Published? | Stack                                                                  | Workspace docs                                |
 | ------------------------- | -------------------------------------- | ---------- | ---------------------------------------------------------------------- | --------------------------------------------- |
-| `packages/legacy/ui/`     | `@acronis-platform/shadcn-uikit`       | **yes**    | Vite library, Storybook 10, Vitest + RTL                               | [AGENTS.md](packages/legacy/ui/AGENTS.md)     |
+| `packages/ui-legacy/`     | `@acronis-platform/shadcn-uikit`       | **yes**    | Vite library, Storybook 10, Vitest + RTL                               | [AGENTS.md](packages/ui-legacy/AGENTS.md)     |
 | `apps/demo/`              | `@acronis-platform/shadcn-uikit-demo`  | no         | Vite SPA, React Router v7, Zustand                                     | [AGENTS.md](apps/demo/AGENTS.md)              |
 | `apps/docs/`              | `@acronis-platform/shadcn-uikit-docs`  | no         | Next.js 15 + Fumadocs                                                  | [AGENTS.md](apps/docs/AGENTS.md)              |
 | `apps/demos/`             | `@acronis-platform/shadcn-uikit-demos` | no         | source-only (no build, no dev server)                                  | [AGENTS.md](apps/demos/AGENTS.md)             |
@@ -32,9 +32,7 @@ design-data packages are published; the apps are private.
 
 `packages/` groups workspaces by family under a parent directory:
 
-- `packages/legacy/` houses the published UI library. The `legacy`
-  prefix anticipates a future split into non-legacy UI packages; nothing
-  else under that prefix is scheduled yet.
+- `packages/ui-legacy/` houses the published UI library.
 - `packages/design/` houses the published **design-data** packages —
   `assets` and `tokens`. These ship JSON (and, for assets, bundled
   binaries) only: no build step, no runtime API. Their one real script

@@ -25,7 +25,7 @@ For the complicated scenario, you can also create an example in the [Sandbox](ht
 ## Working in the monorepo
 
 This repo is a pnpm workspace with four packages: the published UI library
-(`packages/legacy/ui`), a Vite demo (`apps/demo`), a shared demo components
+(`packages/ui-legacy`), a Vite demo (`apps/demo`), a shared demo components
 package (`apps/demos`), and a Fumadocs site (`apps/docs`).
 
 Every workspace exposes the same script vocabulary, so you have two equally
