@@ -63,7 +63,9 @@ is a class-scoped override carrying only the tokens that differ:
 
 ## Scope
 
-- **Color tokens only**, `light` + `dark` schemes, all authored brands.
-- Deferred: typography/composite tokens (incl. AI gradient tokens) and a
-  per-scheme SCSS split. (Note: `brand-b` currently produces no overrides —
-  it differs from `acronis` only in the deferred gradient tokens.)
+- **Color + gradient tokens**, `light` + `dark` schemes, all authored brands.
+  Gradient tokens are emitted as `linear-gradient(...)` (angle from the Figma
+  gradient transform).
+- Deferred: typography/composite tokens and a per-scheme SCSS split. (Note:
+  `brand-b` currently produces no overrides — it matches `acronis` on color
+  tokens and inherits its gradients.)

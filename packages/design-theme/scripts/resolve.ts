@@ -11,9 +11,9 @@ import semanticJson from '@acronis-platform/design-tokens/tokens/semantic.json' 
 // `resolveTree` flattens this matrix for one (brand, scheme) pair into a
 // plain Style-Dictionary token tree with concrete values, resolving the
 // semantic → primitive alias chain itself (references only ever point at
-// primitives, so a single lookup pass is enough). Typography and other
-// composite tokens are out of scope for this first iteration — only color
-// tokens are emitted.
+// primitives, so a single lookup pass is enough). Color tokens and gradient
+// tokens (color-stop arrays → CSS `linear-gradient`) are emitted; typography
+// and other composite tokens are out of scope.
 
 export type Scheme = 'light' | 'dark';
 export type Brand = 'acronis' | 'brand-b';
@@ -50,6 +50,32 @@ function formatColor(color: DtcgColor): string {
     return `hsl(${round(h)} ${round(s)}% ${round(l)}% / ${round(color.alpha)})`;
   }
   return base;
+}
+
+interface GradientStop {
+  color: DtcgColor;
+  position: number;
+}
+
+/**
+ * Convert a Figma gradient transform matrix to a CSS angle. The gradient
+ * parameter progresses along the first row's linear part `(a, c)` in the
+ * shape's (y-down) space; CSS 0deg points up and increases clockwise, so the
+ * angle is `atan2(a, -c)`. Identity (`[[1,0,0],[0,1,0]]`) → 90deg (to right).
+ */
+function gradientAngle(transform: unknown): number {
+  const m = transform as number[][] | undefined;
+  const a = m?.[0]?.[0] ?? 0;
+  const c = m?.[0]?.[1] ?? 1;
+  const deg = (Math.atan2(a, -c) * 180) / Math.PI;
+  return round(((deg % 360) + 360) % 360);
+}
+
+function formatGradient(stops: GradientStop[], transform: unknown): string {
+  const css = stops
+    .map((s) => `${formatColor(s.color)} ${round(s.position * 100)}%`)
+    .join(', ');
+  return `linear-gradient(${gradientAngle(transform)}deg, ${css})`;
 }
 
 function isMeta(key: string): boolean {
@@ -115,6 +141,16 @@ export function resolveTree(scheme: Scheme, brand: string): SdTree {
         const alias = ALIAS_RE.exec(raw)?.[1];
         const resolved = alias ? primitiveLookup.get(alias) : undefined;
         if (resolved) setIn(tree, path, { value: resolved, type: 'color' });
+      } else if (Array.isArray(raw)) {
+        // Gradient token: stops + a Figma transform matrix → CSS linear-gradient.
+        const ext = node.$extensions as Record<string, unknown> | undefined;
+        setIn(tree, path, {
+          value: formatGradient(
+            raw as GradientStop[],
+            ext?.['com.figma.gradientTransform']
+          ),
+          type: 'gradient',
+        });
       } else if (raw && typeof raw === 'object' && 'colorSpace' in raw) {
         setIn(tree, path, {
           value: formatColor(raw as DtcgColor),

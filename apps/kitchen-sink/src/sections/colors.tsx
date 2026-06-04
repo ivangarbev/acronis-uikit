@@ -113,9 +113,61 @@ function PaletteRamp({ group }: { group: TokenGroup }) {
   );
 }
 
+/** Gradient groups: larger cards showing the resolved CSS gradient + value. */
+function GradientGroup({ group }: { group: TokenGroup }) {
+  return (
+    <div>
+      <GroupHeading label={group.label} count={group.tokens.length} />
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+          gap: 12,
+        }}
+      >
+        {group.tokens.map((token) => {
+          const cssVar = `--av-${token.name}`;
+          return (
+            <div key={token.name} style={{ minWidth: 0 }}>
+              <div
+                style={{
+                  height: 72,
+                  borderRadius: 8,
+                  background: `var(${cssVar})`,
+                  border: SWATCH_BORDER,
+                }}
+              />
+              <div style={{ fontSize: 11, fontWeight: 500, marginTop: 6 }}>
+                {token.label}
+              </div>
+              <div
+                style={{
+                  fontSize: 10,
+                  color: 'var(--av-colors-text-on-surface-secondary)',
+                  wordBreak: 'break-all',
+                }}
+              >
+                {resolveToken(cssVar)}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+const isGradientToken = (name: string): boolean =>
+  resolveToken(`--av-${name}`).startsWith('linear-gradient');
+
 export function ColorsSection() {
-  const semantic = groups.filter((g) => !g.label.startsWith('palette ·'));
-  const palette = groups.filter((g) => g.label.startsWith('palette ·'));
+  const isPalette = (g: TokenGroup) => g.label.startsWith('palette ·');
+  const isGradient = (g: TokenGroup) =>
+    g.tokens.length > 0 && isGradientToken(g.tokens[0].name);
+
+  const gradient = groups.filter((g) => !isPalette(g) && isGradient(g));
+  const semantic = groups.filter((g) => !isPalette(g) && !isGradient(g));
+  const palette = groups.filter(isPalette);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
@@ -125,6 +177,15 @@ export function ColorsSection() {
           <SemanticGroup key={group.label} group={group} />
         ))}
       </div>
+
+      {gradient.length > 0 && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <h3 style={{ fontSize: 14, fontWeight: 600 }}>Gradients</h3>
+          {gradient.map((group) => (
+            <GradientGroup key={group.label} group={group} />
+          ))}
+        </div>
+      )}
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
         <h3 style={{ fontSize: 14, fontWeight: 600 }}>Palette</h3>
