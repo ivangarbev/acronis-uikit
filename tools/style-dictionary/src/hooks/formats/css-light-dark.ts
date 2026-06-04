@@ -112,7 +112,7 @@ export const cssLightDark: Format = {
     classes.sort((a, b) => a.selector.localeCompare(b.selector));
 
     const note = skipped.length
-      ? ` (${skipped.length} unsupported tokens skipped: gradients)`
+      ? ` (${skipped.length} unsupported tokens skipped: ${skipped.join(', ')})`
       : '';
     console.log(
       `✓ ${label} — ${vars.length} variables, ${classes.length} typography classes${note}`
