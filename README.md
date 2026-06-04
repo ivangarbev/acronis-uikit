@@ -378,6 +378,9 @@ shadcn-uikit/
 │           ├── docker-compose.storybook.yml      # Storybook visual-regression compose
 │           ├── Dockerfile.storybook              # ... and its image
 │           └── package.json
+├── tools/                     # Private (unpublished) build tooling
+│   └── style-dictionary/      # design-tokens → per-brand CSS (@acronis-platform/style-dictionary)
+├── context/                   # Cross-workspace docs (conventions, commits, releasing)
 ├── .changeset/                # Pending changesets (each PR adds one)
 ├── .github/workflows/         # ci.yml, release.yml, demo-deploy.yml, visual-regression.yml
 ├── .husky/                    # Git hooks (managed by Husky)

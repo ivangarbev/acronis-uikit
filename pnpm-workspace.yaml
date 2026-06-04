@@ -1,6 +1,7 @@
 packages:
   - 'apps/*'
   - 'packages/*'
+  - 'tools/*'
 
 # Single source of truth for dependency versions used by more than one
 # workspace. Workspaces refer to these with "catalog:" — pnpm rewrites
@@ -56,9 +57,10 @@ catalog:
   ajv-cli: 5.0.0
   ajv-formats: 3.0.1
 
-  # Token build — packages/design-theme transforms @acronis-platform/design-tokens
-  # (DTCG JSON) into CSS/SCSS/JS artifacts.
-  style-dictionary: 4.4.0
+  # Style Dictionary v5 — shared by the two token/asset build consumers:
+  # packages/design-theme (tokens → CSS/SCSS/JS) and tools/style-dictionary
+  # (design-tokens → per-brand CSS, design-assets → SVG/React).
+  style-dictionary: 5.4.3
 
 # Pin transitive deps that we don't want pnpm to bump.
 overrides:

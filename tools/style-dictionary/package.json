@@ -1,0 +1,39 @@
+{
+  "name": "@acronis-platform/style-dictionary",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Translation tool: builds @acronis-platform/design-tokens into per-brand CSS custom properties via an intermediate DTCG pass.",
+  "type": "module",
+  "scripts": {
+    "build": "tsx src/index.ts",
+    "dev": "echo \"no dev server (run build)\" && exit 0",
+    "clean": "rm -rf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "design-tokens",
+    "style-dictionary",
+    "dtcg",
+    "css",
+    "acronis"
+  ],
+  "devDependencies": {
+    "@acronis-platform/design-assets": "workspace:*",
+    "@acronis-platform/design-tokens": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "ajv": "catalog:",
+    "ajv-formats": "catalog:",
+    "react": "catalog:",
+    "style-dictionary": "catalog:",
+    "svgo": "^4.0.1",
+    "svgson": "^5.3.1",
+    "tsx": "^4.20.0",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

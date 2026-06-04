@@ -7,6 +7,9 @@
     "build": "pnpm -r build",
     "changeset": "changeset",
     "clean": "pnpm -r clean",
+    "sd": "pnpm --filter @acronis-platform/style-dictionary build",
+    "sd:assets": "pnpm --filter @acronis-platform/style-dictionary build pd-assets web-assets",
+    "sd:tokens": "pnpm --filter @acronis-platform/style-dictionary build pd-dtcg pd-css",
     "format": "prettier --write . --ignore-unknown",
     "format:check": "prettier --check . --ignore-unknown",
     "husky": "pnpm run lint-staged && pnpm run typecheck",
@@ -62,6 +65,9 @@
       "eslint --fix"
     ],
     "packages/**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix"
+    ],
+    "tools/**/*.{js,jsx,ts,tsx,vue}": [
       "eslint --fix"
     ],
     "**/*.{json,md,yml,yaml}": [

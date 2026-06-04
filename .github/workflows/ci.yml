@@ -74,3 +74,74 @@ jobs:
 
       - name: Test
         run: pnpm -r test
+
+  # ── design-assets → SVG/React build ────────────────────────────────────────
+  # Incrementally rebuilds the asset artifacts when their inputs change, per the
+  # CI↔CLI contract in tools/style-dictionary/AGENTS.md. `assets-detect` finds
+  # which packs / shared inputs (rules, schema) changed; `assets-build` validates
+  # (fail closed) then invokes the tool with the right `--pack` selector. The
+  # `ci` job above already does a full `pnpm -r build`; this job exercises the
+  # granular per-pack path and the validate gate.
+  assets-detect:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.filter.outputs.packs == 'true' || steps.filter.outputs.shared == 'true' }}
+      shared: ${{ steps.filter.outputs.shared }}
+      packs_files: ${{ steps.filter.outputs.packs_files }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Detect changed asset inputs
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          list-files: shell
+          filters: |
+            packs:
+              - 'packages/design-assets/packs/**'
+            shared:
+              - 'packages/design-assets/rules/**'
+              - 'packages/design-assets/schemas/pack.schema.json'
+
+  assets-build:
+    needs: assets-detect
+    if: needs.assets-detect.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Fail closed before building: the resolver re-asserts the schema, but the
+      # package's own ajv validate is the authoritative gate.
+      - name: Validate design-assets
+        run: pnpm --filter @acronis-platform/design-assets validate
+
+      - name: Build changed assets
+        env:
+          SHARED: ${{ needs.assets-detect.outputs.shared }}
+          PACKS_FILES: ${{ needs.assets-detect.outputs.packs_files }}
+        run: |
+          set -euo pipefail
+          if [ "$SHARED" = "true" ]; then
+            echo "Shared input (rules/schema) changed — rebuilding all asset packs."
+            pnpm --filter @acronis-platform/style-dictionary build pd-assets web-assets
+          else
+            packs=$(printf '%s\n' $PACKS_FILES \
+              | sed -nE 's#packages/design-assets/packs/([a-z0-9-]+)(\.json|/.*)#\1#p' \
+              | sort -u | paste -sd, -)
+            echo "Changed packs: $packs"
+            pnpm --filter @acronis-platform/style-dictionary build pd-assets web-assets --pack="$packs"
+          fi

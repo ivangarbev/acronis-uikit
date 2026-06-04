@@ -15,9 +15,21 @@ workspace's context when you work inside that subtree.
 ## Repository overview
 
 `acronis/uikit` is a pnpm monorepo containing a React component
-library, a demo SPA, a documentation site, a shared demos package, and
-two design-data packages (assets and tokens). The library and the two
-design-data packages are published; the apps are private.
+library, a demo SPA, a documentation site, a shared demos package, two
+design-data packages (assets and tokens), and a build-tooling tier. The
+library and the two design-data packages are published; the apps and the
+tools are private.
+
+The repo is organized into four top-level directories, each with a
+distinct role:
+
+- **`context/`** — Markdown instructions read by both LLMs and humans
+  (cross-workspace conventions; each workspace also has its own).
+- **`apps/`** — applications that get deployed (e.g. the demo and docs
+  sites). Private.
+- **`packages/`** — packages published to the npm registry.
+- **`tools/`** — scripts that automate, translate, or execute operations
+  (e.g. token→CSS builds). Private; never published.
 
 ## Workspaces
 
@@ -33,6 +45,7 @@ design-data packages are published; the apps are private.
 | `packages/design-tokens/` | `@acronis-platform/design-tokens`      | **yes**    | JSON data only (DTCG-2025.10 design tokens), ajv-validated             | [AGENTS.md](packages/design-tokens/AGENTS.md) |
 | `packages/design-assets/` | `@acronis-platform/design-assets`      | **yes**    | JSON data only (icon/illustration manifests + binaries), ajv-validated | [AGENTS.md](packages/design-assets/AGENTS.md) |
 | `packages/design-theme/`  | `@acronis-platform/design-theme`       | **yes**    | Style Dictionary build of `tokens` → CSS / SCSS / JS                   | [AGENTS.md](packages/design-theme/AGENTS.md)  |
+| `tools/style-dictionary/` | `@acronis-platform/style-dictionary`   | no         | Style Dictionary v5 build: design-tokens → per-brand CSS               | [AGENTS.md](tools/style-dictionary/AGENTS.md) |
 
 `packages/` holds the published workspaces:
 
@@ -51,6 +64,13 @@ design-data packages are published; the apps are private.
 - `packages/design-theme` is the one design package with a real build: it runs Style
   Dictionary over `tokens` to emit consumable CSS / SCSS / JS artifacts.
 
+`tools/` holds private (unpublished) build tooling:
+
+- `tools/style-dictionary/` — a Style Dictionary v5 translation pipeline
+  that builds `@acronis-platform/design-tokens` into per-brand CSS custom
+  properties. Its real script is `build`; output lands in a gitignored
+  `dist/`.
+
 ## Scripts vocabulary
 
 Every workspace exposes the same script names. Run any of them as:
@@ -67,7 +87,9 @@ Root-only scripts (from the repo root):
 - `husky` — runs lint-staged + typecheck (used by the pre-commit hook)
 
 `apps/demos` is intentionally source-only: its `dev`/`build` scripts are
-no-ops because the package is consumed via source-file exports.
+no-ops because the package is consumed via source-file exports. Tools
+follow the same vocabulary too: `tools/style-dictionary`'s real work is
+`build` (with `test`/`test:watch` running vitest); only `dev` is a no-op.
 
 ## How agents should navigate this repo
 
