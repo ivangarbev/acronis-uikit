@@ -1,5 +1,12 @@
 # @acronis-platform/ui-react
 
+## 0.2.2
+
+### Patch Changes
+
+- Updated dependencies [[`61fe683`](https://github.com/acronis/uikit/commit/61fe68389b42f482fe9f7a07ab0f14ebad6c12d1)]:
+  - @acronis-platform/design-theme@0.3.0
+
 ## 0.2.1
 
 ### Patch Changes
