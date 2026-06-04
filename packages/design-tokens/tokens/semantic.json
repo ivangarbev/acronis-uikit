@@ -7,11 +7,10 @@
         "active": {
           "values": {
             "acronis": "{palette.blue.3}",
-            "brand-b": "{palette.blue.3}"
+            "brand-b": "{palette.teal.3}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:141:276"
           }
@@ -19,11 +18,10 @@
         "hover": {
           "values": {
             "acronis": "{palette.blue.2}",
-            "brand-b": "{palette.blue.2}"
+            "brand-b": "{palette.teal.2}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:141:275"
           }
@@ -35,7 +33,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:50:1426"
           }
@@ -43,11 +40,10 @@
         "secondary": {
           "values": {
             "acronis": "{palette.blue.0}",
-            "brand-b": "{palette.blue.0}"
+            "brand-b": "{palette.teal.0}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:50:1427"
           }
@@ -57,11 +53,10 @@
         "primary": {
           "values": {
             "acronis": "{palette.blue.13}",
-            "brand-b": "{palette.blue.13}"
+            "brand-b": "{palette.teal.13}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:50:1428"
           }
@@ -69,11 +64,10 @@
         "primary-active": {
           "values": {
             "acronis": "{palette.blue.11}",
-            "brand-b": "{palette.blue.11}"
+            "brand-b": "{palette.teal.11}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:143:3"
           }
@@ -81,11 +75,10 @@
         "primary-disabled": {
           "values": {
             "acronis": "{palette.blue.5}",
-            "brand-b": "{palette.blue.5}"
+            "brand-b": "{palette.teal.5}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:383:39"
           }
@@ -93,11 +86,10 @@
         "primary-hover": {
           "values": {
             "acronis": "{palette.blue.12}",
-            "brand-b": "{palette.blue.12}"
+            "brand-b": "{palette.teal.12}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:143:2"
           }
@@ -105,11 +97,10 @@
         "secondary": {
           "values": {
             "acronis": "{palette.blue.7}",
-            "brand-b": "{palette.blue.7}"
+            "brand-b": "{palette.teal.7}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:50:1429"
           }
@@ -117,11 +108,10 @@
         "secondary-active": {
           "values": {
             "acronis": "{palette.blue.9}",
-            "brand-b": "{palette.blue.9}"
+            "brand-b": "{palette.teal.9}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:265:59"
           }
@@ -129,11 +119,10 @@
         "secondary-disabled": {
           "values": {
             "acronis": "{palette.blue.3}",
-            "brand-b": "{palette.blue.3}"
+            "brand-b": "{palette.teal.3}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:227:24"
           }
@@ -141,11 +130,10 @@
         "secondary-hover": {
           "values": {
             "acronis": "{palette.blue.8}",
-            "brand-b": "{palette.blue.8}"
+            "brand-b": "{palette.teal.8}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:265:58"
           }
@@ -159,7 +147,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:202:38"
           }
@@ -171,7 +158,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:50:1433"
           }
@@ -185,7 +171,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:147:14"
           }
@@ -197,7 +182,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:15"
           }
@@ -209,7 +193,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:16"
           }
@@ -221,7 +204,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:147:16"
           }
@@ -233,7 +215,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:17"
           }
@@ -245,7 +226,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:18"
           }
@@ -257,7 +237,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:147:8"
           }
@@ -269,7 +248,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:9"
           }
@@ -281,7 +259,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:10"
           }
@@ -293,7 +270,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:911:263457"
           }
@@ -305,7 +281,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:911:263458"
           }
@@ -317,7 +292,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:911:263459"
           }
@@ -329,7 +303,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:1205:160"
           }
@@ -341,7 +314,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:1205:161"
           }
@@ -353,7 +325,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:147:10"
           }
@@ -365,7 +336,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:11"
           }
@@ -377,7 +347,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:12"
           }
@@ -389,7 +358,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:147:12"
           }
@@ -401,7 +369,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:13"
           }
@@ -413,7 +380,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:149:14"
           }
@@ -427,7 +393,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263451"
           }
@@ -439,7 +404,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263452"
           }
@@ -451,7 +415,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263453"
           }
@@ -463,7 +426,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263454"
           }
@@ -475,7 +437,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263455"
           }
@@ -487,7 +448,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263456"
           }
@@ -499,7 +459,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263442"
           }
@@ -511,7 +470,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263443"
           }
@@ -523,7 +481,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263444"
           }
@@ -535,7 +492,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:911:263460"
           }
@@ -547,7 +503,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:911:263461"
           }
@@ -559,7 +514,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:911:263462"
           }
@@ -571,7 +525,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263445"
           }
@@ -583,7 +536,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263446"
           }
@@ -595,7 +547,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263447"
           }
@@ -607,7 +558,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263448"
           }
@@ -619,7 +569,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263449"
           }
@@ -631,7 +580,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
             "com.figma.variableId": "VariableID:910:263450"
           }
@@ -645,7 +593,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:305:124"
           }
@@ -657,7 +604,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:305:123"
           }
@@ -669,7 +615,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["FRAME_FILL"],
             "com.figma.variableId": "VariableID:305:122"
           }
@@ -796,11 +741,10 @@
         "border": {
           "values": {
             "acronis": "{palette.blue.3}",
-            "brand-b": "{palette.blue.3}"
+            "brand-b": "{palette.teal.3}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:50:1437"
           }
@@ -812,7 +756,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:138:187"
           }
@@ -824,7 +767,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:414:104"
           }
@@ -836,7 +778,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:1234:100"
           }
@@ -844,11 +785,10 @@
         "divider": {
           "values": {
             "acronis": "{palette.blue.3}",
-            "brand-b": "{palette.blue.3}"
+            "brand-b": "{palette.teal.3}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:50:1438"
           }
@@ -862,7 +802,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:52:1377"
           }
@@ -874,7 +813,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:139:5"
           }
@@ -886,7 +824,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:52:1378"
           }
@@ -900,7 +837,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:147:41"
           }
@@ -912,7 +848,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:797:2005"
           }
@@ -924,7 +859,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:147:42"
           }
@@ -936,7 +870,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:797:2004"
           }
@@ -948,7 +881,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:147:38"
           }
@@ -960,7 +892,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:797:2008"
           }
@@ -972,7 +903,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:911:263463"
           }
@@ -984,7 +914,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:912:268723"
           }
@@ -996,7 +925,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:147:39"
           }
@@ -1008,7 +936,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:797:2007"
           }
@@ -1020,7 +947,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:147:40"
           }
@@ -1032,7 +958,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["STROKE_COLOR"],
             "com.figma.variableId": "VariableID:797:2006"
           }
@@ -1048,7 +973,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:143:8"
           }
@@ -1056,11 +980,10 @@
         "disabled": {
           "values": {
             "acronis": "{palette.blue.3}",
-            "brand-b": "{palette.blue.3}"
+            "brand-b": "{palette.teal.3}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:56:1581"
           }
@@ -1072,7 +995,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:1024:122"
           }
@@ -1080,11 +1002,10 @@
         "primary": {
           "values": {
             "acronis": "{palette.blue.7}",
-            "brand-b": "{palette.blue.7}"
+            "brand-b": "{palette.teal.7}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:50:1436"
           }
@@ -1098,7 +1019,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:179:195"
           }
@@ -1110,7 +1030,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:52:2202"
           }
@@ -1122,7 +1041,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:179:196"
           }
@@ -1136,7 +1054,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:143:179"
           }
@@ -1150,7 +1067,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:796:1732"
           }
@@ -1162,7 +1078,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:796:1731"
           }
@@ -1174,7 +1089,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:151:43"
           }
@@ -1186,7 +1100,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:796:1735"
           }
@@ -1198,7 +1111,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:911:263464"
           }
@@ -1210,7 +1122,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:1205:724"
           }
@@ -1222,7 +1133,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:1205:723"
           }
@@ -1234,7 +1144,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:149:7"
           }
@@ -1246,7 +1155,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:796:1734"
           }
@@ -1258,7 +1166,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:796:1733"
           }
@@ -1272,7 +1179,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:305:126"
           }
@@ -1284,7 +1190,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:305:125"
           }
@@ -1296,7 +1201,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["SHAPE_FILL", "STROKE_COLOR"],
             "com.figma.variableId": "VariableID:915:272935"
           }
@@ -1312,7 +1216,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:150"
           }
@@ -1324,7 +1227,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:52:1357"
           }
@@ -1332,11 +1234,10 @@
         "link": {
           "values": {
             "acronis": "{palette.blue.7}",
-            "brand-b": "{palette.blue.7}"
+            "brand-b": "{palette.teal.7}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:155"
           }
@@ -1344,11 +1245,10 @@
         "link-disabled": {
           "values": {
             "acronis": "{palette.blue.5}",
-            "brand-b": "{palette.blue.5}"
+            "brand-b": "{palette.teal.5}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:160"
           }
@@ -1356,11 +1256,10 @@
         "link-hover": {
           "values": {
             "acronis": "{palette.blue.8}",
-            "brand-b": "{palette.blue.8}"
+            "brand-b": "{palette.teal.8}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:156"
           }
@@ -1368,11 +1267,10 @@
         "link-pressed": {
           "values": {
             "acronis": "{palette.blue.11}",
-            "brand-b": "{palette.blue.11}"
+            "brand-b": "{palette.teal.11}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:159"
           }
@@ -1384,7 +1282,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:50:1425"
           }
@@ -1396,7 +1293,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:50:1434"
           }
@@ -1410,7 +1306,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:52:1358"
           }
@@ -1418,11 +1313,10 @@
         "link": {
           "values": {
             "acronis": "{palette.blue.7}",
-            "brand-b": "{palette.blue.7}"
+            "brand-b": "{palette.teal.7}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:169"
           }
@@ -1434,7 +1328,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:172"
           }
@@ -1442,11 +1335,10 @@
         "link-hover": {
           "values": {
             "acronis": "{palette.blue.5}",
-            "brand-b": "{palette.blue.5}"
+            "brand-b": "{palette.teal.5}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:170"
           }
@@ -1454,11 +1346,10 @@
         "link-pressed": {
           "values": {
             "acronis": "{palette.blue.3}",
-            "brand-b": "{palette.blue.3}"
+            "brand-b": "{palette.teal.2}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:171"
           }
@@ -1470,7 +1361,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:52:1353"
           }
@@ -1482,7 +1372,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:52:1354"
           }
@@ -1492,11 +1381,10 @@
         "link": {
           "values": {
             "acronis": "{palette.blue.7}",
-            "brand-b": "{palette.blue.7}"
+            "brand-b": "{palette.teal.7}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:139:188"
           }
@@ -1504,11 +1392,10 @@
         "link-hover": {
           "values": {
             "acronis": "{palette.blue.5}",
-            "brand-b": "{palette.blue.5}"
+            "brand-b": "{palette.teal.5}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:141:189"
           }
@@ -1516,11 +1403,10 @@
         "link-pressed": {
           "values": {
             "acronis": "{palette.blue.3}",
-            "brand-b": "{palette.blue.3}"
+            "brand-b": "{palette.teal.3}"
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:141:190"
           }
@@ -1532,7 +1418,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:52:1355"
           }
@@ -1544,7 +1429,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:52:1356"
           }
@@ -1558,7 +1442,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:912:266569"
           }
@@ -1570,7 +1453,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:201:20"
           }
@@ -1582,7 +1464,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:201:19"
           }
@@ -1594,7 +1475,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:201:17"
           }
@@ -1606,7 +1486,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:149:4"
           }
@@ -1618,7 +1497,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:149:8"
           }
@@ -1630,7 +1508,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:149:5"
           }
@@ -1642,7 +1519,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:149:6"
           }
@@ -1654,7 +1530,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:911:263465"
           }
@@ -1666,7 +1541,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:149:2"
           }
@@ -1678,7 +1552,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:149:3"
           }
@@ -1690,7 +1563,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:201:21"
           }
@@ -1702,7 +1574,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:201:18"
           }
@@ -1716,7 +1587,6 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:305:132"
           }
@@ -1728,10 +1598,55 @@
           },
           "platforms": ["PD"],
           "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
             "com.figma.scopes": ["TEXT_FILL"],
             "com.figma.variableId": "VariableID:305:127"
           }
+        }
+      }
+    },
+    "focus": {
+      "brand": {
+        "values": {
+          "acronis": "{palette.blue.6}",
+          "brand-b": "{palette.teal.6}"
+        },
+        "platforms": ["PD"],
+        "$extensions": {
+          "com.figma.scopes": ["EFFECT_COLOR"],
+          "com.figma.variableId": "VariableID:1838:1394"
+        }
+      },
+      "error": {
+        "values": {
+          "acronis": "{palette.red.4}",
+          "brand-b": "{palette.red.4}"
+        },
+        "platforms": ["PD"],
+        "$extensions": {
+          "com.figma.scopes": ["EFFECT_COLOR"],
+          "com.figma.variableId": "VariableID:1828:1379"
+        }
+      },
+      "primary": {
+        "values": {
+          "acronis": "{palette.blue.4}",
+          "brand-b": "{palette.teal.4}"
+        },
+        "platforms": ["PD"],
+        "$extensions": {
+          "com.figma.scopes": ["EFFECT_COLOR"],
+          "com.figma.variableId": "VariableID:1828:1378"
+        }
+      },
+      "secondary": {
+        "values": {
+          "acronis": "{palette.blue.4}",
+          "brand-b": "{palette.teal.4}"
+        },
+        "platforms": ["PD"],
+        "$extensions": {
+          "com.figma.scopes": ["EFFECT_COLOR"],
+          "com.figma.variableId": "VariableID:1838:1393"
         }
       }
     }
@@ -1745,7 +1660,7 @@
           "fontSize": "{font.font-size.32}",
           "fontWeight": "{font.font-weight.regular}",
           "letterSpacing": "{font.letter-spacing.0}",
-          "lineHeight": { "unit": "px", "value": 40 }
+          "lineHeight": "{font.line-height.40}"
         },
         "platforms": ["PD"],
         "$extensions": {
@@ -1806,20 +1721,6 @@
           "com.figma.styleId": "S:370e51bf0854d130794d30019cf2ecba966d8264,"
         }
       },
-      "strong-underlined": {
-        "$value": {
-          "fontFamily": "{font.font-family.default}",
-          "fontSize": "{font.font-size.14}",
-          "fontWeight": "{font.font-weight.semibold}",
-          "letterSpacing": "{font.letter-spacing.0}",
-          "lineHeight": "{font.line-height.24}"
-        },
-        "platforms": ["PD"],
-        "$extensions": {
-          "com.acronis.textDecoration": "UNDERLINE",
-          "com.figma.styleId": "S:a451d4c9cb98b20bc426381248dcd75747de2e85,"
-        }
-      },
       "heading": {
         "$value": {
           "fontFamily": "{font.font-family.default}",
@@ -1847,23 +1748,49 @@
           "com.figma.styleId": "S:682a89d4e80492ccd040ed0902d7586063f54cec,"
         }
       },
-      "link": {
+      "form-label": {
         "$value": {
           "fontFamily": "{font.font-family.default}",
           "fontSize": "{font.font-size.14}",
-          "fontWeight": "{font.font-weight.semibold}",
+          "fontWeight": "{font.font-weight.regular}",
           "letterSpacing": "{font.letter-spacing.0}",
-          "lineHeight": "{font.line-height.24}"
+          "lineHeight": "{font.line-height.16}"
         },
         "platforms": ["PD"],
         "$extensions": {
-          "com.acronis.textDecoration": "UNDERLINE",
-          "com.figma.styleId": "S:76704e81b82496daf14ac42569f218a879da590a,"
+          "com.figma.styleId": "S:b44be8f3fabe30023a200eb551b32c22125726bf,"
         }
       }
     },
     "link": {
-      "primary": {
+      "default": {
+        "$value": {
+          "fontFamily": "{font.font-family.default}",
+          "fontSize": "{font.font-size.14}",
+          "fontWeight": "{font.font-weight.regular}",
+          "letterSpacing": "{font.letter-spacing.0}",
+          "lineHeight": "{font.line-height.24}"
+        },
+        "platforms": ["PD"],
+        "$extensions": {
+          "com.figma.styleId": "S:e6708b02f258a60f1349baf2107f23de0b32bd98,"
+        }
+      },
+      "default-underline": {
+        "$value": {
+          "fontFamily": "{font.font-family.default}",
+          "fontSize": "{font.font-size.14}",
+          "fontWeight": "{font.font-weight.regular}",
+          "letterSpacing": "{font.letter-spacing.0}",
+          "lineHeight": "{font.line-height.24}"
+        },
+        "platforms": ["PD"],
+        "$extensions": {
+          "com.acronis.textDecoration": "UNDERLINE",
+          "com.figma.styleId": "S:6060ea27d58a686cd6f949e3aeb969828ce9d0a4,"
+        }
+      },
+      "strong": {
         "$value": {
           "fontFamily": "{font.font-family.default}",
           "fontSize": "{font.font-size.14}",
@@ -1873,11 +1800,10 @@
         },
         "platforms": ["PD"],
         "$extensions": {
-          "com.acronis.textDecoration": "UNDERLINE",
           "com.figma.styleId": "S:48319df2de2af8c0ca92099a2933581ec8e19df9,"
         }
       },
-      "secondary": {
+      "strong-underline": {
         "$value": {
           "fontFamily": "{font.font-family.default}",
           "fontSize": "{font.font-size.14}",
@@ -1888,7 +1814,7 @@
         "platforms": ["PD"],
         "$extensions": {
           "com.acronis.textDecoration": "UNDERLINE",
-          "com.figma.styleId": "S:e6708b02f258a60f1349baf2107f23de0b32bd98,"
+          "com.figma.styleId": "S:8558f4afc56ed692b63a08aecbd26ac6db225326,"
         }
       }
     },
@@ -1937,7 +1863,7 @@
       "default": {
         "$value": {
           "fontFamily": "{font.font-family.default}",
-          "fontSize": { "unit": "px", "value": 11 },
+          "fontSize": "{font.font-size.11}",
           "fontWeight": "{font.font-weight.semibold}",
           "letterSpacing": "{font.letter-spacing.1}",
           "lineHeight": "{font.line-height.16}"
@@ -1950,7 +1876,7 @@
       "heading": {
         "$value": {
           "fontFamily": "{font.font-family.default}",
-          "fontSize": { "unit": "px", "value": 11 },
+          "fontSize": "{font.font-size.11}",
           "fontWeight": "{font.font-weight.bold}",
           "letterSpacing": "{font.letter-spacing.1}",
           "lineHeight": "{font.line-height.16}"
