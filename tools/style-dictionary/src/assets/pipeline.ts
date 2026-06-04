@@ -59,10 +59,7 @@ const RASTER_EXTS = new Set(['png', 'webp']);
 
 export interface BuildAssetsOptions {
   filter: AssetFilter;
-  /** Restrict to these source packs (CI per-pack rebuild); undefined = all. */
-  packs?: string[];
-  /** Dist dir for this filter's assets (`dist/<filter>-assets`). */
-  outDir: string;
+  /** Dist root for assets (caller typically passes the tool's `dist/assets/`). */
   log: (msg: string) => void;
 }
 
@@ -157,8 +154,6 @@ export function buildAssetsForFilter(opts: BuildAssetsOptions): void {
       writeReact(reactDeliverable, components);
       writeManifest(reactDeliverable, manifest);
       componentCount = components.length;
-    }
-
-    log(`${deliverable}: ${svgCount} svg${group.react ? ` + ${componentCount} react` : ''}`);
+    log(`${deliverable}: ${svgCount} files${group.react ? ` + ${componentCount} react` : ''}`);
   }
 }

@@ -65,6 +65,9 @@ function parseKey(key: string): Pair {
   // Neither a filter (pd/web) nor an output (dtcg/css/assets) contains a dash,
   // so the last dash is always the boundary between them.
   const dash = key.lastIndexOf('-');
+  if (dash <= 0 || dash === key.length - 1) {
+    throw new Error(`Unknown platform: ${key}. Known: ${validKeys().join(', ')}.`);
+  }
   const filter = key.slice(0, dash) as Filter;
   const output = key.slice(dash + 1) as Output;
   if (!OUTPUTS.includes(output) || !filtersFor(output).includes(filter)) {
