@@ -19,15 +19,15 @@
   "dependencies": {
     "@acronis-platform/design-theme": "workspace:*",
     "@acronis-platform/icons-react": "workspace:*",
-    "@acronis-platform/ui-react": "workspace:*"
+    "@acronis-platform/ui-react": "workspace:*",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "5.1.1",
     "eslint": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:"
   }

@@ -72,10 +72,10 @@ export function ElementsSection() {
             alignItems: 'center',
           }}
         >
-          <input type="text" placeholder="text input" />
-          <input type="email" placeholder="email" />
-          <input type="checkbox" defaultChecked /> <label>checkbox</label>
-          <input type="radio" name="r" defaultChecked /> <label>radio</label>
+          <input id="checkbox" type="checkbox" defaultChecked />{' '}
+          <label htmlFor="checkbox">checkbox</label>
+          <input id="radio" type="radio" name="r" defaultChecked />{' '}
+          <label htmlFor="radio">radio</label>
           <select defaultValue="a">
             <option value="a">Option A</option>
             <option value="b">Option B</option>

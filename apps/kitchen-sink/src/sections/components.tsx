@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 import { Button, Switch } from '@acronis-platform/ui-react';
 import {
   ChevronDownIcon,
@@ -19,7 +21,7 @@ function Row({
   children,
 }: {
   label: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
