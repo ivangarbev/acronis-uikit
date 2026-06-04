@@ -51,8 +51,11 @@ jobs:
       - name: Build Acronis UI Component Library
         run: pnpm --filter ./packages/ui-legacy run build
 
-      #      - name: Build icons
-      #        run: pnpm --filter ./packages/icons run build
+      # apps/kitchen-sink imports ui-react + icons-react by package name, so
+      # their dist (incl. types) must exist before `pnpm -r typecheck`. Build
+      # kitchen-sink's dependency graph (design-theme → icons-react → ui-react).
+      - name: Build kitchen-sink dependencies
+        run: pnpm --filter "@acronis-platform/kitchen-sink^..." run build
 
       - name: Lint
         run: pnpm -r lint
