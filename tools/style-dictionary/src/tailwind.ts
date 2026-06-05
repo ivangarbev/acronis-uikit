@@ -12,10 +12,17 @@ import type { TransformedToken } from 'style-dictionary/types';
 import { type Filter, rel, tailwindDir, tailwindPreset } from './platforms';
 import { BRANDS, resolveColorMap, resolveTokens } from './tokens';
 
-// Tailwind theme namespaces we populate from tokens. Keys keep the `ui-` prefix
-// (so utilities read `bg-ui-…`, `text-ui-…`, `rounded-ui-…`).
+// Tailwind theme namespaces we populate from tokens. Colors are split into
+// role-restricted namespaces (a `background` token only makes `bg-*`, a `text`
+// token only `text-*`, …) so the utility prefix carries the role and the key
+// doesn't repeat it. Keys drop the `ui-` prefix that the CSS variables keep, so
+// utilities read `bg-surface-primary`, `text-on-surface-primary`, `ring-brand`.
 interface ThemeExtend {
-  colors: Record<string, string>;
+  backgroundColor: Record<string, string>;
+  textColor: Record<string, string>;
+  borderColor: Record<string, string>;
+  fill: Record<string, string>;
+  ringColor: Record<string, string>;
   backgroundImage: Record<string, string>;
   fontFamily: Record<string, string>;
   fontSize: Record<string, [string, Record<string, string>]>;
@@ -24,13 +31,79 @@ interface ThemeExtend {
 }
 
 const emptyTheme = (): ThemeExtend => ({
-  colors: {},
+  backgroundColor: {},
+  textColor: {},
+  borderColor: {},
+  fill: {},
+  ringColor: {},
   backgroundImage: {},
   fontFamily: {},
   fontSize: {},
   spacing: {},
   borderRadius: {},
 });
+
+const stripUi = (name: string): string => name.replace(/^ui-/, '');
+
+// ── Color → Tailwind namespace routing ───────────────────────────────────────
+// Acronis colors encode their role in the token path (`background`, `text`,
+// `border`, `glyph` icons, `focus` rings). Tailwind's model is that the theme
+// key names the utility, so we route each color into the role-specific namespace
+// and drop the role word from the key: `colors.background.surface.primary` →
+// `backgroundColor: { 'surface-primary' }` → `bg-surface-primary`. Icons paint
+// via `fill`/`stroke` (`currentColor`), so `glyph` → `fill` (which also keeps it
+// from colliding with `text` keys that share leaf names like `on-surface-primary`).
+type ColorNamespace = 'backgroundColor' | 'textColor' | 'borderColor' | 'fill' | 'ringColor';
+
+// Semantic tier: the segment right after `colors` is the role.
+const SEMANTIC_ROLE: Record<string, ColorNamespace> = {
+  background: 'backgroundColor',
+  text: 'textColor',
+  border: 'borderColor',
+  glyph: 'fill',
+  focus: 'ringColor',
+};
+
+// Component tier: a role word somewhere in the path. PURE roles set the namespace
+// and are dropped from the key; DESC(riptive) roles set the namespace but stay in
+// the key (a switch `circle`, a breadcrumb `chevron` are meaningful descriptors).
+const PURE_ROLE: Record<string, ColorNamespace> = {
+  background: 'backgroundColor',
+  border: 'borderColor',
+  'border-color': 'borderColor',
+  text: 'textColor',
+  label: 'textColor',
+  color: 'textColor',
+  icon: 'fill',
+  glyph: 'fill',
+};
+const DESC_ROLE: Record<string, ColorNamespace> = {
+  circle: 'backgroundColor',
+  divider: 'borderColor',
+  chevron: 'fill',
+  link: 'textColor',
+  value: 'textColor',
+  title: 'textColor',
+};
+
+/** Map a color token's path to its Tailwind namespace + key (no `ui-`, no role word). */
+export function routeColor(path: string[]): { namespace: ColorNamespace; key: string } {
+  if (path[0] === 'colors' && SEMANTIC_ROLE[path[1]]) {
+    return { namespace: SEMANTIC_ROLE[path[1]], key: path.slice(2).join('-') };
+  }
+  for (let i = 1; i < path.length; i++) {
+    if (PURE_ROLE[path[i]])
+      return { namespace: PURE_ROLE[path[i]], key: path.filter((_, j) => j !== i).join('-') };
+    if (DESC_ROLE[path[i]]) return { namespace: DESC_ROLE[path[i]], key: path.join('-') };
+  }
+  throw new Error(`Cannot route color token to a Tailwind namespace: ${path.join('.')}`);
+}
+
+/** Assign into a namespace map, throwing if two tokens land on the same key. */
+function put(map: Record<string, string>, key: string, value: string, path: string[]): void {
+  if (key in map) throw new Error(`Tailwind key collision on '${key}' (at ${path.join('.')})`);
+  map[key] = value;
+}
 
 /** Parse a `prop: value;`-per-line declaration block into a property map. */
 function parseDeclarations(block: string): Record<string, string> {
@@ -57,26 +130,30 @@ function addTypography(theme: ThemeExtend, key: string, block: string): void {
 }
 
 /** Build one brand's `theme.extend` from its resolved tokens (baked values). */
-function buildThemeExtend(
+export function buildThemeExtend(
   tokens: TransformedToken[],
   darkColors: Map<string, string>
 ): ThemeExtend {
   const theme = emptyTheme();
   for (const token of tokens) {
-    const key = token.name; // already `ui-…`
     const value = typeof token.$value === 'string' ? token.$value : null;
     if (token.$type === 'color') {
       if (value === null) continue;
       const dark = darkColors.get(token.path.join('.')) ?? value;
-      theme.colors[key] = `light-dark(${value}, ${dark})`;
+      const { namespace, key } = routeColor(token.path);
+      put(theme[namespace], key, `light-dark(${value}, ${dark})`, token.path);
     } else if (token.$type === 'gradient') {
-      if (value !== null) theme.backgroundImage[key] = value;
+      if (value === null) continue;
+      // Gradients can't be a `*-color` (those set a solid paint); Tailwind's
+      // gradient namespace is `backgroundImage` (→ `bg-*` setting background-image).
+      put(theme.backgroundImage, routeColor(token.path).key, value, token.path);
     } else if (token.$type === 'typography') {
-      if (value !== null) addTypography(theme, key, value);
+      if (value !== null) addTypography(theme, stripUi(token.name), value);
     } else if (token.$type === 'dimension') {
       if (value === null) continue;
-      if (key.includes('radius')) theme.borderRadius[key] = value;
-      else theme.spacing[key] = value;
+      const key = stripUi(token.name);
+      if (key.includes('radius')) put(theme.borderRadius, key, value, token.path);
+      else put(theme.spacing, key, value, token.path);
     }
   }
   return theme;

@@ -1,5 +1,7 @@
 // CSS rendering for the token build. Two kinds of declaration share a file:
-//   - colors + dimensions + gradients → custom properties in `:root`. Colors are
+//   - colors + dimensions + gradients → custom properties in `:root, :host` (so
+//     the tokens resolve in the light DOM and inside web-component shadow roots).
+//     Colors are
 //     theme-aware: the light value is zipped with the matching dark value
 //     (supplied via `darkTokens`, keyed by token path) into `light-dark()`.
 //   - typography composites → utility classes (`.ui-typography-* { … }`). The
@@ -75,7 +77,7 @@ export interface SerializeOptions {
   brand: string;
   /** `semantic` or a component name — recorded in the file header. */
   tier: string;
-  /** Override-only files are bare `:root {}`; base files carry the theme shell. */
+  /** Override-only files are bare `:root, :host {}`; base files carry the theme shell. */
   isOverride: boolean;
   vars: Map<string, string>;
   classes: Map<string, string>;
@@ -107,10 +109,10 @@ export function serializeCss({
   // Base files declare the light/dark shell; override files only restate the
   // changed custom properties (they layer on top of the imported base).
   const root = isOverride
-    ? `:root {\n${varLines}\n}`
-    : `:root {\n  color-scheme: light dark;\n\n${varLines}\n}\n\n` +
-      `[data-theme='light'] {\n  color-scheme: light;\n}\n\n` +
-      `[data-theme='dark'] {\n  color-scheme: dark;\n}`;
+    ? `:root, :host {\n${varLines}\n}`
+    : `:root, :host {\n  color-scheme: light dark;\n\n${varLines}\n}\n\n` +
+      `[data-theme='light'], :host([data-theme='light']) {\n  color-scheme: light;\n}\n\n` +
+      `[data-theme='dark'], :host([data-theme='dark']) {\n  color-scheme: dark;\n}`;
 
   return `${header}\n${[root, classBlocks].filter(Boolean).join('\n\n')}\n`;
 }
