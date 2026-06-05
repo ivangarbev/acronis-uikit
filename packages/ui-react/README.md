@@ -1,8 +1,8 @@
 # @acronis-platform/ui-react
 
 The next-generation Acronis React component library — a **Base UI**
-implementation, themed by [`@acronis-platform/design-theme`](../design-theme)
-(generated from [`@acronis-platform/design-tokens`](../design/tokens)).
+implementation, themed by [`@acronis-platform/tokens-pd`](../tokens-pd)
+(generated from [`@acronis-platform/design-tokens`](../design-tokens)).
 
 > Early days: this package is being built out component by component. See
 > [`AGENTS.md`](./AGENTS.md) for conventions.

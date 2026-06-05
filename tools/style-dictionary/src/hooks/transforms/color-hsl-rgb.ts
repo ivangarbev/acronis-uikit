@@ -11,7 +11,7 @@ import { transformTypes } from 'style-dictionary/enums';
 
 export const COLOR_HSL_RGB = 'color/hsl-to-rgb';
 
-interface DtcgColor {
+export interface DtcgColor {
   colorSpace: string;
   components: [number, number, number];
   alpha?: number;
@@ -21,8 +21,9 @@ const channel = (value: number): string =>
   String(Math.round(Math.max(0, Math.min(255, value))));
 
 // HSL → modern `rgb(r g b)`, or `rgb(r g b / a)` when it carries opacity. The raw
-// decimal alpha is kept so fractional values stay exact.
-function hslToRgb(color: DtcgColor): string {
+// decimal alpha is kept so fractional values stay exact. Exported so the gradient
+// transform can render each color stop with the same conversion.
+export function hslColorToRgb(color: DtcgColor): string {
   if (color.colorSpace !== 'hsl') {
     throw new Error(
       `Unsupported colorSpace "${color.colorSpace}" — only hsl is handled.`
@@ -48,5 +49,5 @@ export const colorHslToRgb: Transform = {
   type: transformTypes.value,
   transitive: false,
   filter: (token) => token.$type === 'color',
-  transform: (token) => hslToRgb(token.$value as DtcgColor),
+  transform: (token) => hslColorToRgb(token.$value as DtcgColor),
 };

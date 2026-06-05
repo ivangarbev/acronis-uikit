@@ -2,8 +2,9 @@
 // domains (tokens, assets) agree on, owned by none of them (so neither domain has
 // to import the CLI). A build target is `${filter}-${output}`: `filter` maps to
 // the `platforms` enum (PD | WEB) that both design-tokens and design-assets
-// declare; `output` is the artifact kind. Output lands under `dist/tokens/`
-// (dtcg, css) or `dist/assets/` (assets).
+// declare; `output` is the artifact kind. The token outputs (dtcg, css, tailwind)
+// land inside the published `@acronis-platform/tokens-pd` package; assets stay
+// under this tool's own `dist/assets/`.
 
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { ASSET_FILTERS } from './assets';
 
 export type Filter = 'pd' | 'web';
-export type Output = 'dtcg' | 'css' | 'assets';
+export type Output = 'dtcg' | 'css' | 'tailwind' | 'assets';
 export type PlatformKey = `${Filter}-${Output}`;
 
 /** Filter slug → the `platforms` enum value kept by normalization / asset filtering. */
@@ -20,7 +21,7 @@ export const FILTER_ENUM: Record<Filter, 'PD' | 'WEB'> = { pd: 'PD', web: 'WEB' 
 /** Token filters that have source data today. WEB lands here when it exists. */
 export const FILTERS: Filter[] = ['pd'];
 
-export const OUTPUTS: Output[] = ['dtcg', 'css', 'assets'];
+export const OUTPUTS: Output[] = ['dtcg', 'css', 'tailwind', 'assets'];
 
 /**
  * Which filters have source data for a given output. `dtcg`/`css` come from the
@@ -38,11 +39,37 @@ export const ALL_FILTERS: Filter[] = [...new Set<Filter>([...FILTERS, ...(ASSET_
 /** Tool root (`tools/style-dictionary/`). */
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
-/** Gitignored build output root. `dist/` splits into `tokens/` and `assets/`. */
+/** Gitignored build output root. Today only `assets/` lives here. */
 export const DIST = path.join(ROOT, 'dist');
 
-/** Token artifacts live under `dist/tokens/<key>/` (e.g. `dist/tokens/pd-css/`). */
-export const tokenDistDir = (key: PlatformKey): string => path.join(DIST, 'tokens', key);
+/**
+ * The published token package the token builds write into:
+ * `packages/tokens-pd/`. Its generated contents are committed.
+ */
+export const TOKENS_PD = path.resolve(ROOT, '..', '..', 'packages', 'tokens-pd');
+
+/** The DTCG intermediate ships under `tokens-pd/dtcg/`. */
+export const dtcgDir = (): string => path.join(TOKENS_PD, 'dtcg');
+
+/** All CSS lives under `tokens-pd/css/`. */
+export const cssDir = (): string => path.join(TOKENS_PD, 'css');
+
+/** Semantic-tier CSS lives at the css root: `tokens-pd/css/<brand>.css`. */
+export const semanticFile = (brand: string): string => path.join(cssDir(), `${brand}.css`);
+
+/** Each component tier gets its own dir: `tokens-pd/css/<component>/`. */
+export const componentDir = (component: string): string => path.join(cssDir(), component);
+
+/** Component-tier CSS: `tokens-pd/css/<component>/<brand>.css`. */
+export const componentFile = (component: string, brand: string): string =>
+  path.join(componentDir(component), `${brand}.css`);
+
+/** Tailwind presets live under `tokens-pd/tailwind/`. */
+export const tailwindDir = (): string => path.join(TOKENS_PD, 'tailwind');
+
+/** Per-brand Tailwind preset: `tokens-pd/tailwind/<brand>.js`. */
+export const tailwindPreset = (brand: string): string =>
+  path.join(tailwindDir(), `${brand}.js`);
 
 /** Asset deliverables live under `dist/assets/<filter>-<group>-<format>/`. */
 export const ASSETS_DIST = path.join(DIST, 'assets');

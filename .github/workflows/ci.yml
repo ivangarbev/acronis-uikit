@@ -51,11 +51,11 @@ jobs:
       - name: Build Acronis UI Component Library
         run: pnpm --filter ./packages/ui-legacy run build
 
-      # apps/kitchen-sink imports ui-react + icons-react by package name, so
-      # their dist (incl. types) must exist before `pnpm -r typecheck`. Build
-      # kitchen-sink's dependency graph (design-theme → icons-react → ui-react).
-      - name: Build kitchen-sink dependencies
-        run: pnpm --filter "@acronis-platform/kitchen-sink^..." run build
+      # Apps import the libraries by package name, so their dist (incl. types)
+      # must exist before `pnpm -r typecheck`. Building ui-react's graph covers
+      # tokens-pd (generated CSS), icons-react, and the design-data packages.
+      - name: Build library dependencies
+        run: pnpm --filter "@acronis-platform/ui-react..." run build
 
       - name: Lint
         run: pnpm -r lint
@@ -71,6 +71,11 @@ jobs:
       # is exercised against the same lockfile we just installed from.
       - name: Build
         run: pnpm -r build
+
+      # tokens-pd ships generated, committed artifacts. Fail the build if a token
+      # change wasn't re-generated + committed (the build above is idempotent).
+      - name: Verify generated tokens-pd is committed
+        run: git diff --exit-code -- packages/tokens-pd
 
       - name: Test
         run: pnpm -r test

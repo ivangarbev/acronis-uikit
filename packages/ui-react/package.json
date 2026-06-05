@@ -54,8 +54,8 @@
   },
   "dependencies": {
     "@acronis-platform/design-assets": "workspace:*",
-    "@acronis-platform/design-theme": "workspace:*",
     "@acronis-platform/icons-react": "workspace:*",
+    "@acronis-platform/tokens-pd": "workspace:*",
     "@base-ui/react": "catalog:",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",

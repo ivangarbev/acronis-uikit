@@ -44,15 +44,15 @@ distinct role:
 | `apps/kitchen-sink/`      | `@acronis-platform/kitchen-sink`       | no         | Vite SPA — one-page showcase of tokens, elements, components, icons    | [AGENTS.md](apps/kitchen-sink/AGENTS.md)      |
 | `packages/design-tokens/` | `@acronis-platform/design-tokens`      | **yes**    | JSON data only (DTCG-2025.10 design tokens), ajv-validated             | [AGENTS.md](packages/design-tokens/AGENTS.md) |
 | `packages/design-assets/` | `@acronis-platform/design-assets`      | **yes**    | JSON data only (icon/illustration manifests + binaries), ajv-validated | [AGENTS.md](packages/design-assets/AGENTS.md) |
-| `packages/design-theme/`  | `@acronis-platform/design-theme`       | **yes**    | Style Dictionary build of `tokens` → CSS / SCSS / JS                   | [AGENTS.md](packages/design-theme/AGENTS.md)  |
-| `tools/style-dictionary/` | `@acronis-platform/style-dictionary`   | no         | Style Dictionary v5 build: design-tokens → per-brand CSS               | [AGENTS.md](tools/style-dictionary/AGENTS.md) |
+| `packages/tokens-pd/`     | `@acronis-platform/tokens-pd`          | **yes**    | Generated (committed) CSS + Tailwind presets + DTCG, built by the tool | [AGENTS.md](packages/tokens-pd/AGENTS.md)     |
+| `tools/style-dictionary/` | `@acronis-platform/style-dictionary`   | no         | Style Dictionary v5 build: design-tokens → tokens-pd CSS/presets       | [AGENTS.md](tools/style-dictionary/AGENTS.md) |
 
 `packages/` holds the published workspaces:
 
 - `packages/ui-legacy/` — the published shadcn-based UI library.
 - `packages/ui-react/` houses the published next-generation **Base UI**
   library (`@base-ui/react` as a direct dep), themed by
-  `@acronis-platform/design-theme`. New component work goes here.
+  `@acronis-platform/tokens-pd`. New component work goes here.
 - `packages/icons-react/` — published React icon components, **generated**
   from `@acronis-platform/design-assets` (24px masters + scale/stroke rules
   baked into a `size` prop). Per-pack subpath exports, tree-shakeable.
@@ -61,8 +61,10 @@ distinct role:
   binaries) only: no build step, no runtime API. Their one real script
   is `validate` (ajv); `build`/`dev`/`clean`/`lint`/`typecheck` are
   no-ops and `test` aliases `validate`.
-- `packages/design-theme` is the one design package with a real build: it runs Style
-  Dictionary over `tokens` to emit consumable CSS / SCSS / JS artifacts.
+- `packages/tokens-pd` ships the consumable token artifacts (per-brand CSS,
+  per-component CSS, Tailwind presets, DTCG). It has **no build logic of its own**
+  — its `build` delegates to `tools/style-dictionary`, which writes the generated
+  (and committed) output into the package.
 
 `tools/` holds private (unpublished) build tooling:
 

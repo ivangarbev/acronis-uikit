@@ -24,6 +24,7 @@ import {
   type PlatformKey,
   rel,
 } from './platforms';
+import { buildTailwind } from './tailwind';
 import { buildCss, buildDtcg } from './tokens';
 
 /** Enumerate the asset pack names (`packs/*.json` stems, = each pack's `name`). */
@@ -120,13 +121,14 @@ function parseArgs(args: string[]): ParsedArgs {
 async function main(): Promise<void> {
   const { packs, pairs } = parseArgs(process.argv.slice(2));
 
-  // css reads the dtcg files, so build dtcg first for every filter needing either.
+  // css + tailwind read the dtcg files, so build dtcg first for any filter needing them.
   const dtcgFilters = new Set<Filter>();
   for (const { filter, output } of pairs) {
-    if (output === 'dtcg' || output === 'css') dtcgFilters.add(filter);
+    if (output === 'dtcg' || output === 'css' || output === 'tailwind') dtcgFilters.add(filter);
   }
   for (const filter of dtcgFilters) buildDtcg(filter);
   for (const { filter, output } of pairs) if (output === 'css') await buildCss(filter);
+  for (const { filter, output } of pairs) if (output === 'tailwind') await buildTailwind(filter);
   for (const { filter, output } of pairs) if (output === 'assets') buildAssets(filter, packs);
 }
 

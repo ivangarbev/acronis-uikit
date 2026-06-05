@@ -1,50 +1,68 @@
-// Format: render one brand's resolved tokens as CSS. Two kinds of output share
-// the file:
-//   - colors + dimensions → custom properties in `:root`. Colors are theme-aware:
-//     the light value is zipped with the matching dark value (supplied via
-//     `options.darkTokens`, keyed by token path) into `light-dark()`.
-//   - typography composites → utility classes (`.typography-body-default { … }`).
-//     The `typography/css-class` transform has already built each token's
-//     declaration block; this format only wraps it in the selector and indents it.
-// See context/output.md.
+// CSS rendering for the token build. Two kinds of declaration share a file:
+//   - colors + dimensions + gradients → custom properties in `:root`. Colors are
+//     theme-aware: the light value is zipped with the matching dark value
+//     (supplied via `darkTokens`, keyed by token path) into `light-dark()`.
+//   - typography composites → utility classes (`.ui-typography-* { … }`). The
+//     `typography/css-class` transform has already built each declaration block;
+//     rendering only wraps it in the selector and indents it.
+//
+// `collectDecls` turns a resolved token slice into name→value / selector→block
+// maps; `serializeCss` renders a file from those maps. Keeping the two apart lets
+// the token builder partition tokens per output file and diff one brand against
+// another (override-only files) before serializing. See context/output.md.
 
-import type { Format, TransformedToken } from 'style-dictionary/types';
+import type { TransformedToken } from 'style-dictionary/types';
 
 export const CSS_LIGHT_DARK = 'css/light-dark';
 
-/** Options the CSS builder threads through the file config to this format. */
-export interface CssLightDarkOptions {
-  /** Token path (`a.b.c`) → resolved dark-mode value, for the `light-dark()` pair. */
-  darkTokens: Map<string, string>;
-  /** Brand name, for the file header. */
-  brand: string;
-  /** Pretty path of the destination, for the build log line. */
-  label: string;
+/** Resolved declarations of one token slice, keyed for rendering and diffing. */
+export interface Decls {
+  /** CSS var name → value (colors as the `light-dark(...)` pair). */
+  vars: Map<string, string>;
+  /** Class selector → declaration block (typography utilities). */
+  classes: Map<string, string>;
+  /** Tokens that could not be represented, for the build log. */
+  skipped: string[];
 }
 
-interface CssVar {
-  name: string;
-  value: string;
-}
+/**
+ * Collect a resolved token slice into declaration maps. `darkTokens` maps a
+ * token path (`a.b.c`) to its resolved dark-mode color value; a color with no
+ * dark entry falls back to its light value.
+ */
+export function collectDecls(
+  tokens: TransformedToken[],
+  darkTokens: Map<string, string>
+): Decls {
+  const vars = new Map<string, string>();
+  const classes = new Map<string, string>();
+  const skipped: string[] = [];
 
-interface CssClass {
-  selector: string;
-  /** The declaration block (one `property: value;` per line), unindented. */
-  declarations: string;
-}
-
-function colorVar(
-  token: TransformedToken,
-  darkTokens: Map<string, string>,
-  skipped: string[]
-): CssVar | null {
-  const light = typeof token.$value === 'string' ? token.$value : null;
-  const dark = darkTokens.get(token.path.join('.')) ?? light;
-  if (light === null || dark == null) {
-    skipped.push(`${token.name} (color)`);
-    return null;
+  for (const token of tokens) {
+    if (token.$type === 'color') {
+      const light = typeof token.$value === 'string' ? token.$value : null;
+      const dark = darkTokens.get(token.path.join('.')) ?? light;
+      if (light === null || dark == null) {
+        skipped.push(`${token.name} (color)`);
+        continue;
+      }
+      vars.set(token.name, `light-dark(${light}, ${dark})`);
+    } else if (token.$type === 'typography') {
+      // `typography/css-class` transformed the composite into a declaration block.
+      if (typeof token.$value === 'string' && token.$value.length) {
+        classes.set(`.${token.name}`, token.$value);
+      } else {
+        skipped.push(`${token.name} (typography)`);
+      }
+    } else if (typeof token.$value === 'string') {
+      // dimension / scalar / gradient — already CSS-ready (theme-invariant).
+      vars.set(token.name, token.$value);
+    } else {
+      skipped.push(`${token.name} (${token.$type})`);
+    }
   }
-  return { name: token.name, value: `light-dark(${light}, ${dark})` };
+
+  return { vars, classes, skipped };
 }
 
 const indent = (block: string): string =>
@@ -53,70 +71,46 @@ const indent = (block: string): string =>
     .map((line) => `  ${line}`)
     .join('\n');
 
-function render(brand: string, vars: CssVar[], classes: CssClass[]): string {
-  const declarations = vars.map((v) => `  --${v.name}: ${v.value};`).join('\n');
-  const classBlocks = classes
-    .map((c) => `${c.selector} {\n${indent(c.declarations)}\n}`)
+export interface SerializeOptions {
+  brand: string;
+  /** `semantic` or a component name — recorded in the file header. */
+  tier: string;
+  /** Override-only files are bare `:root {}`; base files carry the theme shell. */
+  isOverride: boolean;
+  vars: Map<string, string>;
+  classes: Map<string, string>;
+}
+
+/** Render a CSS file from declaration maps. */
+export function serializeCss({
+  brand,
+  tier,
+  isOverride,
+  vars,
+  classes,
+}: SerializeOptions): string {
+  const varLines = [...vars.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([name, value]) => `  --${name}: ${value};`)
+    .join('\n');
+
+  const classBlocks = [...classes.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([selector, block]) => `${selector} {\n${indent(block)}\n}`)
     .join('\n\n');
 
-  return `/* Generated by @acronis-platform/style-dictionary — DO NOT EDIT. */
-/* Source: @acronis-platform/design-tokens • brand: ${brand} */
+  const header =
+    `/* Generated by @acronis-platform/style-dictionary — DO NOT EDIT. */\n` +
+    `/* Source: @acronis-platform/design-tokens • brand: ${brand} • tier: ${tier}` +
+    `${isOverride ? ' • overrides only' : ''} */\n`;
 
-:root {
-  color-scheme: light dark;
+  // Base files declare the light/dark shell; override files only restate the
+  // changed custom properties (they layer on top of the imported base).
+  const root = isOverride
+    ? `:root {\n${varLines}\n}`
+    : `:root {\n  color-scheme: light dark;\n\n${varLines}\n}\n\n` +
+      `[data-theme='light'] {\n  color-scheme: light;\n}\n\n` +
+      `[data-theme='dark'] {\n  color-scheme: dark;\n}`;
 
-${declarations}
+  return `${header}\n${[root, classBlocks].filter(Boolean).join('\n\n')}\n`;
 }
-
-[data-theme='light'] {
-  color-scheme: light;
-}
-
-[data-theme='dark'] {
-  color-scheme: dark;
-}
-
-${classBlocks}
-`;
-}
-
-export const cssLightDark: Format = {
-  name: CSS_LIGHT_DARK,
-  format: ({ dictionary, file }) => {
-    const { darkTokens, brand, label } = file.options as CssLightDarkOptions;
-    const vars: CssVar[] = [];
-    const classes: CssClass[] = [];
-    const skipped: string[] = [];
-
-    for (const token of dictionary.allTokens) {
-      if (token.$type === 'color') {
-        const cssVar = colorVar(token, darkTokens, skipped);
-        if (cssVar) vars.push(cssVar);
-      } else if (token.$type === 'typography') {
-        // `typography/css-class` transformed the composite into a declaration block.
-        if (typeof token.$value === 'string' && token.$value.length) {
-          classes.push({ selector: `.${token.name}`, declarations: token.$value });
-        } else {
-          skipped.push(`${token.name} (typography)`);
-        }
-      } else if (typeof token.$value === 'string') {
-        // dimension / scalar — already CSS-ready.
-        vars.push({ name: token.name, value: token.$value });
-      } else {
-        // gradient and any other unhandled type are out of MVP scope.
-        skipped.push(`${token.name} (${token.$type})`);
-      }
-    }
-
-    vars.sort((a, b) => a.name.localeCompare(b.name));
-    classes.sort((a, b) => a.selector.localeCompare(b.selector));
-
-    const note = skipped.length
-      ? ` (${skipped.length} unsupported tokens skipped: ${skipped.join(', ')})`
-      : '';
-    console.log(
-      `✓ ${label} — ${vars.length} variables, ${classes.length} typography classes${note}`
-    );
-    return render(brand, vars, classes);
-  },
-};

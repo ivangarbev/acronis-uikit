@@ -4,10 +4,10 @@
 // small in-memory fixture token tree, so the normalization rules and the
 // light/dark zip stay pinned independently of a full `build`.
 
-import type { Dictionary, TransformedToken } from 'style-dictionary/types';
-import { describe, expect, it, vi } from 'vitest';
+import type { TransformedToken } from 'style-dictionary/types';
+import { describe, expect, it } from 'vitest';
 
-import { cssLightDark, type CssLightDarkOptions } from '../formats/css-light-dark';
+import { collectDecls, serializeCss } from '../formats/css-light-dark';
 import { normalizeTree } from '../preprocessors/acronis-dtcg';
 
 // ── normalizeTree (stage 1) ──────────────────────────────────────────────────
@@ -98,63 +98,91 @@ describe('normalizeTree', () => {
   });
 });
 
-// ── cssLightDark format (stage 2) ────────────────────────────────────────────
+// ── collectDecls + serializeCss (stage 2) ────────────────────────────────────
 
 const token = (over: Partial<TransformedToken>): TransformedToken =>
   ({ name: 'x', path: ['x'], ...over }) as TransformedToken;
 
-const renderCss = (tokens: TransformedToken[], darkTokens = new Map<string, string>()): string => {
-  const options: CssLightDarkOptions = { darkTokens, brand: 'acronis', label: 'test.css' };
-  // The format is synchronous; SD types it as `string | Promise<string>`.
-  return cssLightDark.format({
-    dictionary: { allTokens: tokens } as Dictionary,
-    file: { destination: 'test.css', format: 'x', options },
-    platform: {},
-    options: {},
-  }) as string;
+const render = (tokens: TransformedToken[], darkTokens = new Map<string, string>()): string => {
+  const { vars, classes } = collectDecls(tokens, darkTokens);
+  return serializeCss({ brand: 'acronis', tier: 'semantic', isOverride: false, vars, classes });
 };
 
-describe('cssLightDark format', () => {
+describe('collectDecls', () => {
   it('zips a color into light-dark() using its dark override', () => {
-    const css = renderCss(
-      [token({ name: 'color-bg', path: ['color', 'bg'], $type: 'color', $value: 'rgb(255 255 255)' })],
-      new Map([['color.bg', 'rgb(0 0 0)']])
+    const css = render(
+      [token({ name: 'ui-bg', path: ['colors', 'bg'], $type: 'color', $value: 'rgb(255 255 255)' })],
+      new Map([['colors.bg', 'rgb(0 0 0)']])
     );
-    expect(css).toContain('--color-bg: light-dark(rgb(255 255 255), rgb(0 0 0));');
+    expect(css).toContain('--ui-bg: light-dark(rgb(255 255 255), rgb(0 0 0));');
   });
 
   it('falls back to the light value when no dark override exists', () => {
-    const css = renderCss([
-      token({ name: 'color-bg', path: ['color', 'bg'], $type: 'color', $value: 'rgb(255 255 255)' }),
+    const css = render([
+      token({ name: 'ui-bg', path: ['colors', 'bg'], $type: 'color', $value: 'rgb(255 255 255)' }),
     ]);
-    expect(css).toContain('--color-bg: light-dark(rgb(255 255 255), rgb(255 255 255));');
+    expect(css).toContain('--ui-bg: light-dark(rgb(255 255 255), rgb(255 255 255));');
   });
 
   it('emits a dimension token as a plain custom property', () => {
-    const css = renderCss([token({ name: 'spacing-sm', $type: 'dimension', $value: '8px' })]);
-    expect(css).toContain('--spacing-sm: 8px;');
+    const css = render([token({ name: 'ui-spacing-sm', $type: 'dimension', $value: '8px' })]);
+    expect(css).toContain('--ui-spacing-sm: 8px;');
+  });
+
+  it('emits a resolved gradient string as a plain custom property', () => {
+    const css = render([
+      token({ name: 'ui-bg-ai', $type: 'gradient', $value: 'linear-gradient(180deg, rgb(0 0 0) 0%)' }),
+    ]);
+    expect(css).toContain('--ui-bg-ai: linear-gradient(180deg, rgb(0 0 0) 0%);');
   });
 
   it('wraps a typography composite in a utility class selector', () => {
-    const css = renderCss([
-      token({ name: 'typography-body', $type: 'typography', $value: 'font-family: Inter;\nfont-size: 14px;' }),
+    const css = render([
+      token({ name: 'ui-typography-body', $type: 'typography', $value: 'font-family: Inter;\nfont-size: 14px;' }),
     ]);
-    expect(css).toContain('.typography-body {');
+    expect(css).toContain('.ui-typography-body {');
     expect(css).toContain('  font-family: Inter;');
   });
 
-  it('skips unhandled token types and names them in the log note', () => {
-    const log = vi.spyOn(console, 'log').mockImplementation(() => {});
-    renderCss([token({ name: 'grad', $type: 'gradient', $value: { stops: [] } as unknown as string })]);
-    expect(log).toHaveBeenCalledWith(expect.stringContaining('grad (gradient)'));
-    log.mockRestore();
+  it('collects unrepresentable tokens into the skipped list', () => {
+    const { skipped } = collectDecls(
+      [token({ name: 'grad', $type: 'gradient', $value: { stops: [] } as unknown as string })],
+      new Map()
+    );
+    expect(skipped).toContain('grad (gradient)');
   });
 
   it('sorts custom properties by name for stable output', () => {
-    const css = renderCss([
+    const css = render([
       token({ name: 'b-token', $type: 'dimension', $value: '2px' }),
       token({ name: 'a-token', $type: 'dimension', $value: '1px' }),
     ]);
     expect(css.indexOf('--a-token')).toBeLessThan(css.indexOf('--b-token'));
+  });
+});
+
+describe('serializeCss', () => {
+  it('includes the light/dark shell in base files', () => {
+    const css = serializeCss({
+      brand: 'acronis',
+      tier: 'semantic',
+      isOverride: false,
+      vars: new Map([['ui-x', 'red']]),
+      classes: new Map(),
+    });
+    expect(css).toContain('color-scheme: light dark;');
+    expect(css).toContain("[data-theme='dark']");
+  });
+
+  it('omits the shell from override files', () => {
+    const css = serializeCss({
+      brand: 'brand-b',
+      tier: 'semantic',
+      isOverride: true,
+      vars: new Map([['ui-x', 'blue']]),
+      classes: new Map(),
+    });
+    expect(css).not.toContain('color-scheme');
+    expect(css).toContain('--ui-x: blue;');
   });
 });

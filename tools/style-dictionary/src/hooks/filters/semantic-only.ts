@@ -9,7 +9,11 @@ export const SEMANTIC_ONLY = 'semantic-only';
 /** Token-tree roots that are resolution inputs only — never emitted as CSS. */
 const PRIMITIVE_ROOTS = new Set(['palette', 'units', 'font']);
 
+/** True when a token belongs to an emitted tier (not a primitive resolution input). */
+export const isEmittableToken = (token: { path: string[] }): boolean =>
+  !PRIMITIVE_ROOTS.has(token.path[0]);
+
 export const semanticOnly: Filter = {
   name: SEMANTIC_ONLY,
-  filter: (token) => !PRIMITIVE_ROOTS.has(token.path[0]),
+  filter: (token) => isEmittableToken(token),
 };

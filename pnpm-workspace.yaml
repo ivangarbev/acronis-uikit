@@ -2,6 +2,11 @@ packages:
   - 'apps/*'
   - 'packages/*'
   - 'tools/*'
+  # Temporarily excluded: apps/kitchen-sink still consumes the retired
+  # design-theme `/js` export + `--av-*` names. It is left untouched and out of
+  # the workspace until a follow-up migrates it to @acronis-platform/tokens-pd
+  # (the new `--ui-*` CSS + the pd-tailwind preset).
+  - '!apps/kitchen-sink'
 
 # Single source of truth for dependency versions used by more than one
 # workspace. Workspaces refer to these with "catalog:" — pnpm rewrites
@@ -57,9 +62,9 @@ catalog:
   ajv-cli: 5.0.0
   ajv-formats: 3.0.1
 
-  # Style Dictionary v5 — shared by the two token/asset build consumers:
-  # packages/design-theme (tokens → CSS/SCSS/JS) and tools/style-dictionary
-  # (design-tokens → per-brand CSS, design-assets → SVG/React).
+  # Style Dictionary v5 — used by tools/style-dictionary, which builds
+  # design-tokens → packages/tokens-pd (per-brand CSS, per-component CSS,
+  # Tailwind presets, DTCG) and design-assets → SVG/React.
   style-dictionary: 5.4.3
 
 # Pin transitive deps that we don't want pnpm to bump.

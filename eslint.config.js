@@ -23,6 +23,8 @@ export default tseslint.config(
       '**/*.config.ts',
       'vite.config.*.ts',
       '**/next-env.d.ts',
+      // Generated, committed token artifacts (built by tools/style-dictionary).
+      'packages/tokens-pd/**',
     ],
   }, // General configuration for all files
   {

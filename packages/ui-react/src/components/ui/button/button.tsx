@@ -21,7 +21,7 @@ const buttonVariants = cva(
           'bg-transparent text-btn-link underline-offset-4 hover:text-btn-link-hover hover:underline active:text-btn-link-active active:underline',
         destructive:
           'bg-btn-destructive text-btn-destructive-foreground hover:bg-btn-destructive-hover active:bg-btn-destructive-active',
-        ai: 'text-btn-primary-foreground [background-image:var(--av-colors-background-ai-idle)] hover:[background-image:var(--av-colors-background-ai-hover)] active:[background-image:var(--av-colors-background-ai-active)]',
+        ai: 'text-btn-primary-foreground [background-image:var(--ui-background-ai-idle)] hover:[background-image:var(--ui-background-ai-hover)] active:[background-image:var(--ui-background-ai-active)]',
         inverted:
           'bg-btn-inverted text-btn-inverted-foreground hover:bg-btn-inverted-hover active:bg-btn-inverted-active',
         // Not in the Figma "Button" component, but retained for parity with

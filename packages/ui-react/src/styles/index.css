@@ -1,67 +1,68 @@
 @import 'tailwindcss';
-@import '@acronis-platform/design-theme/css';
+@import '@acronis-platform/tokens-pd/css/acronis.css';
 
-/* Theme switches via a `.dark` class (set by the consumer / next-themes),
-   not the OS media query — mirror that for the `dark:` variant. */
-@custom-variant dark (&:where(.dark, .dark *));
+/* Theme switches via the `[data-theme]` attribute (set by the consumer /
+   next-themes), which drives the tokens' `light-dark()` + `color-scheme` — mirror
+   that for the `dark:` variant. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
-/* Bridge: map the generated `--av-*` design-token custom properties onto the
-   Tailwind color names the components use. `inline` emits `var(--av-*)`
-   references rather than copying values, so the `:root` / `.dark` cascade
-   from @acronis-platform/design-theme drives light/dark mode with no rebuild. */
+/* Bridge: map the generated `--ui-*` design-token custom properties onto the
+   Tailwind color names the components use. `inline` emits `var(--ui-*)`
+   references rather than copying values, so the `light-dark()` values from
+   @acronis-platform/tokens-pd drive light/dark mode with no rebuild. */
 @theme inline {
-  --color-background: var(--av-colors-background-surface-primary);
-  --color-foreground: var(--av-colors-text-on-surface-primary);
+  --color-background: var(--ui-background-surface-primary);
+  --color-foreground: var(--ui-text-on-surface-primary);
 
-  --color-primary: var(--av-colors-background-brand-primary);
-  --color-primary-foreground: var(--av-colors-glyph-on-brand-primary);
+  --color-primary: var(--ui-background-brand-primary);
+  --color-primary-foreground: var(--ui-glyph-on-brand-primary);
 
-  --color-secondary: var(--av-colors-background-brand-secondary);
-  --color-secondary-foreground: var(--av-colors-glyph-on-brand-secondary);
+  --color-secondary: var(--ui-background-brand-secondary);
+  --color-secondary-foreground: var(--ui-glyph-on-brand-secondary);
 
-  --color-destructive: var(--av-colors-background-status-danger);
-  --color-destructive-foreground: var(--av-colors-glyph-on-status-danger);
+  --color-destructive: var(--ui-background-status-danger);
+  --color-destructive-foreground: var(--ui-glyph-on-status-danger);
 
-  --color-muted: var(--av-colors-background-surface-secondary);
-  --color-muted-foreground: var(--av-colors-text-on-surface-secondary);
+  --color-muted: var(--ui-background-surface-secondary);
+  --color-muted-foreground: var(--ui-text-on-surface-secondary);
 
-  --color-accent: var(--av-colors-background-surface-hover);
-  --color-accent-foreground: var(--av-colors-text-on-surface-primary);
+  --color-accent: var(--ui-background-surface-hover);
+  --color-accent-foreground: var(--ui-text-on-surface-primary);
 
-  --color-border: var(--av-colors-border-on-surface-border);
-  --color-input: var(--av-colors-border-on-surface-border);
-  --color-ring: var(--av-colors-border-on-surface-border-active);
+  --color-border: var(--ui-border-on-surface-border);
+  --color-input: var(--ui-border-on-surface-border);
+  --color-ring: var(--ui-border-on-surface-border-active);
 
   /* Button-local color tokens. The Figma "Button" component maps its styles
-     onto specific design-theme tokens that differ from the shared semantic
+     onto specific tokens-pd tokens that differ from the shared semantic
      names above (e.g. its Primary is brand-secondary blue, not brand-primary
      navy). These are bridged here, scoped to the button, so the component
      matches the mockup without re-pointing the shared --color-* tokens. */
-  --color-btn-primary: var(--av-colors-background-brand-secondary);
-  --color-btn-primary-hover: var(--av-colors-background-brand-secondary-hover);
-  --color-btn-primary-active: var(--av-colors-background-brand-secondary-active);
-  --color-btn-primary-foreground: var(--av-colors-text-on-brand-primary);
+  --color-btn-primary: var(--ui-background-brand-secondary);
+  --color-btn-primary-hover: var(--ui-background-brand-secondary-hover);
+  --color-btn-primary-active: var(--ui-background-brand-secondary-active);
+  --color-btn-primary-foreground: var(--ui-text-on-brand-primary);
 
-  --color-btn-secondary-hover: var(--av-colors-background-surface-hover);
-  --color-btn-secondary-active: var(--av-colors-background-surface-active);
+  --color-btn-secondary-hover: var(--ui-background-surface-hover);
+  --color-btn-secondary-active: var(--ui-background-surface-active);
 
-  --color-btn-link: var(--av-colors-text-on-surface-link);
-  --color-btn-link-hover: var(--av-colors-text-on-surface-link-hover);
-  --color-btn-link-active: var(--av-colors-text-on-surface-link-pressed);
+  --color-btn-link: var(--ui-text-on-surface-link);
+  --color-btn-link-hover: var(--ui-text-on-surface-link-hover);
+  --color-btn-link-active: var(--ui-text-on-surface-link-pressed);
 
-  --color-btn-destructive: var(--av-colors-background-status-inverted-danger);
+  --color-btn-destructive: var(--ui-background-status-inverted-danger);
   --color-btn-destructive-hover: var(
-    --av-colors-background-status-inverted-danger-hover
+    --ui-background-status-inverted-danger-hover
   );
   --color-btn-destructive-active: var(
-    --av-colors-background-status-inverted-danger-pressed
+    --ui-background-status-inverted-danger-pressed
   );
-  --color-btn-destructive-foreground: var(--av-colors-text-on-inverted-primary);
+  --color-btn-destructive-foreground: var(--ui-text-on-inverted-primary);
 
-  --color-btn-inverted: var(--av-colors-background-inverted-surface-idle);
-  --color-btn-inverted-hover: var(--av-colors-background-inverted-surface-hover);
+  --color-btn-inverted: var(--ui-background-inverted-surface-idle);
+  --color-btn-inverted-hover: var(--ui-background-inverted-surface-hover);
   --color-btn-inverted-active: var(
-    --av-colors-background-inverted-surface-active
+    --ui-background-inverted-surface-active
   );
-  --color-btn-inverted-foreground: var(--av-colors-text-on-inverted-primary);
+  --color-btn-inverted-foreground: var(--ui-text-on-inverted-primary);
 }
