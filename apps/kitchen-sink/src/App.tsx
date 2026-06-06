@@ -11,7 +11,6 @@ import {
 } from '@/lib/tokens';
 import { ColorsSection } from '@/sections/colors';
 import { ComponentsSection } from '@/sections/components';
-import { ElementsSection } from '@/sections/elements';
 import { IconsSection } from '@/sections/icons';
 import { TypographySection } from '@/sections/typography';
 
@@ -44,7 +43,6 @@ function Section({
 const SECTIONS = [
   { id: 'colors', title: 'Colors & tokens', Component: ColorsSection },
   { id: 'typography', title: 'Typography', Component: TypographySection },
-  { id: 'elements', title: 'Default elements', Component: ElementsSection },
   { id: 'components', title: 'Components', Component: ComponentsSection },
   { id: 'icons', title: 'Icons', Component: IconsSection },
 ];
