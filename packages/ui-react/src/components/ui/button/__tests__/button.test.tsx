@@ -15,8 +15,8 @@ describe('Button', () => {
     render(<Button>Save</Button>);
     const button = screen.getByRole('button', { name: 'Save' });
     expect(button).toHaveClass(
-      'bg-btn-primary',
-      'text-btn-primary-foreground',
+      'bg-[var(--ui-button-primary-background-idle)]',
+      'text-[var(--ui-button-primary-label-idle)]',
       'h-8'
     );
   });
@@ -28,14 +28,17 @@ describe('Button', () => {
       </Button>
     );
     const button = screen.getByRole('button', { name: 'Delete' });
-    expect(button).toHaveClass('bg-btn-destructive', 'h-10');
+    expect(button).toHaveClass(
+      'bg-[var(--ui-button-destructive-background-idle)]',
+      'h-10'
+    );
   });
 
   it('merges a custom className with the variant classes', () => {
     render(<Button className="custom-class">Save</Button>);
     expect(screen.getByRole('button', { name: 'Save' })).toHaveClass(
       'custom-class',
-      'bg-btn-primary'
+      'bg-[var(--ui-button-primary-background-idle)]'
     );
   });
 
@@ -65,13 +68,13 @@ describe('Button', () => {
 
   it('composes with another element via the render prop', () => {
     render(
-      <Button render={<a href="/home" />} variant="link">
+      <Button render={<a href="/home" />} variant="ghost">
         Home
       </Button>
     );
     const link = screen.getByRole('link', { name: 'Home' });
     expect(link).toHaveAttribute('href', '/home');
-    expect(link).toHaveClass('text-primary');
+    expect(link).toHaveClass('text-[var(--ui-button-ghost-label-idle)]');
     expect(screen.queryByRole('button')).not.toBeInTheDocument();
   });
 });

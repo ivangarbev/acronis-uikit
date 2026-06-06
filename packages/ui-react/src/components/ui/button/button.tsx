@@ -5,38 +5,35 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
 
+// Variants mirror the Figma "Button" component's `Style` property (Primary,
+// Secondary, Ghost, Destructive, Ai, Inverted) and each interaction state
+// (idle / hover / active / disabled). Colors reference the dedicated
+// `--ui-button-*` component tokens from @acronis-platform/tokens-pd directly —
+// not the shared semantic names — so the component tracks the design source
+// without a per-state bridge. Disabled uses the design's explicit disabled
+// tokens (not opacity); the focus ring uses the `--ui-focus-*` tokens.
 const buttonVariants = cva(
-  'inline-flex min-w-16 items-center justify-center gap-2 whitespace-nowrap rounded text-sm font-semibold leading-6 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  'inline-flex min-w-16 items-center justify-center gap-2 whitespace-nowrap rounded border text-sm font-semibold leading-6 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ui-focus-brand)] focus-visible:ring-offset-2 disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   {
     variants: {
-      // Variants mirror the Figma "Button" component's `Style` property
-      // (Primary, Secondary, Ghost, Destructive, Ai, Inverted), wired to the
-      // button-local --color-btn-* tokens bridged in src/styles/index.css.
       variant: {
         default:
-          'bg-btn-primary text-btn-primary-foreground hover:bg-btn-primary-hover active:bg-btn-primary-active',
+          'bg-[var(--ui-button-primary-background-idle)] text-[var(--ui-button-primary-label-idle)] border-[var(--ui-button-primary-border-idle)] hover:bg-[var(--ui-button-primary-background-hover)] active:bg-[var(--ui-button-primary-background-active)] disabled:bg-[var(--ui-button-primary-background-disabled)] disabled:text-[var(--ui-button-primary-label-disabled)]',
         secondary:
-          'border border-border bg-transparent text-btn-link hover:bg-btn-secondary-hover hover:text-btn-link-hover active:bg-btn-secondary-active active:text-btn-link-active',
+          'bg-[var(--ui-button-secondary-background-idle)] text-[var(--ui-button-secondary-label-idle)] border-[var(--ui-button-secondary-border-idle)] hover:bg-[var(--ui-button-secondary-background-hover)] hover:text-[var(--ui-button-secondary-label-hover)] hover:border-[var(--ui-button-secondary-border-hover)] active:bg-[var(--ui-button-secondary-background-active)] active:text-[var(--ui-button-secondary-label-active)] active:border-[var(--ui-button-secondary-border-active)] disabled:bg-[var(--ui-button-secondary-background-disabled)] disabled:text-[var(--ui-button-secondary-label-disabled)] disabled:border-[var(--ui-button-secondary-border-disabled)]',
         ghost:
-          'bg-transparent text-btn-link underline-offset-4 hover:text-btn-link-hover hover:underline active:text-btn-link-active active:underline',
+          'bg-[var(--ui-button-ghost-background-idle)] text-[var(--ui-button-ghost-label-idle)] border-[var(--ui-button-ghost-border-idle)] hover:text-[var(--ui-button-ghost-label-hover)] active:text-[var(--ui-button-ghost-label-active)] disabled:text-[var(--ui-button-ghost-label-disabled)]',
         destructive:
-          'bg-btn-destructive text-btn-destructive-foreground hover:bg-btn-destructive-hover active:bg-btn-destructive-active',
-        ai: 'text-btn-primary-foreground [background-image:var(--ui-background-ai-idle)] hover:[background-image:var(--ui-background-ai-hover)] active:[background-image:var(--ui-background-ai-active)]',
+          'bg-[var(--ui-button-destructive-background-idle)] text-[var(--ui-button-destructive-label-idle)] border-[var(--ui-button-destructive-border-idle)] hover:bg-[var(--ui-button-destructive-background-hover)] active:bg-[var(--ui-button-destructive-background-active)] disabled:bg-[var(--ui-button-destructive-background-disabled)] disabled:text-[var(--ui-button-destructive-label-disabled)]',
+        ai: 'text-[var(--ui-button-ai-label-idle)] border-[var(--ui-button-ai-border-idle)] [background-image:var(--ui-background-ai-idle)] hover:[background-image:var(--ui-background-ai-hover)] active:[background-image:var(--ui-background-ai-active)] disabled:[background-image:var(--ui-background-ai-disabled)] disabled:text-[var(--ui-button-ai-label-disabled)]',
         inverted:
-          'bg-btn-inverted text-btn-inverted-foreground hover:bg-btn-inverted-hover active:bg-btn-inverted-active',
-        // Not in the Figma "Button" component, but retained for parity with
-        // the shared @acronis-platform/shadcn-uikit-demos (used by legacy too).
-        outline:
-          'border border-border bg-background hover:bg-accent/10 active:bg-accent/20',
-        link: 'text-primary underline-offset-4 hover:underline',
-        translucent:
-          'bg-foreground/20 text-foreground hover:bg-foreground/30 active:bg-foreground/40',
+          'bg-[var(--ui-button-inverted-background-idle)] text-[var(--ui-button-inverted-label-idle)] border-[var(--ui-button-inverted-border-idle)] hover:bg-[var(--ui-button-inverted-background-hover)] active:bg-[var(--ui-button-inverted-background-active)] disabled:bg-[var(--ui-button-inverted-background-disabled)] disabled:text-[var(--ui-button-inverted-label-disabled)] disabled:border-[var(--ui-button-inverted-border-disabled)]',
       },
       size: {
-        default: 'h-8 px-3 py-1',
+        // Default matches the Figma button: 32px tall, 12px x-padding, 8px gap.
+        default: 'h-8 px-3',
         sm: 'h-7 px-2 py-0.5 text-xs',
         lg: 'h-10 px-4 py-2',
-        icon: 'h-8 w-8 min-w-0 p-2',
       },
     },
     defaultVariants: {

@@ -5,6 +5,7 @@ import {
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '../button';
+import { ButtonIcon } from '../../button-icon';
 
 /**
  * Buttons composed with `@acronis-platform/icons-react`. The icons use
@@ -36,12 +37,12 @@ export const IconAcrossVariants: Story = {
       <Button variant="secondary">
         Options <ChevronDownIcon />
       </Button>
-      <Button variant="outline">
+      <Button variant="ghost">
         <PlusIcon /> Add
       </Button>
-      <Button variant="ghost" size="icon" aria-label="Add">
+      <ButtonIcon aria-label="Add">
         <PlusIcon />
-      </Button>
+      </ButtonIcon>
     </div>
   ),
 };
