@@ -1,5 +1,43 @@
 # @acronis-platform/design-theme
 
+## 0.7.1
+
+### Patch Changes
+
+- [#207](https://github.com/acronis/uikit/pull/207) [`8a72145`](https://github.com/acronis/uikit/commit/8a721459e35a405bdf9ef11489e86f68b61a821c) Thanks [@leonid](https://github.com/leonid)! - Emit a web-safe fallback chain for `font-family` instead of the bare design
+  family.
+
+  The design tokens carry only the preferred family (`Inter`) — all Figma's
+  font-family variables express — so the generated CSS previously rendered
+  `font-family: Inter;` with no fallback. If Inter isn't loaded, the browser
+  dropped straight to its default serif. The `typography/css-class` transform now
+  appends a generic fallback chain at generation time, so the `.ui-typography-*`
+  classes (and the matching Tailwind `fontFamily` preset keys) render
+  `font-family: Inter, system-ui, sans-serif;` and degrade gracefully.
+
+  The fallback is keyed on the preferred family (`Inter` → `system-ui,
+sans-serif`, `IBM Plex Mono` → `ui-monospace, monospace`), defaulting to
+  `sans-serif`. The token source is unchanged; this is purely a CSS-output
+  concern. Affects the regenerated semantic CSS and Tailwind presets (both
+  brands).
+
+- [#204](https://github.com/acronis/uikit/pull/204) [`beae4ff`](https://github.com/acronis/uikit/commit/beae4ffd3dd4cd8742300c8906e7e18cef8693ee) Thanks [@copilot-swe-agent](https://github.com/apps/copilot-swe-agent)! - Fix Tailwind color routing for component tokens with multiple role-like
+  segments, and normalize leading-underscore key segments.
+
+  `routeColor` previously scanned a token path left-to-right and stopped at the
+  first role-like segment, so `button.icon.background.idle` was misrouted to the
+  `icon` role instead of `background` — emitting the wrong namespace/key. It now
+  scans right-to-left, so the role segment **closest to the leaf** wins
+  (`button-icon-idle` under `backgroundColor`/`textColor`/`borderColor`).
+
+  Key segments are now normalized too: leading underscores are stripped, so
+  `tree._global.background.selected` emits `tree-global-selected` instead of
+  `tree-_global-selected` — matching the `--ui-*` CSS variable naming the
+  `name/ui` transform already produces.
+
+  Affects the regenerated `button`, `form`, and `tree` Tailwind component
+  presets (both brands).
+
 ## 0.7.0
 
 ### Minor Changes
