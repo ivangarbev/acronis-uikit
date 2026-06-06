@@ -54,7 +54,11 @@ delivery model differs from the retired `design-theme`:
 - `typography.tsx` — the `.ui-typography-*` utility classes (headings/body/link/
   caption/note/fineprint), each shown as live sample text + its name and metrics.
 - `elements.tsx` — raw HTML elements (headings, lists, table, native form
-  controls) as the reset renders them.
+  controls) as the reset renders them. **Currently hidden**: the library only
+  applies Tailwind Preflight (which normalizes/strips bare-tag styling) — the DS
+  styles via `.ui-typography-*` utilities / components, not bare tags — so the
+  section showed only the reset baseline. The file is kept (not wired into
+  `SECTIONS` in `App.tsx`) so it can be re-enabled if a base element layer ships.
 - `components.tsx` — `ui-react` `Button` (variants/sizes/states/with-icons) and
   `Switch`.
 - `icons.tsx` — galleries for all four `icons-react` packs.
