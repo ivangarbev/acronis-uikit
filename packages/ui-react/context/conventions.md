@@ -29,11 +29,40 @@ Primitive.Root>`).
 
 - **Tailwind CSS v4** utility classes. Merge with `cn()` from
   `src/lib/utils.ts` (wraps `clsx` + `tailwind-merge`).
-- Use semantic Tailwind color names (`bg-primary`, `text-foreground`,
-  `border-border`, …). They are bridged to the generated `--ui-*` tokens in
-  `src/styles/index.css`. If a component needs a color name that isn't
-  bridged yet, add it to the `@theme inline` block pointing at the relevant
-  `@acronis-platform/tokens-pd` token — never hard-code a hex/hsl value.
+- **Never hard-code a hex/hsl value.** Every color must resolve to a generated
+  `@acronis-platform/tokens-pd` token (`--ui-*`). This is the one hard rule;
+  the next two points are about _how_ you reference the token.
+
+### Bridged names vs. direct token references
+
+There are two valid ways to drive a color from a token. Pick by **how shared
+the token is**, not by habit:
+
+- **Shared semantic vocabulary → bridge a name.** Colors reused across many
+  components (`bg-primary`, `text-foreground`, `border-border`, …) are bridged
+  to the `--ui-*` tokens in `src/styles/index.css`'s `@theme inline` block, and
+  components use the short Tailwind name. The bridge exists so a token is
+  renamed/re-pointed **once** and every consumer follows. If a shared color
+  isn't bridged yet, add it there.
+- **Component-specific tokens → reference the token directly** with an
+  arbitrary-value utility: `bg-[var(--ui-button-primary-background-idle)]`,
+  `hover:border-[var(--ui-button-secondary-border-hover)]`. Use this for the
+  dense, single-component token sets (`--ui-button-*`, `--ui-switch-*`, …) whose
+  names are already systematic. Bridging these would be a 1:1 mechanical rename
+  used in exactly one place — pure indirection that just adds a second naming
+  layer to keep in sync. Arbitrary values are first-class Tailwind and still
+  carry `hover:`/`active:`/`disabled:` variants.
+
+  Rule of thumb: **bridge what's reused; reference component-local tokens
+  directly.** A 1:1 alias consumed by a single component is a smell — skip it.
+
+- Because both forms compile to `var(--ui-*)` references resolved at paint time,
+  brand/theme overrides (the `[data-theme]` attribute, brand `:root` overrides)
+  are honored automatically. Corollary for **stateful** colors: wire **each
+  state to its own token** (`hover:` → `*-hover`, `disabled:` → `*-disabled`)
+  even when the default brand's value happens to match `*-idle` — another brand
+  may define a distinct per-state value, and only the referenced token is
+  honored. See `components/ui/button/button.tsx`.
 
 ## Accessibility
 
