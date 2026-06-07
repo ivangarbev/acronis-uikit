@@ -1,4 +1,4 @@
-# @acronis-platform/design-theme
+# @acronis-platform/tokens-pd
 
 ## 0.7.1
 
