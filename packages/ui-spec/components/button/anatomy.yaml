@@ -34,26 +34,93 @@ layout:
   align: center
   order: [icon, label]
 
+# Button is a pure function of its props — it owns no internal state, so there
+# is no `internal_state`. Every state below is reached by a prop or a CSS
+# pseudo-class.
 states:
-  - { id: default, trigger: "variant === 'default'", affects: [root] }
-  - { id: secondary, trigger: "variant === 'secondary'", affects: [root] }
-  - { id: ghost, trigger: "variant === 'ghost'", affects: [root] }
-  - { id: destructive, trigger: "variant === 'destructive'", affects: [root] }
-  - { id: ai, trigger: "variant === 'ai'", affects: [root] }
-  - { id: inverted, trigger: "variant === 'inverted'", affects: [root] }
+  - {
+      id: default,
+      trigger: "variant === 'default'",
+      kind: prop,
+      prop: variant,
+      affects: [root],
+    }
+  - {
+      id: secondary,
+      trigger: "variant === 'secondary'",
+      kind: prop,
+      prop: variant,
+      affects: [root],
+    }
+  - {
+      id: ghost,
+      trigger: "variant === 'ghost'",
+      kind: prop,
+      prop: variant,
+      affects: [root],
+    }
+  - {
+      id: destructive,
+      trigger: "variant === 'destructive'",
+      kind: prop,
+      prop: variant,
+      affects: [root],
+    }
+  - {
+      id: ai,
+      trigger: "variant === 'ai'",
+      kind: prop,
+      prop: variant,
+      affects: [root],
+    }
+  - {
+      id: inverted,
+      trigger: "variant === 'inverted'",
+      kind: prop,
+      prop: variant,
+      affects: [root],
+    }
   - {
       id: small,
       trigger: "size === 'sm'",
+      kind: prop,
+      prop: size,
       affects: [root],
       exclusive_with: [large],
     }
   - {
       id: large,
       trigger: "size === 'lg'",
+      kind: prop,
+      prop: size,
       affects: [root],
       exclusive_with: [small],
     }
-  - { id: hover, trigger: pointer hover, affects: [root] }
-  - { id: active, trigger: pointer or keyboard activation, affects: [root] }
-  - { id: focus-visible, trigger: keyboard focus, affects: [root] }
-  - { id: disabled, trigger: 'disabled === true', affects: [root, label] }
+  - {
+      id: hover,
+      trigger: pointer hover,
+      kind: pseudo,
+      pseudo: ':hover',
+      affects: [root],
+    }
+  - {
+      id: active,
+      trigger: pointer or keyboard activation,
+      kind: pseudo,
+      pseudo: ':active',
+      affects: [root],
+    }
+  - {
+      id: focus-visible,
+      trigger: keyboard focus,
+      kind: pseudo,
+      pseudo: ':focus-visible',
+      affects: [root],
+    }
+  - {
+      id: disabled,
+      trigger: 'disabled === true',
+      kind: prop,
+      prop: disabled,
+      affects: [root, label],
+    }

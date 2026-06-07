@@ -52,12 +52,48 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "trigger"],
+        "required": ["id", "trigger", "kind"],
         "properties": {
           "id": { "type": "string" },
           "trigger": { "type": "string" },
+          "kind": {
+            "enum": ["prop", "pseudo", "internal"],
+            "description": "How the state is reached: a prop value, a CSS pseudo-class, or component-owned (internal) state changed by interaction."
+          },
+          "pseudo": {
+            "type": "string",
+            "description": "CSS pseudo-class for kind=pseudo (e.g. ':hover')."
+          },
+          "prop": {
+            "type": "string",
+            "description": "For kind=prop: the api.yaml property that drives this state."
+          },
           "affects": { "type": "array", "items": { "type": "string" } },
           "exclusive_with": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "internal_state": {
+      "type": "array",
+      "description": "Component-owned state that changes via interaction and affects visual state (empty/absent for components that are a pure function of their props).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string" },
+          "initial": {},
+          "controllable_via": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "api.yaml props that read/override this internal state."
+          },
+          "changed_by": {
+            "type": "string",
+            "description": "The interaction that mutates it (e.g. 'click / Space toggles')."
+          },
+          "description": { "type": "string" }
         }
       }
     }

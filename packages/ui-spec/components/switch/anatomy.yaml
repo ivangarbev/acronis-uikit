@@ -20,16 +20,43 @@ parts:
     description: The sliding knob that moves between the off and on positions.
     element: span
 
+# Switch owns one piece of internal state: `checked`. When uncontrolled it is
+# toggled by interaction; when controlled it mirrors the `checked` prop. The
+# checked/unchecked visual states below are therefore `internal` (driven by
+# this state), not `prop` — reaching them in a story needs either the controlled
+# prop or a play interaction.
+internal_state:
+  - id: checked
+    type: boolean
+    initial: false
+    controllable_via: [checked, default-checked]
+    changed_by: click / Space / Enter toggles it (when uncontrolled)
+    description: On/off state; reflected to aria-checked and the thumb position.
+
 states:
   - {
       id: checked,
-      trigger: 'checked === true (data-[checked])',
+      trigger: 'internal checked === true (data-[checked])',
+      kind: internal,
       affects: [root, thumb],
     }
   - {
       id: unchecked,
-      trigger: 'checked === false (data-[unchecked])',
+      trigger: 'internal checked === false (data-[unchecked])',
+      kind: internal,
       affects: [root, thumb],
     }
-  - { id: focus-visible, trigger: keyboard focus, affects: [root] }
-  - { id: disabled, trigger: 'disabled === true', affects: [root, thumb] }
+  - {
+      id: focus-visible,
+      trigger: keyboard focus,
+      kind: pseudo,
+      pseudo: ':focus-visible',
+      affects: [root],
+    }
+  - {
+      id: disabled,
+      trigger: 'disabled === true',
+      kind: prop,
+      prop: disabled,
+      affects: [root, thumb],
+    }

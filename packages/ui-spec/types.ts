@@ -22,11 +22,29 @@ export interface AnatomyPart {
   visible_when?: string;
 }
 
+export type StateKind = 'prop' | 'pseudo' | 'internal';
+
 export interface AnatomyState {
   id: string;
   trigger: string;
+  /** How the state is reached. */
+  kind: StateKind;
+  /** CSS pseudo-class, for kind=pseudo (e.g. ':hover'). */
+  pseudo?: string;
+  /** For kind=prop: the api.yaml property that drives this state. */
+  prop?: string;
   affects?: string[];
   exclusive_with?: string[];
+}
+
+/** Component-owned state that changes via interaction and affects visuals. */
+export interface InternalState {
+  id: string;
+  type: string;
+  initial?: unknown;
+  controllable_via?: string[];
+  changed_by?: string;
+  description: string;
 }
 
 export interface AnatomySpec {
@@ -35,6 +53,7 @@ export interface AnatomySpec {
   schematic?: string;
   root: { element: string; role?: string; description?: string };
   parts: AnatomyPart[];
+  internal_state?: InternalState[];
   layout?: {
     type?: string;
     direction?: string;

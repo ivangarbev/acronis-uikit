@@ -55,6 +55,41 @@ describe('anatomy schematic depicts every declared part', () => {
   }
 });
 
+describe('state classification is coherent', () => {
+  for (const name of componentNames) {
+    it(`${name}: each state's kind lines up with the spec`, () => {
+      const { anatomy, api } = loadSpec(name);
+      const propNames = new Set(api.contract.properties.map((p) => p.name));
+      for (const s of anatomy.states ?? []) {
+        if (s.kind === 'pseudo') {
+          expect(s.pseudo, `${name}/${s.id} (pseudo) needs a pseudo selector`).toBeTruthy();
+        }
+        if (s.kind === 'prop' && s.prop) {
+          expect(
+            propNames.has(s.prop),
+            `${name}/${s.id} references unknown prop "${s.prop}"`
+          ).toBe(true);
+        }
+        if (s.kind === 'internal') {
+          expect(
+            (anatomy.internal_state ?? []).length,
+            `${name}/${s.id} is internal but no internal_state is declared`
+          ).toBeGreaterThan(0);
+        }
+      }
+      // Any declared internal state must be readable/overridable by a real prop.
+      for (const st of anatomy.internal_state ?? []) {
+        for (const prop of st.controllable_via ?? []) {
+          expect(
+            propNames.has(prop),
+            `${name}: internal_state "${st.id}" controllable_via unknown prop "${prop}"`
+          ).toBe(true);
+        }
+      }
+    });
+  }
+});
+
 /** Pull the string-union members out of an `api.yaml` property `type`. */
 function enumMembers(api: ApiSpec, propName: string): string[] {
   const prop = api.contract.properties.find((p) => p.name === propName);

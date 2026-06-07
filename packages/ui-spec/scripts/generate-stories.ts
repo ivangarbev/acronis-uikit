@@ -1,35 +1,36 @@
 /**
- * Generate Storybook "All states" stories from component specs.
+ * Generate Storybook stories from component specs.
  *
- * For each spec it reads the variant/size enums and boolean state props from
- * `api.yaml` and emits a story that renders the full prop-driven state matrix —
- * a single comprehensive, snapshot-friendly story per component (a base for
- * visual-regression tests). Output lands next to the React component in
- * `packages/ui-react/src/components/ui/<name>/__stories__/<name>.generated.stories.tsx`.
+ * Drives output from each state's `kind` (see anatomy.yaml):
+ *   - kind=prop     → static matrix / variations (snapshot by passing props)
+ *   - kind=pseudo   → a story per CSS pseudo-state. `:hover`/`:active` emit
+ *                     addon-ready `parameters.pseudo` (needs a pseudo-states
+ *                     addon to paint); `:focus-visible` is driven by a real
+ *                     `play` tab() so it works without one.
+ *   - kind=internal → an Interaction `play` story that performs the real
+ *                     interaction so the component lands in the after-interaction
+ *                     state (e.g. Switch click → checked).
  *
- * Run: `pnpm --filter @acronis-platform/ui-spec generate:stories`
+ * Output: packages/ui-react/src/components/ui/<name>/__stories__/<name>.generated.stories.tsx
+ * Run:    pnpm --filter @acronis-platform/ui-spec generate:stories
  *
- * NOTE (spike limitation): the *axes* (which variants/sizes/states exist) are
- * spec-derived; the small per-component "how to instantiate" hint below
- * (sample content, required aria-label) is not yet in the spec. A future
- * `story` hint in `api.yaml` would remove this map.
+ * NOTE (spike limitation): the state *axes* are spec-derived; the small
+ * per-component "how to instantiate" hint below (sample content, aria-label) is
+ * not yet in the spec — a future `story` hint in api.yaml would remove it.
  */
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { listComponentNames, loadSpec } from '../lib/load';
-import type { ApiSpec } from '../types';
+import type { AnatomySpec, ApiSpec } from '../types';
 
 const PKG_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const UI_REACT_UI = resolve(PKG_ROOT, '../ui-react/src/components/ui');
 
 interface RenderHint {
-  /** Raw JSX or text used as the component's children (empty = self-closing). */
   sample?: string;
-  /** Extra import lines the sample needs. */
   extraImports?: string[];
-  /** aria-label applied to each instance (for controls with no text). */
   ariaLabel?: string;
 }
 
@@ -47,36 +48,48 @@ const RENDER: Record<string, RenderHint> = {
 
 const HEADER =
   '// AUTO-GENERATED from @acronis-platform/ui-spec — DO NOT EDIT.\n' +
-  '// Regenerate: pnpm --filter @acronis-platform/ui-spec generate:stories\n';
+  '// Regenerate: pnpm --filter @acronis-platform/ui-spec generate:stories\n' +
+  '// `:hover` / `:active` stories require a Storybook pseudo-states addon to paint.\n';
 
-/** String-union members of an `api.yaml` property `type`, e.g. ['sm','lg']. */
+const PSEUDO_KEY: Record<string, string> = {
+  ':hover': 'hover',
+  ':active': 'active',
+  ':focus': 'focus',
+};
+
 function enumMembers(api: ApiSpec, prop: string): string[] {
   const p = api.contract.properties.find((x) => x.name === prop);
   if (!p) return [];
   return [...p.type.matchAll(/'([^']+)'/g)].map((m) => m[1]);
 }
 
-function hasProp(api: ApiSpec, name: string): boolean {
-  return api.contract.properties.some((p) => p.name === name);
-}
+const hasProp = (api: ApiSpec, name: string): boolean =>
+  api.contract.properties.some((p) => p.name === name);
 
-function arr(values: string[]): string {
-  return `[${values.map((v) => `'${v}'`).join(', ')}] as const`;
-}
+const arr = (values: string[]): string =>
+  `[${values.map((v) => `'${v}'`).join(', ')}] as const`;
 
-function buildStories(comp: string, api: ApiSpec, hint: RenderHint): string {
+const cap = (s: string): string => s.charAt(0).toUpperCase() + s.slice(1);
+
+function buildStories(
+  comp: string,
+  api: ApiSpec,
+  anatomy: AnatomySpec,
+  hint: RenderHint
+): { body: string; needsPlay: boolean } {
   const variants = enumMembers(api, 'variant');
   const sizes = enumMembers(api, 'size');
   const label = hint.ariaLabel ? ` aria-label="${hint.ariaLabel}"` : '';
-  const children = hint.sample ? `${hint.sample}` : '';
-  const open = (props: string) =>
-    children
-      ? `<${comp}${props}>${children}</${comp}>`
-      : `<${comp}${props} />`;
+  const children = hint.sample ?? '';
+  const inst = (props: string) =>
+    children ? `<${comp}${props}>${children}</${comp}>` : `<${comp}${props} />`;
+  const base = inst(label);
 
-  // Shape 1 — variant × size grid (+ a disabled row).
+  const parts: string[] = [];
+
+  // ── kind=prop: static matrix / variations ──
   if (variants.length && sizes.length) {
-    return `const VARIANTS = ${arr(variants)};
+    parts.push(`const VARIANTS = ${arr(variants)};
 const SIZES = ${arr(sizes)};
 
 export const Matrix: Story = {
@@ -99,9 +112,7 @@ export const Matrix: Story = {
         <span key={\`\${v}-label\`} style={{ fontSize: 12, opacity: 0.6 }}>
           {v}
         </span>,
-        ...SIZES.map((s) => (
-          ${open(' key={`${v}-${s}`} variant={v} size={s}')}
-        )),
+        ...SIZES.map((s) => ${inst(' key={`${v}-${s}`} variant={v} size={s}')}),
       ])}
     </div>
   ),
@@ -110,18 +121,12 @@ export const Matrix: Story = {
 export const Disabled: Story = {
   render: () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-      {VARIANTS.map((v) => (
-        ${open(' key={v} variant={v} disabled')}
-      ))}
+      {VARIANTS.map((v) => ${inst(' key={v} variant={v} disabled')})}
     </div>
   ),
-};
-`;
-  }
-
-  // Shape 2 — on/off toggle (checked × disabled).
-  if (hasProp(api, 'checked')) {
-    return `export const States: Story = {
+};`);
+  } else if (hasProp(api, 'checked')) {
+    parts.push(`export const States: Story = {
   render: () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center' }}>
       <${comp} aria-label="Off" />
@@ -130,34 +135,72 @@ export const Disabled: Story = {
       <${comp} aria-label="Disabled on" disabled defaultChecked />
     </div>
   ),
-};
-`;
-  }
-
-  // Shape 3 — single style, enabled vs disabled.
-  return `export const States: Story = {
+};`);
+  } else {
+    parts.push(`export const States: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
-      ${open(label)}
-      ${open(`${label} disabled`)}
+      ${inst(label)}
+      ${inst(`${label} disabled`)}
     </div>
   ),
-};
-`;
+};`);
+  }
+
+  // ── kind=pseudo: one story per pseudo-state ──
+  let needsPlay = false;
+  for (const state of anatomy.states ?? []) {
+    if (state.kind !== 'pseudo' || !state.pseudo) continue;
+    if (state.pseudo === ':focus-visible') {
+      needsPlay = true;
+      parts.push(`export const FocusVisible: Story = {
+  render: () => ${base},
+  // Real keyboard focus — paints :focus-visible without a pseudo-states addon.
+  play: async () => {
+    await userEvent.tab();
+  },
+};`);
+    } else if (PSEUDO_KEY[state.pseudo]) {
+      const key = PSEUDO_KEY[state.pseudo];
+      parts.push(`export const ${cap(key)}: Story = {
+  parameters: { pseudo: { ${key}: true } },
+  render: () => ${base},
+};`);
+    }
+  }
+
+  // ── kind=internal: drive the real interaction, land in the changed state ──
+  const internal = anatomy.internal_state ?? [];
+  if (internal.length) {
+    needsPlay = true;
+    const role = anatomy.root.role ?? 'button';
+    const changedBy = internal[0].changed_by ?? 'interaction';
+    parts.push(`// Internal state "${internal[0].id}" — ${changedBy}.
+export const Interaction: Story = {
+  render: () => ${base},
+  play: async ({ canvasElement }) => {
+    const el = canvasElement.querySelector('[role="${role}"]');
+    if (el) await userEvent.click(el as HTMLElement);
+  },
+};`);
+  }
+
+  return { body: parts.join('\n\n'), needsPlay };
 }
 
 function generate(name: string): boolean {
-  const dir = join(UI_REACT_UI, name, '__stories__');
   if (!existsSync(join(UI_REACT_UI, name))) {
     console.warn(`skip ${name}: no @acronis-platform/ui-react component`);
     return false;
   }
-  const { index, api } = loadSpec(name);
+  const { index, api, anatomy } = loadSpec(name);
   const comp = index.component;
   const hint = RENDER[name] ?? {};
+  const { body, needsPlay } = buildStories(comp, api, anatomy, hint);
 
   const imports = [
     "import type { Meta, StoryObj } from '@storybook/react-vite';",
+    ...(needsPlay ? ["import { userEvent } from 'storybook/test';"] : []),
     ...(hint.extraImports ?? []),
     `import { ${comp} } from '../${name}';`,
   ].join('\n');
@@ -173,8 +216,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-${buildStories(comp, api, hint)}`;
+${body}
+`;
 
+  const dir = join(UI_REACT_UI, name, '__stories__');
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, `${name}.generated.stories.tsx`), file);
   console.log(`generated ${name}.generated.stories.tsx`);
