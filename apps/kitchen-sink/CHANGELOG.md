@@ -1,5 +1,17 @@
 # @acronis-platform/kitchen-sink
 
+## 0.1.5
+
+### Patch Changes
+
+- [#223](https://github.com/acronis/uikit/pull/223) [`18308ce`](https://github.com/acronis/uikit/commit/18308ce09ef9b66cec8de5169bc7e9c7ebf3e515) Thanks [@leonid](https://github.com/leonid)! - Regroup the **Colors & tokens** section: semantic colors by **context → role**,
+  component tokens the same way (sub-group → state-ordered rows), with the regular
+  families rendered as a matrix — status by intent, button by variant. Tokens are
+  also ordered by state progression (idle → hover → active → pressed → disabled).
+
+  `@acronis-platform/kitchen-sink` is a private, unpublished app, so this bump has
+  no publish impact.
+
 ## 0.1.4
 
 ### Patch Changes
