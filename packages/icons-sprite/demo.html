@@ -393,27 +393,51 @@
         const bgColor = document.getElementById('bg-color').value;
 
         if (filteredIcons.length === 0) {
-          grid.innerHTML = `<div class="no-results">No icons found matching "${document.getElementById('search').value}"</div>`;
+          const noResults = document.createElement('div');
+          noResults.className = 'no-results';
+          noResults.textContent = `No icons found matching "${document.getElementById('search').value}"`;
+          grid.replaceChildren(noResults);
           return;
         }
 
-        grid.innerHTML = filteredIcons
-          .map(
-            (icon) => `
-        <div class="icon-card" style="background-color: ${bgColor};" title="${icon.id}">
-          <span class="icon-badge ${icon.isMultiColor ? 'multi-color' : 'mono-color'}">
-            ${icon.isMultiColor ? 'Multi' : 'Mono'}
-          </span>
-          <div class="icon-wrapper" style="color: ${iconColor};">
-            <svg width="${size}" height="${size}" viewBox="${icon.viewBox}">
-              <use href="./sprites/iconsprite.svg#${icon.id}"></use>
-            </svg>
-          </div>
-          <div class="icon-name">${icon.displayName}</div>
-        </div>
-      `
-          )
-          .join('');
+        const cards = filteredIcons.map((icon) => {
+          const card = document.createElement('div');
+          card.className = 'icon-card';
+          card.style.backgroundColor = bgColor;
+          card.title = icon.id;
+
+          const badge = document.createElement('span');
+          badge.className = `icon-badge ${icon.isMultiColor ? 'multi-color' : 'mono-color'}`;
+          badge.textContent = icon.isMultiColor ? 'Multi' : 'Mono';
+
+          const wrapper = document.createElement('div');
+          wrapper.className = 'icon-wrapper';
+          wrapper.style.color = iconColor;
+
+          const svgNS = 'http://www.w3.org/2000/svg';
+          const svg = document.createElementNS(svgNS, 'svg');
+          svg.setAttribute('width', String(size));
+          svg.setAttribute('height', String(size));
+          svg.setAttribute('viewBox', icon.viewBox);
+
+          const use = document.createElementNS(svgNS, 'use');
+          use.setAttribute('href', `./sprites/iconsprite.svg#${icon.id}`);
+          svg.appendChild(use);
+
+          wrapper.appendChild(svg);
+
+          const name = document.createElement('div');
+          name.className = 'icon-name';
+          name.textContent = icon.displayName;
+
+          card.appendChild(badge);
+          card.appendChild(wrapper);
+          card.appendChild(name);
+
+          return card;
+        });
+
+        grid.replaceChildren(...cards);
       }
 
       // Event listeners
