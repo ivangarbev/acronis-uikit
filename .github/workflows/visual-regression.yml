@@ -55,6 +55,15 @@ jobs:
           key: storybook-${{ matrix.name }}-${{ runner.os }}-${{ hashFiles(format('{0}/src/**', matrix.dir), format('{0}/.storybook/**', matrix.dir), format('{0}/package.json', matrix.dir)) }}
           restore-keys: storybook-${{ matrix.name }}-${{ runner.os }}-
 
+      # ui-react depends on generated workspace packages — notably
+      # @acronis-platform/icons-react, whose sources are generated + gitignored
+      # and which ships from dist/. Its dependency graph must be built before
+      # Storybook can resolve those imports. ui-legacy is a leaf and needs no
+      # pre-build. Mirrors ci.yml's `pnpm --filter "@acronis-platform/ui-react..."`.
+      - name: Build workspace dependencies
+        if: matrix.name == 'ui-react'
+        run: pnpm --filter "${{ matrix.filter }}..." run build
+
       - name: Build Storybook
         run: pnpm --filter ${{ matrix.filter }} storybook:build
 
