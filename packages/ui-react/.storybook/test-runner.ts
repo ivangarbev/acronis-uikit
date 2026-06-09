@@ -41,17 +41,20 @@ const config: TestRunnerConfig = {
       const target = hasOverlay ? overlay : page.locator('#storybook-root');
       const box = await target.boundingBox();
       const padding = 24;
-      image = await page.screenshot({
-        animations: 'disabled',
-        clip: box
-          ? {
-              x: Math.max(0, box.x - padding),
-              y: Math.max(0, box.y - padding),
-              width: box.width + padding * 2,
-              height: box.height + padding * 2,
-            }
-          : undefined,
-      });
+      const viewport = page.viewportSize();
+      const clip = box && viewport
+        ? (() => {
+            const x = Math.max(0, box.x - padding);
+            const y = Math.max(0, box.y - padding);
+            return {
+              x,
+              y,
+              width: Math.min(box.width + padding * 2, viewport.width - x),
+              height: Math.min(box.height + padding * 2, viewport.height - y),
+            };
+          })()
+        : undefined;
+      image = await page.screenshot({ animations: 'disabled', clip });
     }
     expect(image).toMatchImageSnapshot({
       customSnapshotsDir: `${process.cwd()}/test/__snapshots__`,
