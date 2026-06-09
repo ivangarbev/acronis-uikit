@@ -1,5 +1,20 @@
 # @acronis-platform/ui-react
 
+## 0.9.0
+
+### Minor Changes
+
+- [#240](https://github.com/acronis/uikit/pull/240) [`dbdc2fc`](https://github.com/acronis/uikit/commit/dbdc2fcb566b8aaf1f5ddb91d9d977051b65e9e7) Thanks [@leonid](https://github.com/leonid)! - Add `RadioGroup` and `Radio`: a mutually-exclusive option group wrapping Base
+  UI's RadioGroup / Radio primitives. The group owns the selected value; each
+  `Radio` takes a `value`. Themed by the shared `--ui-form-*` token tier from
+  `@acronis-platform/tokens-pd` — the 16px circle uses idle / hover / active /
+  disabled border + background, the 8px dot uses `--ui-form-circle-active` (and
+  `--ui-form-circle-disabled` when disabled), and the focus ring uses
+  `--ui-focus-primary`; the checked fill is scoped with `not-data-[disabled]` so
+  disabled wins. Includes tests, Storybook stories, visual-regression baselines,
+  and a Figma Code Connect mapping. Labels are composed by the consumer (a Field
+  component is future work).
+
 ## 0.8.0
 
 ### Minor Changes
