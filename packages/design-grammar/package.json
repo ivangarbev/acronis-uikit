@@ -1,0 +1,18 @@
+{
+  "name": "@acronis-platform/design-grammar",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Design grammar context for the Acronis UI Kit.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "echo \"no build (context package)\" && exit 0",
+    "clean": "echo \"nothing to clean (context package)\" && exit 0",
+    "dev": "echo \"no dev server (context package)\" && exit 0",
+    "lint": "echo \"no lint (context package)\" && exit 0",
+    "lint:fix": "echo \"no lint (context package)\" && exit 0",
+    "test": "echo \"no tests (context package)\" && exit 0",
+    "test:watch": "echo \"no watch mode (context package)\" && exit 0",
+    "typecheck": "echo \"no typecheck (context package)\" && exit 0"
+  }
+}

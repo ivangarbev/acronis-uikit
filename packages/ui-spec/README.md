@@ -8,7 +8,7 @@ Component implementations in the future.
 
 > **Status: Phase 0 spike.** Private package. Covers three components
 > (`button`, `button-icon`, `switch`) to validate the format and its conformance
-> check. See [`context/component-specs-proposal.md`](../../context/component-specs-proposal.md).
+> check. See [`packages/design-grammar/context/component-specs-proposal.md`](../design-grammar/context/component-specs-proposal.md).
 
 ## Layout
 

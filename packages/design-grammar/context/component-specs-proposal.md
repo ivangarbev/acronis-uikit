@@ -5,8 +5,9 @@
 - **Owner:** Leonid Romanov
 - **Affects:** `packages/ui-react`, `packages/tokens-pd`, future Vue / Web
   Component implementations; the `ui-kit-pipeline` agent workflow.
-- **Related:** [`roadmap.md`](roadmap.md) (ui-react replaces legacy by Q3 2026;
-  future non-React implementations), [`conventions.md`](conventions.md).
+- **Related:** [`context/roadmap.md`](../../../context/roadmap.md) (ui-react
+  replaces legacy by Q3 2026; future non-React implementations),
+  [`context/conventions.md`](../../../context/conventions.md).
 
 ## Problem
 

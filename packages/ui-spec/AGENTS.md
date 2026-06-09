@@ -2,7 +2,8 @@
 
 `@acronis-platform/ui-spec` — **framework-agnostic** component specifications for
 the Acronis UI Kit. **Private** (not published). This is the **Phase 0 spike** of
-the proposal in [`context/component-specs-proposal.md`](../../context/component-specs-proposal.md):
+the proposal in
+[`packages/design-grammar/context/component-specs-proposal.md`](../design-grammar/context/component-specs-proposal.md):
 prove the spec format and its conformance check on three existing components
 (`button`, `button-icon`, `switch`) before scaling.
 

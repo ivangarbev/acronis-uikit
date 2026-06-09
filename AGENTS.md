@@ -136,7 +136,8 @@ that workspace**, never here.
   `context/backlog-p2-primitives.md`, `context/backlog-p3-p4.md`.
 - `context/project-board.md` — how we run Project #3: epic/task model, status
   lifecycle + gates, fields, views, and automation.
-- `context/component-specs-proposal.md` — **Proposed** (not yet adopted):
+- `packages/design-grammar/context/component-specs-proposal.md` — **Proposed**
+  (not yet adopted):
   framework-agnostic component specs + a machine-readable design grammar, to
   support future non-React implementations and agent tooling.
 
