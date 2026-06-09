@@ -7,7 +7,7 @@ import { Switch } from './switch';
 
 figma.connect(
   Switch,
-  'https://www.figma.com/design/lrU3ydIyvPYQNE6ixdsKtJ/shadcn-uikit?node-id=1838-1908&m=dev',
+  'https://www.figma.com/design/lrU3ydIyvPYQNE6ixdsKtJ/shadcn-uikit?node-id=1838-1908',
   {
     example: () => <Switch />,
   }
