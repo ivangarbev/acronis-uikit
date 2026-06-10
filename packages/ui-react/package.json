@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@acronis-platform/shadcn-uikit-demos": "workspace:*",
-    "@figma/code-connect": "1.4.7",
+    "@figma/code-connect": "1.4.8",
     "@playwright/test": "1.60.0",
     "react": "catalog:",
     "react-dom": "catalog:",

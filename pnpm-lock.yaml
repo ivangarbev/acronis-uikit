@@ -755,8 +755,8 @@ importers:
         specifier: workspace:*
         version: link:../../apps/demos
       '@figma/code-connect':
-        specifier: 1.4.7
-        version: 1.4.7
+        specifier: 1.4.8
+        version: 1.4.8
       '@playwright/test':
         specifier: 1.60.0
         version: 1.60.0
@@ -1889,8 +1889,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@figma/code-connect@1.4.7':
-    resolution: {integrity: sha512-iWolnm/X/LZVEvbt/D8AQ0IohnNskrTtDcdtGNEZKqUnBh+zDyQQ+m1HnM9+C00NveRbENfhs13QxrTYcOrvEA==}
+  '@figma/code-connect@1.4.8':
+    resolution: {integrity: sha512-Z9KyZPCx88ryFoRbe5M+vs3ZlPo7hFzD8yqeT+43nJM1PaIag04Xm2a0+9C7bCgwyn8jmKKNtDNG5f++Nn1tfA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -9999,7 +9999,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@figma/code-connect@1.4.7':
+  '@figma/code-connect@1.4.8':
     dependencies:
       boxen: 5.1.1
       chalk: 4.1.2
