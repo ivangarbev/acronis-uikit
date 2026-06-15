@@ -4,20 +4,32 @@
   "version": "1.0.0",
   "$type": "vector",
   "values": {
-    "24": { "default": true },
-    "16": { "$rules": ["scale-16"] },
-    "32": { "$rules": ["scale-32"] }
+    "16": {
+      "$rules": ["scale-16"]
+    },
+    "24": {
+      "default": true
+    }
   },
   "assets": {
     "sparkles": {
       "values": {
-        "24": { "$file": "./packs/icons-solid-multi/sparkles-24.svg" }
+        "24": {
+          "$file": "./packs/icons-solid-multi/Sparkles.svg"
+        }
       },
       "platforms": ["PD"],
       "metadata": {
-        "category": [],
+        "category": ["Multicolor"],
         "tags": [],
-        "legacyNames": []
+        "legacyNames": [
+          "ai-sparkles-tag--16",
+          "ai-sparkles-color--16",
+          "ai-sparkles-color--24",
+          "ai-sparkles-color--32",
+          "ai-sparkles-color--72",
+          "ai-sparkles-tag-color--16"
+        ]
       }
     }
   }

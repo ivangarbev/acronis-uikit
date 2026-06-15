@@ -91,7 +91,7 @@
                     "properties": {
                       "$file": {
                         "type": "string",
-                        "pattern": "^\\./packs/[a-z0-9-]+/[a-z0-9-]+\\.(png|webp)$"
+                        "pattern": "^\\./packs/[a-z0-9-]+/[a-zA-Z0-9-]+\\.(png|webp)$"
                       }
                     }
                   }
@@ -116,7 +116,7 @@
                     "properties": {
                       "$file": {
                         "type": "string",
-                        "pattern": "^\\./packs/[a-z0-9-]+/[a-z0-9-]+\\.svg$"
+                        "pattern": "^\\./packs/[a-z0-9-]+/[a-zA-Z0-9-]+\\.svg$"
                       }
                     }
                   }
@@ -160,7 +160,7 @@
       "properties": {
         "$file": {
           "type": "string",
-          "pattern": "^\\./packs/[a-z0-9-]+/[a-z0-9-]+\\.(svg|png|webp)$",
+          "pattern": "^\\./packs/[a-z0-9-]+/[a-zA-Z0-9-]+\\.(svg|png|webp)$",
           "description": "Project-relative path to the on-disk binary. MUST resolve under ./packs/<pack>/. File-extension / $type consistency (svg for vector, png|webp for raster) is a runtime invariant, not enforced by the schema."
         },
         "default": {
