@@ -1,0 +1,113 @@
+import { spawnSync } from 'node:child_process';
+import path from 'node:path';
+import process from 'node:process';
+
+import chalk from 'chalk';
+
+import { getBaseConfig } from './config';
+import { checkUnlinked } from './check-unlinked';
+import { discoverPacks } from './discover-packs';
+import { generateLinkedReport } from './generate-linked-report';
+import { syncPack, type PackSyncResult } from './sync-pack';
+import { validateManifest } from './validate-manifest';
+
+async function main(): Promise<void> {
+  const config = getBaseConfig();
+
+  if (!config.token) {
+    console.error(chalk.red.bold('Token not found. Please add FIGMA_SYNC_TOKEN to .env.local'));
+    process.exit(1);
+  }
+  if (!config.fileKey) {
+    console.error(chalk.red.bold('File key not found. Please add FIGMA_SYNC_FILE_KEY to .env.local'));
+    process.exit(1);
+  }
+  if (!config.sectionNodeId) {
+    console.error(chalk.red.bold('Section node ID not found. Please add FIGMA_SYNC_SECTION_NODE_ID to .env.local'));
+    process.exit(1);
+  }
+
+  console.log(chalk.bold('\n🎨 Figma Design Assets Sync\n'));
+  console.log(`  File:    ${config.fileKey}`);
+  console.log(`  Section: ${config.sectionNodeId}\n`);
+
+  let packs;
+  try {
+    packs = await discoverPacks(config);
+  } catch (err) {
+    const error = err as Error;
+    console.error(chalk.red.bold('✗ Failed to discover packs:'), error.message);
+    process.exit(1);
+  }
+
+  const results: PackSyncResult[] = [];
+  for (const pack of packs) {
+    try {
+      const result = await syncPack(config, pack);
+      results.push(result);
+    } catch (err) {
+      const error = err as Error & { cause?: Error };
+      console.error(chalk.red.bold(`\n✗ Error syncing ${pack.packName}:`), error.message);
+      if (error.cause) console.error(chalk.red('  Cause:'), error.cause.message);
+      process.exit(1);
+    }
+  }
+
+  console.log(chalk.bold('\n\n══ Sync summary ════════════════════════════'));
+  for (const r of results) {
+    console.log(`  ${chalk.green('✓')} ${r.packName.padEnd(24)} ${r.assetCount} assets  (${(r.durationMs / 1000).toFixed(1)}s)`);
+  }
+
+  console.log(chalk.bold('\n\n══ Validations ═════════════════════════════'));
+
+  console.log('\n▸ Schema validation (ajv)...');
+  const ajv = 'node_modules/.bin/ajv';
+  const ajvCmd = [
+    `${ajv} compile -s schemas/pack.schema.json --spec=draft2020`,
+    `${ajv} compile -s schemas/rule.schema.json --spec=draft2020`,
+    `${ajv} validate -s schemas/pack.schema.json -d "packs/*.json" --spec=draft2020`,
+    `${ajv} validate -s schemas/rule.schema.json -d "rules/*.json" --spec=draft2020`,
+  ].join(' && ');
+  const ajvResult = spawnSync(ajvCmd, { stdio: 'inherit', shell: true });
+  if (ajvResult.status !== 0) {
+    console.error(chalk.red.bold('\n✗ Schema validation failed'));
+    process.exit(1);
+  }
+
+  console.log('\n▸ Duplicate legacyNames check...');
+  let hasLegacyDuplicates = false;
+  for (const pack of packs) {
+    const manifestPath = path.join('packs', `${pack.packName}.json`);
+    console.log(chalk.dim(`\n  ${manifestPath}`));
+    const result = await validateManifest(manifestPath);
+    console.log(`  Assets: ${result.assetCount}  Legacy names: ${result.legacyCount}`);
+    if (result.duplicates.length === 0) {
+      console.log(chalk.green('  ✓ No duplicates'));
+    } else {
+      hasLegacyDuplicates = true;
+      console.error(chalk.red(`  ✗ ${result.duplicates.length} duplicate(s):`));
+      for (const d of result.duplicates) {
+        console.error(chalk.red(`    "${d.legacyName}"`), chalk.dim(`→ ${d.icons[0]} and ${d.icons[1]}`));
+      }
+    }
+  }
+
+  console.log('\n▸ Unlinked legacy icons...');
+  const unlinked = await checkUnlinked();
+  console.log(`  Monocolor:  ${unlinked.unlinkedMono} unlinked / ${unlinked.totalMono}`);
+  console.log(`  Multicolor: ${unlinked.unlinkedMulti} unlinked / ${unlinked.totalMulti}`);
+  console.log(chalk.dim(`  Report: ${unlinked.reportPath}`));
+
+  console.log('\n▸ Linked icons report...');
+  const linkedReport = await generateLinkedReport();
+  console.log(chalk.dim(`  Report: ${linkedReport}`));
+
+  if (hasLegacyDuplicates) {
+    console.error(chalk.red.bold('\n✗ Duplicate legacyNames found — resolve before committing\n'));
+    process.exit(1);
+  }
+
+  console.log(chalk.green.bold('\n\n✓ All done!\n'));
+}
+
+main();
