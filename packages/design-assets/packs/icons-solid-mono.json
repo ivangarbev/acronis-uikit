@@ -1058,10 +1058,10 @@
         "legacyNames": ["pci--16", "pci--24"]
       }
     },
-    "sparkles": {
+    "sparkles-solid": {
       "values": {
         "24": {
-          "$file": "./packs/icons-solid-mono/Sparkles.svg"
+          "$file": "./packs/icons-solid-mono/SparklesSolid.svg"
         }
       },
       "platforms": ["PD"],

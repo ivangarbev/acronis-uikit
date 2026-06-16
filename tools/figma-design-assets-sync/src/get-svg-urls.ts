@@ -29,7 +29,7 @@ export async function getSvgUrls(config: SyncConfig, icons: PackIcon[]): Promise
 
   const requests = batches.map((batch) => {
     const ids = batch.map((icon) => icon.id).join(',');
-    return client.get<ImagesResponse>(`/images/${config.fileKey}?ids=${ids}&format=svg`);
+    return client.get<ImagesResponse>(`/images/${config.fileKey}?ids=${ids}&format=svg&svg_include_id=true`);
   });
 
   const responses = await Promise.all(requests);

@@ -36,10 +36,19 @@ export interface PackIcon {
 
 const ICON_TYPES = new Set(['INSTANCE', 'COMPONENT']);
 
+function findGridNode(node: FigmaNode): FigmaNode | undefined {
+  for (const child of node.children ?? []) {
+    if (child.name === '_IconGrid-24') return child;
+    const found = findGridNode(child);
+    if (found) return found;
+  }
+  return undefined;
+}
+
 function collectIconNodes(node: FigmaNode, result: PackIcon[] = []): PackIcon[] {
   if (ICON_TYPES.has(node.type) && node.name.startsWith('_assetsource/')) {
     const componentName = node.name.replace('_assetsource/', '');
-    const gridChild = (node.children ?? []).find((c) => c.name === '_IconGrid-24');
+    const gridChild = findGridNode(node);
     result.push({
       id: node.id,
       name: componentName,

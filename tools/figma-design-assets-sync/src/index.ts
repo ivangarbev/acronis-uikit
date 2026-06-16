@@ -55,7 +55,8 @@ async function main(): Promise<void> {
 
   console.log(chalk.bold('\n\n══ Sync summary ════════════════════════════'));
   for (const r of results) {
-    console.log(`  ${chalk.green('✓')} ${r.packName.padEnd(24)} ${r.assetCount} assets  (${(r.durationMs / 1000).toFixed(1)}s)`);
+    const prunedNote = r.pruned > 0 ? chalk.yellow(`  ${r.pruned} pruned`) : '';
+    console.log(`  ${chalk.green('✓')} ${r.packName.padEnd(24)} ${r.assetCount} assets  (${(r.durationMs / 1000).toFixed(1)}s)${prunedNote}`);
   }
 
   console.log(chalk.bold('\n\n══ Validations ═════════════════════════════'));

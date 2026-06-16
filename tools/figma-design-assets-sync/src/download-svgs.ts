@@ -15,54 +15,50 @@ export interface DownloadedIcon extends PackIconWithUrl {
 }
 
 /**
- * Removes the element (and all its children) whose `id` attribute matches the
- * given Figma node ID from the raw SVG text. Figma may encode the colon in
- * node IDs as a literal colon or as a hyphen, so both variants are tried.
- * Returns the SVG unchanged when the node ID is absent or not found.
+ * Removes the element (and all its children) whose `id` attribute equals
+ * `_IconGrid-24` from the raw SVG text. `svg_include_id=true` in the Figma
+ * export API encodes each layer's NAME (not its node ID) as the `id`
+ * attribute, so we can reliably locate the grid layer by its well-known name.
+ * Returns the SVG unchanged when the element is not present.
  */
-function stripGridElement(svg: string, gridNodeId: string | undefined): string {
-  if (!gridNodeId) return svg;
+function stripGridElement(svg: string): string {
+  const idAttr = 'id="_IconGrid-24"';
+  const pos = svg.indexOf(idAttr);
+  if (pos === -1) return svg;
 
-  for (const id of [gridNodeId, gridNodeId.replace(':', '-')]) {
-    const idAttr = `id="${id}"`;
-    const pos = svg.indexOf(idAttr);
-    if (pos === -1) continue;
+  const openBracket = svg.lastIndexOf('<', pos);
+  if (openBracket === -1) return svg;
 
-    const openBracket = svg.lastIndexOf('<', pos);
-    if (openBracket === -1) continue;
+  const openEnd = svg.indexOf('>', openBracket);
+  if (openEnd === -1) return svg;
 
-    const openEnd = svg.indexOf('>', openBracket);
-    if (openEnd === -1) continue;
+  const tagSlice = svg.slice(openBracket, openEnd + 1);
 
-    const tagSlice = svg.slice(openBracket, openEnd + 1);
+  if (tagSlice.endsWith('/>') || tagSlice.includes('/>')) {
+    return svg.slice(0, openBracket) + svg.slice(openEnd + 1);
+  }
 
-    if (tagSlice.endsWith('/>') || tagSlice.includes('/>')) {
-      return svg.slice(0, openBracket) + svg.slice(openEnd + 1);
-    }
+  const tagNameMatch = svg.slice(openBracket + 1).match(/^([a-z][a-z0-9]*)/i);
+  if (!tagNameMatch) return svg;
+  const tagName = tagNameMatch[1];
 
-    const tagNameMatch = svg.slice(openBracket + 1).match(/^([a-z][a-z0-9]*)/i);
-    if (!tagNameMatch) continue;
-    const tagName = tagNameMatch[1];
-
-    let depth = 1;
-    let searchPos = openEnd + 1;
-    while (depth > 0 && searchPos < svg.length) {
-      const nextOpen = svg.indexOf(`<${tagName}`, searchPos);
-      const nextClose = svg.indexOf(`</${tagName}>`, searchPos);
-      if (nextClose === -1) break;
-      if (nextOpen !== -1 && nextOpen < nextClose) {
-        depth++;
-        searchPos = nextOpen + tagName.length + 1;
-      } else {
-        depth--;
-        if (depth === 0) {
-          const closeEnd = nextClose + `</${tagName}>`.length;
-          return svg.slice(0, openBracket) + svg.slice(closeEnd);
-        }
-        searchPos = nextClose + tagName.length + 3;
+  let depth = 1;
+  let searchPos = openEnd + 1;
+  while (depth > 0 && searchPos < svg.length) {
+    const nextOpen = svg.indexOf(`<${tagName}`, searchPos);
+    const nextClose = svg.indexOf(`</${tagName}>`, searchPos);
+    if (nextClose === -1) break;
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth++;
+      searchPos = nextOpen + tagName.length + 1;
+    } else {
+      depth--;
+      if (depth === 0) {
+        const closeEnd = nextClose + `</${tagName}>`.length;
+        return svg.slice(0, openBracket) + svg.slice(closeEnd);
       }
+      searchPos = nextClose + tagName.length + 3;
     }
-    break;
   }
 
   return svg;
@@ -74,7 +70,8 @@ async function downloadOne(config: SyncConfig, icon: PackIconWithUrl): Promise<D
     throw new Error(`HTTP ${response.status} ${response.statusText} for ${icon.name}`);
   }
   const rawSvg = await response.text();
-  const svgText = stripGridElement(rawSvg, icon.gridNodeId);
+
+  const svgText = stripGridElement(rawSvg);
 
   const plugins: Config['plugins'] = [
     {

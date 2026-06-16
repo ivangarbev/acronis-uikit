@@ -1196,7 +1196,7 @@
       "metadata": {
         "category": ["Objects"],
         "tags": [
-          "company",
+          "my company",
           "business",
           "partner",
           "organization",
@@ -1416,6 +1416,7 @@
       "metadata": {
         "category": ["Shapes"],
         "tags": [
+          "partner portal",
           "growth",
           "project profit",
           "statistics",
@@ -1437,6 +1438,7 @@
       "metadata": {
         "category": ["Shapes"],
         "tags": [
+          "intelligence",
           "pie chart",
           "partition",
           "resource pool",
@@ -1736,8 +1738,6 @@
           "ban-o--24",
           "ban-o--16",
           "ban--16",
-          "forbidden--16",
-          "forbidden--32",
           "blocked-mix--32",
           "forbidden-mix--32"
         ]
@@ -3838,6 +3838,7 @@
       "metadata": {
         "category": ["Objects"],
         "tags": [
+          "service desk",
           "support portal",
           "call center",
           "device",
@@ -4244,7 +4245,14 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Shapes"],
-        "tags": ["products", "apps", "plans", "services", "vendor portal"],
+        "tags": [
+          "marketplace",
+          "products",
+          "apps",
+          "plans",
+          "services",
+          "vendor portal"
+        ],
         "legacyNames": [
           "plans-ab--32",
           "vp--16",
@@ -4624,6 +4632,7 @@
       "metadata": {
         "category": ["Objects"],
         "tags": [
+          "my inbox",
           "ipn",
           "in-product notifications",
           "advertisement",
@@ -4816,6 +4825,7 @@
       "metadata": {
         "category": ["Assets"],
         "tags": [
+          "assets",
           "device",
           "workstation",
           "workload",
@@ -5521,7 +5531,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Shapes"],
-        "tags": ["hide", "close", "panel", "sidebar"],
+        "tags": ["hide", "close", "panel", "sidebar", "collapse menu"],
         "legacyNames": ["hide-panel--24", "hide-panel-o--24"]
       }
     },
@@ -5534,7 +5544,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Shapes"],
-        "tags": ["show", "open", "panel", "sidebar"],
+        "tags": ["show", "open", "panel", "sidebar", "expand menu"],
         "legacyNames": ["show-panel--24", "show-panel-o--24"]
       }
     },

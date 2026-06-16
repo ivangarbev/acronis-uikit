@@ -12,10 +12,10 @@
     }
   },
   "assets": {
-    "circle-check": {
+    "circle-check-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleCheck.svg"
+          "$file": "./packs/icons-stroke-multi/CircleCheckMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -29,15 +29,15 @@
           "ok-tray--16",
           "success--16",
           "success--32",
-          "success-mix--32",
-          "synced-d--16"
+          "synced-d--16",
+          "success-mix--32"
         ]
       }
     },
-    "circle-clock": {
+    "circle-clock-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleClock.svg"
+          "$file": "./packs/icons-stroke-multi/CircleClockMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -73,10 +73,10 @@
         ]
       }
     },
-    "circle-info": {
+    "circle-info-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleInfo.svg"
+          "$file": "./packs/icons-stroke-multi/CircleInfoMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -86,10 +86,10 @@
         "legacyNames": ["info--16", "info--32", "info-mix--32"]
       }
     },
-    "circle-minus": {
+    "circle-minus-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleMinus.svg"
+          "$file": "./packs/icons-stroke-multi/CircleMinusMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -99,10 +99,10 @@
         "legacyNames": ["unknown--16", "unknown--32"]
       }
     },
-    "circle-times": {
+    "circle-times-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleTimes.svg"
+          "$file": "./packs/icons-stroke-multi/CircleTimesMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -115,14 +115,16 @@
           "danger-mix--32",
           "error-clr--16",
           "error-d--16",
-          "error-tray--16"
+          "error-tray--16",
+          "forbidden--16",
+          "forbidden--32"
         ]
       }
     },
-    "circle-warning": {
+    "circle-warning-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleWarning.svg"
+          "$file": "./packs/icons-stroke-multi/CircleWarningMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -142,10 +144,10 @@
         ]
       }
     },
-    "circles": {
+    "circles-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/Circles.svg"
+          "$file": "./packs/icons-stroke-multi/CirclesMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -155,10 +157,10 @@
         "legacyNames": ["multiple-mix--32", "multiple--16"]
       }
     },
-    "diamond-warning": {
+    "diamond-warning-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DiamondWarning.svg"
+          "$file": "./packs/icons-stroke-multi/DiamondWarningMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -168,10 +170,10 @@
         "legacyNames": ["emergency--16", "emergency--32"]
       }
     },
-    "dot-blue": {
+    "dot-blue-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotBlue.svg"
+          "$file": "./packs/icons-stroke-multi/DotBlueMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -186,10 +188,10 @@
         ]
       }
     },
-    "dot-gray": {
+    "dot-gray-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotGray.svg"
+          "$file": "./packs/icons-stroke-multi/DotGrayMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -206,10 +208,10 @@
         "legacyNames": ["dot-unknown--16", "dot-chart-grey--16"]
       }
     },
-    "dot-green": {
+    "dot-green-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotGreen.svg"
+          "$file": "./packs/icons-stroke-multi/DotGreenMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -219,10 +221,10 @@
         "legacyNames": ["dot-chart-success--16"]
       }
     },
-    "dot-orange": {
+    "dot-orange-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotOrange.svg"
+          "$file": "./packs/icons-stroke-multi/DotOrangeMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -232,10 +234,10 @@
         "legacyNames": ["dot-chart-critical--16", "dot-critical--16"]
       }
     },
-    "dot-red": {
+    "dot-red-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotRed.svg"
+          "$file": "./packs/icons-stroke-multi/DotRedMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -252,10 +254,10 @@
         "legacyNames": ["dot-chart-danger--16", "dot-danger--16"]
       }
     },
-    "dot-yellow": {
+    "dot-yellow-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotYellow.svg"
+          "$file": "./packs/icons-stroke-multi/DotYellowMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -265,10 +267,10 @@
         "legacyNames": ["dot-chart-warning--16", "dot-warning--16"]
       }
     },
-    "triangle-warning": {
+    "triangle-warning-multi": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/TriangleWarning.svg"
+          "$file": "./packs/icons-stroke-multi/TriangleWarningMulti.svg"
         }
       },
       "platforms": ["PD"],
