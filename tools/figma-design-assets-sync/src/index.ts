@@ -5,6 +5,7 @@ import process from 'node:process';
 import chalk from 'chalk';
 
 import { getBaseConfig } from './config';
+import { checkStrokeIntegrity } from './check-stroke-integrity';
 import { checkUnlinked } from './check-unlinked';
 import { discoverPacks } from './discover-packs';
 import { generateLinkedReport } from './generate-linked-report';
@@ -102,6 +103,22 @@ async function main(): Promise<void> {
   console.log('\n▸ Linked icons report...');
   const linkedReport = await generateLinkedReport();
   console.log(chalk.dim(`  Report: ${linkedReport}`));
+
+  console.log('\n▸ Stroke fill integrity (icons-stroke-mono)...');
+  const integrity = await checkStrokeIntegrity();
+  const affectedCount = integrity.fullyOutlined.length + integrity.mixed.length;
+  if (affectedCount === 0) {
+    console.log(chalk.green('  ✓ No hardcoded fills found'));
+  } else {
+    console.log(chalk.yellow(`  ⚠ ${affectedCount} icon(s) with hardcoded fills:`));
+    if (integrity.fullyOutlined.length > 0) {
+      console.log(chalk.yellow(`    Fully outlined (${integrity.fullyOutlined.length}): ${integrity.fullyOutlined.join(' · ')}`))
+    }
+    if (integrity.mixed.length > 0) {
+      console.log(chalk.dim(`    Mixed fill+stroke (${integrity.mixed.length}): ${integrity.mixed.join(' · ')}`))
+    }
+    console.log(chalk.dim(`  Report: ${integrity.reportPath}`));
+  }
 
   if (hasLegacyDuplicates) {
     console.error(chalk.red.bold('\n✗ Duplicate legacyNames found — resolve before committing\n'));
