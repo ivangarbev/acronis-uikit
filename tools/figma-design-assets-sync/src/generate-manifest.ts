@@ -36,7 +36,7 @@ export async function generateManifest(
   const assets: Record<string, unknown> = {};
   for (const icon of icons) {
     const meta = parseDescription(icon.description);
-    assets[icon.kebabName] = {
+    assets[icon.name] = {
       values: {
         '24': { $file: `./packs/${config.packName}/${icon.name}.svg` },
       },

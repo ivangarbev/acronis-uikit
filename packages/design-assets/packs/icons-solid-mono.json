@@ -12,7 +12,7 @@
     }
   },
   "assets": {
-    "brand-acronis": {
+    "BrandAcronis": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandAcronis.svg"
@@ -21,11 +21,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["a-logo--32", "acronis-icon--32"]
       }
     },
-    "brand-acronis-cloud": {
+    "BrandAcronisCloud": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandAcronisCloud.svg"
@@ -34,7 +34,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["cloud"],
+        "tags": ["logo", "cloud"],
         "legacyNames": [
           "acronis-cloud--16",
           "acronis-cloud--32",
@@ -42,7 +42,7 @@
         ]
       }
     },
-    "brand-agent-qnap": {
+    "BrandAgentQnap": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandAgentQnap.svg"
@@ -51,11 +51,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["nas"],
+        "tags": ["logo", "nas"],
         "legacyNames": ["agent-qnap--16", "agent-qnap--32"]
       }
     },
-    "brand-apple": {
+    "BrandApple": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandApple.svg"
@@ -65,6 +65,7 @@
       "metadata": {
         "category": ["Solid"],
         "tags": [
+          "logo",
           "os",
           "operating system",
           "macos",
@@ -83,7 +84,7 @@
         ]
       }
     },
-    "brand-aws": {
+    "BrandAws": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandAws.svg"
@@ -92,11 +93,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["storage", "cloud"],
+        "tags": ["logo", "storage", "cloud"],
         "legacyNames": ["aws--24", "aws--32"]
       }
     },
-    "brand-box": {
+    "BrandBox": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandBox.svg"
@@ -105,11 +106,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["storage", "cloud"],
+        "tags": ["logo", "storage", "cloud"],
         "legacyNames": ["box--16", "box--24"]
       }
     },
-    "brand-cis": {
+    "BrandCis": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandCis.svg"
@@ -118,11 +119,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["compliance"],
+        "tags": ["logo", "compliance"],
         "legacyNames": ["cis--16", "cis--24"]
       }
     },
-    "brand-cisco": {
+    "BrandCisco": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandCisco.svg"
@@ -131,11 +132,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["cisco-clr--32", "cisco-tray--32"]
       }
     },
-    "brand-citrix": {
+    "BrandCitrix": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandCitrix.svg"
@@ -144,11 +145,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["citrix-clr--32", "citrix-tray--32"]
       }
     },
-    "brand-communigate": {
+    "BrandCommunigate": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandCommunigate.svg"
@@ -157,11 +158,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["communigate--32"]
       }
     },
-    "brand-cpoc": {
+    "BrandCpoc": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandCpoc.svg"
@@ -170,11 +171,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["cpoc--24"]
       }
     },
-    "brand-dropbox": {
+    "BrandDropbox": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandDropbox.svg"
@@ -183,11 +184,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["cloud", "storage"],
+        "tags": ["logo", "cloud", "storage"],
         "legacyNames": ["dropbox--24", "dropbox--16"]
       }
     },
-    "brand-google": {
+    "BrandGoogle": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandGoogle.svg"
@@ -196,7 +197,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["google workspace", "g-suite"],
+        "tags": ["logo", "google workspace", "g-suite"],
         "legacyNames": [
           "google--24",
           "g-suite-team--32",
@@ -212,7 +213,7 @@
         ]
       }
     },
-    "brand-google-android": {
+    "BrandGoogleAndroid": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandGoogleAndroid.svg"
@@ -221,11 +222,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["os", "operating system"],
+        "tags": ["logo", "os", "operating system"],
         "legacyNames": ["android--24", "android--32"]
       }
     },
-    "brand-google-drive": {
+    "BrandGoogleDrive": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandGoogleDrive.svg"
@@ -234,7 +235,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["google workspace"],
+        "tags": ["logo", "google workspace"],
         "legacyNames": [
           "google-drive--24",
           "google-drive--16",
@@ -245,7 +246,7 @@
         ]
       }
     },
-    "brand-google-gmail": {
+    "BrandGoogleGmail": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandGoogleGmail.svg"
@@ -254,7 +255,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["google workspace"],
+        "tags": ["logo", "google workspace"],
         "legacyNames": [
           "google-gmail--24",
           "google-gmail--16",
@@ -265,7 +266,7 @@
         ]
       }
     },
-    "brand-google-youtube": {
+    "BrandGoogleYoutube": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandGoogleYoutube.svg"
@@ -274,11 +275,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["youtube--24", "youtube--16"]
       }
     },
-    "brand-great-horn": {
+    "BrandGreatHorn": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandGreatHorn.svg"
@@ -287,7 +288,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["security"],
+        "tags": ["logo", "security"],
         "legacyNames": [
           "greathorn--16",
           "greathorn--24",
@@ -298,7 +299,7 @@
         ]
       }
     },
-    "brand-impossible-cloud": {
+    "BrandImpossibleCloud": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandImpossibleCloud.svg"
@@ -307,11 +308,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["storage", "cloud"],
+        "tags": ["logo", "storage", "cloud"],
         "legacyNames": ["impossible-cloud--32"]
       }
     },
-    "brand-ionos": {
+    "BrandIonos": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandIonos.svg"
@@ -320,11 +321,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["hosting"],
+        "tags": ["logo", "hosting"],
         "legacyNames": ["ionos--16", "ionos--24", "ionos--32"]
       }
     },
-    "brand-kubernetes": {
+    "BrandKubernetes": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandKubernetes.svg"
@@ -333,7 +334,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["virtualization"],
+        "tags": ["logo", "virtualization"],
         "legacyNames": [
           "kubernetes--16",
           "kubernetes--24",
@@ -348,7 +349,7 @@
         ]
       }
     },
-    "brand-kvm": {
+    "BrandKvm": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandKvm.svg"
@@ -357,11 +358,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["virtualization"],
+        "tags": ["logo", "virtualization"],
         "legacyNames": ["agent-kvm--32"]
       }
     },
-    "brand-linkedin": {
+    "BrandLinkedin": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandLinkedin.svg"
@@ -370,11 +371,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["social"],
+        "tags": ["logo", "social"],
         "legacyNames": ["linkedin--16", "linkedin--24"]
       }
     },
-    "brand-linux": {
+    "BrandLinux": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandLinux.svg"
@@ -383,7 +384,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["os", "operating system"],
+        "tags": ["logo", "os", "operating system"],
         "legacyNames": [
           "linux--24",
           "linux--16",
@@ -393,7 +394,7 @@
         ]
       }
     },
-    "brand-mc-afee": {
+    "BrandMcAfee": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandMcAfee.svg"
@@ -402,11 +403,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["security"],
+        "tags": ["logo", "security"],
         "legacyNames": ["mc-afee--24", "mc-afee-o--24"]
       }
     },
-    "brand-meta-facebook": {
+    "BrandMetaFacebook": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandMetaFacebook.svg"
@@ -415,11 +416,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["social"],
+        "tags": ["logo", "social"],
         "legacyNames": ["facebook--16", "facebook--24"]
       }
     },
-    "brand-meta-instagram": {
+    "BrandMetaInstagram": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandMetaInstagram.svg"
@@ -428,11 +429,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["social"],
+        "tags": ["logo", "social"],
         "legacyNames": ["instagram--16", "instagram--24"]
       }
     },
-    "brand-meta-whatsapp": {
+    "BrandMetaWhatsapp": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandMetaWhatsapp.svg"
@@ -441,225 +442,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["social"],
+        "tags": ["logo", "social"],
         "legacyNames": ["whatsapp--16"]
       }
     },
-    "brand-microsoft-azure": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftAzure.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms", "microsoft"],
-        "legacyNames": [
-          "azure--24",
-          "azure--32",
-          "dr-in-azure--16",
-          "dr-in-azure--24",
-          "azure--16"
-        ]
-      }
-    },
-    "brand-microsoft-defender": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftDefender.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": ["ms-win-defender--24", "win-defender-o--24"]
-      }
-    },
-    "brand-microsoft-dynamics": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftDynamics.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": [
-          "ms-365-dynamics-backup--24",
-          "ms-365-dynamics-backup--16",
-          "ms-365-dynamics-backup--32"
-        ]
-      }
-    },
-    "brand-microsoft-entra-id": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftEntraId.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": ["entra-id--24", "entra-id--32"]
-      }
-    },
-    "brand-microsoft-exchange": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftExchange.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": [
-          "ms-exchange--24",
-          "ms-exchange--16",
-          "ms-exchange--32",
-          "exchange-cluster--32",
-          "exchange--16",
-          "exchange--24",
-          "exchange-ab--32"
-        ]
-      }
-    },
-    "brand-microsoft-one-drive": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftOneDrive.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": [
-          "ms-onedrive--24",
-          "ms-onedrive--16",
-          "ms-onedrive--32",
-          "one-drive--16",
-          "one-drive--24",
-          "one-drive-ab--32"
-        ]
-      }
-    },
-    "brand-microsoft-onenote": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftOnenote.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": ["ms-onenote--32"]
-      }
-    },
-    "brand-microsoft-outlook": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftOutlook.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": [
-          "ms-outlook--24",
-          "ms-outlook--16",
-          "o365-mailbox-ab--32"
-        ]
-      }
-    },
-    "brand-microsoft-sharepoint": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftSharepoint.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": [
-          "ms-sharepoint--24",
-          "ms-sharepoint--16",
-          "ms-sharepoint--32",
-          "o-365-sharepoint-o--16",
-          "o-365-sharepoint-o--24",
-          "sharepoint-ab--32"
-        ]
-      }
-    },
-    "brand-microsoft-teams": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftTeams.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": [
-          "ms-teams--24",
-          "ms-teams--16",
-          "ms-teams--32",
-          "o365-teams--24",
-          "office-365-teams--16",
-          "ms-teams-tray--32",
-          "o365team-clr--32"
-        ]
-      }
-    },
-    "brand-microsoft-windows": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftWindows.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms", "hyper-v", "os", "operating system"],
-        "legacyNames": [
-          "ms-windows--16",
-          "hyper-v--16",
-          "ms-windows--32",
-          "ms-windows--24",
-          "hyper-v--24",
-          "agent-hyperv--32",
-          "hyper-v-ab--24",
-          "hyper-v-ab--32",
-          "win-serv-essentials-o--16",
-          "win-serv-essentials-o--24",
-          "windows--16",
-          "windows-ab--24",
-          "windows-ab--32"
-        ]
-      }
-    },
-    "brand-microsoft-word": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-solid-mono/BrandMicrosoftWord.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Solid"],
-        "tags": ["ms"],
-        "legacyNames": ["ms-word-tray--32"]
-      }
-    },
-    "brand-microsoft365": {
+    "BrandMicrosoft365": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandMicrosoft365.svg"
@@ -668,7 +455,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["ms", "microsoft 365", "office"],
+        "tags": ["logo", "ms", "microsoft 365", "office"],
         "legacyNames": [
           "ms-365--24",
           "ms-365-o--24",
@@ -692,7 +479,221 @@
         ]
       }
     },
-    "brand-minio": {
+    "BrandMicrosoftAzure": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftAzure.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms", "microsoft"],
+        "legacyNames": [
+          "azure--24",
+          "azure--32",
+          "dr-in-azure--16",
+          "dr-in-azure--24",
+          "azure--16"
+        ]
+      }
+    },
+    "BrandMicrosoftDefender": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftDefender.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": ["ms-win-defender--24", "win-defender-o--24"]
+      }
+    },
+    "BrandMicrosoftDynamics": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftDynamics.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": [
+          "ms-365-dynamics-backup--24",
+          "ms-365-dynamics-backup--16",
+          "ms-365-dynamics-backup--32"
+        ]
+      }
+    },
+    "BrandMicrosoftEntraId": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftEntraId.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": ["entra-id--24", "entra-id--32"]
+      }
+    },
+    "BrandMicrosoftExchange": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftExchange.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": [
+          "ms-exchange--24",
+          "ms-exchange--16",
+          "ms-exchange--32",
+          "exchange-cluster--32",
+          "exchange--16",
+          "exchange--24",
+          "exchange-ab--32"
+        ]
+      }
+    },
+    "BrandMicrosoftOneDrive": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftOneDrive.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": [
+          "ms-onedrive--24",
+          "ms-onedrive--16",
+          "ms-onedrive--32",
+          "one-drive--16",
+          "one-drive--24",
+          "one-drive-ab--32"
+        ]
+      }
+    },
+    "BrandMicrosoftOnenote": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftOnenote.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": ["ms-onenote--32"]
+      }
+    },
+    "BrandMicrosoftOutlook": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftOutlook.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": [
+          "ms-outlook--24",
+          "ms-outlook--16",
+          "o365-mailbox-ab--32"
+        ]
+      }
+    },
+    "BrandMicrosoftSharepoint": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftSharepoint.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": [
+          "ms-sharepoint--24",
+          "ms-sharepoint--16",
+          "ms-sharepoint--32",
+          "o-365-sharepoint-o--16",
+          "o-365-sharepoint-o--24",
+          "sharepoint-ab--32"
+        ]
+      }
+    },
+    "BrandMicrosoftTeams": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftTeams.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": [
+          "ms-teams--24",
+          "ms-teams--16",
+          "ms-teams--32",
+          "o365-teams--24",
+          "office-365-teams--16",
+          "ms-teams-tray--32",
+          "o365team-clr--32"
+        ]
+      }
+    },
+    "BrandMicrosoftWindows": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftWindows.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms", "hyper-v", "os", "operating system"],
+        "legacyNames": [
+          "ms-windows--16",
+          "hyper-v--16",
+          "ms-windows--32",
+          "ms-windows--24",
+          "hyper-v--24",
+          "agent-hyperv--32",
+          "hyper-v-ab--24",
+          "hyper-v-ab--32",
+          "win-serv-essentials-o--16",
+          "win-serv-essentials-o--24",
+          "windows--16",
+          "windows-ab--24",
+          "windows-ab--32"
+        ]
+      }
+    },
+    "BrandMicrosoftWord": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-solid-mono/BrandMicrosoftWord.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Solid"],
+        "tags": ["logo", "ms"],
+        "legacyNames": ["ms-word-tray--32"]
+      }
+    },
+    "BrandMinio": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandMinio.svg"
@@ -701,11 +702,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["cloud", "storage"],
+        "tags": ["logo", "cloud", "storage"],
         "legacyNames": ["minio--32"]
       }
     },
-    "brand-nutanix": {
+    "BrandNutanix": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandNutanix.svg"
@@ -714,11 +715,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["virtualization"],
+        "tags": ["logo", "virtualization"],
         "legacyNames": ["nutanix--16", "agent-nutanix--32"]
       }
     },
-    "brand-omnivoice": {
+    "BrandOmnivoice": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandOmnivoice.svg"
@@ -727,7 +728,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": [
           "omnivoice--24",
           "omnivoice--16",
@@ -736,7 +737,7 @@
         ]
       }
     },
-    "brand-oracle": {
+    "BrandOracle": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandOracle.svg"
@@ -745,7 +746,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["virtualization"],
+        "tags": ["logo", "virtualization"],
         "legacyNames": [
           "oracle-agent--16",
           "oracle-agent--24",
@@ -754,7 +755,7 @@
         ]
       }
     },
-    "brand-pdf": {
+    "BrandPdf": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandPdf.svg"
@@ -763,11 +764,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["adobe"],
+        "tags": ["logo", "adobe"],
         "legacyNames": ["pdf--16", "pdf--24", "pdf-o--16"]
       }
     },
-    "brand-postgresql": {
+    "BrandPostgresql": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandPostgresql.svg"
@@ -776,11 +777,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["database", "db", "sql"],
+        "tags": ["logo", "database", "db", "sql"],
         "legacyNames": ["postgresql--32"]
       }
     },
-    "brand-proxmox": {
+    "BrandProxmox": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandProxmox.svg"
@@ -789,11 +790,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["virtualization"],
+        "tags": ["logo", "virtualization"],
         "legacyNames": ["proxmox--16", "proxmox--32"]
       }
     },
-    "brand-reddit": {
+    "BrandReddit": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandReddit.svg"
@@ -802,11 +803,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["social"],
+        "tags": ["logo", "social"],
         "legacyNames": ["reddit--16", "reddit--24"]
       }
     },
-    "brand-redhat": {
+    "BrandRedhat": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandRedhat.svg"
@@ -815,11 +816,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["os", "operating system", "agent"],
+        "tags": ["logo", "os", "operating system", "agent"],
         "legacyNames": ["agent-redhat--32"]
       }
     },
-    "brand-s3": {
+    "BrandS3": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandS3.svg"
@@ -828,11 +829,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["cloud", "storage"],
+        "tags": ["logo", "cloud", "storage"],
         "legacyNames": ["s3--24", "s3--32", "s3-storage--24"]
       }
     },
-    "brand-salesforce": {
+    "BrandSalesforce": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandSalesforce.svg"
@@ -841,11 +842,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["salesforce--16", "salesforce--24"]
       }
     },
-    "brand-slack": {
+    "BrandSlack": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandSlack.svg"
@@ -854,11 +855,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["social"],
+        "tags": ["logo", "social"],
         "legacyNames": ["slack--24", "slack--16"]
       }
     },
-    "brand-spiceworks": {
+    "BrandSpiceworks": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandSpiceworks.svg"
@@ -867,11 +868,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["spiceworks--24", "spiceworks--16"]
       }
     },
-    "brand-splashtop": {
+    "BrandSplashtop": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandSplashtop.svg"
@@ -880,11 +881,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["splashtop--16", "splashtop--24", "splashtop--32"]
       }
     },
-    "brand-sql": {
+    "BrandSql": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandSql.svg"
@@ -893,11 +894,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["database", "db", "sql"],
+        "tags": ["logo", "database", "db", "sql"],
         "legacyNames": ["sql--24"]
       }
     },
-    "brand-synology": {
+    "BrandSynology": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandSynology.svg"
@@ -906,11 +907,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["nas"],
+        "tags": ["logo", "nas"],
         "legacyNames": ["synology--16", "synology--32"]
       }
     },
-    "brand-virus-total": {
+    "BrandVirusTotal": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandVirusTotal.svg"
@@ -919,11 +920,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["security"],
+        "tags": ["logo", "security"],
         "legacyNames": ["virustotal--16", "virustotal-o--16"]
       }
     },
-    "brand-vmware": {
+    "BrandVmware": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandVmware.svg"
@@ -932,7 +933,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["virtualization"],
+        "tags": ["logo", "virtualization"],
         "legacyNames": [
           "vm-ware--24",
           "partner-vcd--16",
@@ -941,7 +942,7 @@
         ]
       }
     },
-    "brand-wasabi": {
+    "BrandWasabi": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandWasabi.svg"
@@ -950,11 +951,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["cloud", "storage"],
+        "tags": ["logo", "cloud", "storage"],
         "legacyNames": ["wasabi--32"]
       }
     },
-    "brand-x": {
+    "BrandX": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandX.svg"
@@ -963,11 +964,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["social", "twitter"],
+        "tags": ["logo", "social", "twitter"],
         "legacyNames": ["x-twitter--24", "twitter--16", "twitter--24"]
       }
     },
-    "brand-xen": {
+    "BrandXen": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandXen.svg"
@@ -976,11 +977,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["virtualization"],
+        "tags": ["logo", "virtualization"],
         "legacyNames": ["agent-xen--32"]
       }
     },
-    "brand-zendesk": {
+    "BrandZendesk": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandZendesk.svg"
@@ -989,11 +990,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["zendesk--16", "zendesk--24"]
       }
     },
-    "brand-zoom": {
+    "BrandZoom": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/BrandZoom.svg"
@@ -1002,11 +1003,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["logo"],
         "legacyNames": ["zoom-clr--32", "zoom-tray--32"]
       }
     },
-    "compliance-e8": {
+    "ComplianceE8": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/ComplianceE8.svg"
@@ -1015,11 +1016,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["compliance standards"],
+        "tags": ["logo", "compliance standards"],
         "legacyNames": ["e8--16", "e8--24"]
       }
     },
-    "compliance-gdpr": {
+    "ComplianceGdpr": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/ComplianceGdpr.svg"
@@ -1028,11 +1029,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["compliance standards"],
+        "tags": ["logo", "compliance standards"],
         "legacyNames": ["gdpr--16", "gdpr--24"]
       }
     },
-    "compliance-hipaa": {
+    "ComplianceHipaa": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/ComplianceHipaa.svg"
@@ -1041,11 +1042,11 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["compliance standards"],
+        "tags": ["logo", "compliance standards"],
         "legacyNames": ["hipaa--16", "hipaa--24"]
       }
     },
-    "compliance-pci": {
+    "CompliancePci": {
       "values": {
         "24": {
           "$file": "./packs/icons-solid-mono/CompliancePci.svg"
@@ -1054,20 +1055,20 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": ["compliance standards"],
+        "tags": ["logo", "compliance standards"],
         "legacyNames": ["pci--16", "pci--24"]
       }
     },
-    "sparkles-solid": {
+    "Sparkles": {
       "values": {
         "24": {
-          "$file": "./packs/icons-solid-mono/SparklesSolid.svg"
+          "$file": "./packs/icons-solid-mono/Sparkles.svg"
         }
       },
       "platforms": ["PD"],
       "metadata": {
         "category": ["Solid"],
-        "tags": [],
+        "tags": ["ai"],
         "legacyNames": [
           "ai-sparkles--16",
           "ai-sparkles--24",

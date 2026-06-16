@@ -12,10 +12,10 @@
     }
   },
   "assets": {
-    "circle-check-multi": {
+    "CircleCheck": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleCheckMulti.svg"
+          "$file": "./packs/icons-stroke-multi/CircleCheck.svg"
         }
       },
       "platforms": ["PD"],
@@ -34,10 +34,10 @@
         ]
       }
     },
-    "circle-clock-multi": {
+    "CircleClock": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleClockMulti.svg"
+          "$file": "./packs/icons-stroke-multi/CircleClock.svg"
         }
       },
       "platforms": ["PD"],
@@ -73,10 +73,10 @@
         ]
       }
     },
-    "circle-info-multi": {
+    "CircleInfo": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleInfoMulti.svg"
+          "$file": "./packs/icons-stroke-multi/CircleInfo.svg"
         }
       },
       "platforms": ["PD"],
@@ -86,10 +86,10 @@
         "legacyNames": ["info--16", "info--32", "info-mix--32"]
       }
     },
-    "circle-minus-multi": {
+    "CircleMinus": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleMinusMulti.svg"
+          "$file": "./packs/icons-stroke-multi/CircleMinus.svg"
         }
       },
       "platforms": ["PD"],
@@ -99,10 +99,10 @@
         "legacyNames": ["unknown--16", "unknown--32"]
       }
     },
-    "circle-times-multi": {
+    "CircleTimes": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleTimesMulti.svg"
+          "$file": "./packs/icons-stroke-multi/CircleTimes.svg"
         }
       },
       "platforms": ["PD"],
@@ -121,10 +121,10 @@
         ]
       }
     },
-    "circle-warning-multi": {
+    "CircleWarning": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleWarningMulti.svg"
+          "$file": "./packs/icons-stroke-multi/CircleWarning.svg"
         }
       },
       "platforms": ["PD"],
@@ -144,10 +144,10 @@
         ]
       }
     },
-    "circles-multi": {
+    "Circles": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CirclesMulti.svg"
+          "$file": "./packs/icons-stroke-multi/Circles.svg"
         }
       },
       "platforms": ["PD"],
@@ -157,10 +157,10 @@
         "legacyNames": ["multiple-mix--32", "multiple--16"]
       }
     },
-    "diamond-warning-multi": {
+    "DiamondWarning": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DiamondWarningMulti.svg"
+          "$file": "./packs/icons-stroke-multi/DiamondWarning.svg"
         }
       },
       "platforms": ["PD"],
@@ -170,10 +170,10 @@
         "legacyNames": ["emergency--16", "emergency--32"]
       }
     },
-    "dot-blue-multi": {
+    "DotBlue": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotBlueMulti.svg"
+          "$file": "./packs/icons-stroke-multi/DotBlue.svg"
         }
       },
       "platforms": ["PD"],
@@ -188,10 +188,10 @@
         ]
       }
     },
-    "dot-gray-multi": {
+    "DotGray": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotGrayMulti.svg"
+          "$file": "./packs/icons-stroke-multi/DotGray.svg"
         }
       },
       "platforms": ["PD"],
@@ -208,10 +208,10 @@
         "legacyNames": ["dot-unknown--16", "dot-chart-grey--16"]
       }
     },
-    "dot-green-multi": {
+    "DotGreen": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotGreenMulti.svg"
+          "$file": "./packs/icons-stroke-multi/DotGreen.svg"
         }
       },
       "platforms": ["PD"],
@@ -221,10 +221,10 @@
         "legacyNames": ["dot-chart-success--16"]
       }
     },
-    "dot-orange-multi": {
+    "DotOrange": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotOrangeMulti.svg"
+          "$file": "./packs/icons-stroke-multi/DotOrange.svg"
         }
       },
       "platforms": ["PD"],
@@ -234,10 +234,10 @@
         "legacyNames": ["dot-chart-critical--16", "dot-critical--16"]
       }
     },
-    "dot-red-multi": {
+    "DotRed": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotRedMulti.svg"
+          "$file": "./packs/icons-stroke-multi/DotRed.svg"
         }
       },
       "platforms": ["PD"],
@@ -254,10 +254,10 @@
         "legacyNames": ["dot-chart-danger--16", "dot-danger--16"]
       }
     },
-    "dot-yellow-multi": {
+    "DotYellow": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DotYellowMulti.svg"
+          "$file": "./packs/icons-stroke-multi/DotYellow.svg"
         }
       },
       "platforms": ["PD"],
@@ -267,10 +267,10 @@
         "legacyNames": ["dot-chart-warning--16", "dot-warning--16"]
       }
     },
-    "triangle-warning-multi": {
+    "TriangleWarning": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/TriangleWarningMulti.svg"
+          "$file": "./packs/icons-stroke-multi/TriangleWarning.svg"
         }
       },
       "platforms": ["PD"],

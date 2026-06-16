@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 
 import type { SyncConfig } from './config';
-import { figmaClientRequest } from './figma-client';
 import { formatName } from './helpers';
+import { figmaClientRequest } from './figma-client';
 
 interface FigmaNode {
   id: string;

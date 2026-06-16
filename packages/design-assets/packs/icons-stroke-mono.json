@@ -12,7 +12,7 @@
     }
   },
   "assets": {
-    "app-window": {
+    "AppWindow": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/AppWindow.svg"
@@ -25,7 +25,7 @@
         "legacyNames": ["application--24", "virtual-app--32"]
       }
     },
-    "app-window-arrow": {
+    "AppWindowArrow": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/AppWindowArrow.svg"
@@ -52,7 +52,7 @@
         ]
       }
     },
-    "app-window-times": {
+    "AppWindowTimes": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/AppWindowTimes.svg"
@@ -71,7 +71,7 @@
         ]
       }
     },
-    "archival-box": {
+    "ArchivalBox": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArchivalBox.svg"
@@ -109,7 +109,7 @@
         ]
       }
     },
-    "arrow-down": {
+    "ArrowDown": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowDown.svg"
@@ -127,7 +127,7 @@
         ]
       }
     },
-    "arrow-down-left": {
+    "ArrowDownLeft": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowDownLeft.svg"
@@ -140,7 +140,7 @@
         "legacyNames": ["arrow-lower-left-o--24"]
       }
     },
-    "arrow-export": {
+    "ArrowExport": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowExport.svg"
@@ -164,7 +164,7 @@
         ]
       }
     },
-    "arrow-import": {
+    "ArrowImport": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowImport.svg"
@@ -187,7 +187,7 @@
         ]
       }
     },
-    "arrow-in-down": {
+    "ArrowInDown": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowInDown.svg"
@@ -206,7 +206,7 @@
         ]
       }
     },
-    "arrow-left": {
+    "ArrowLeft": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowLeft.svg"
@@ -226,7 +226,7 @@
         ]
       }
     },
-    "arrow-left-from-line": {
+    "ArrowLeftFromLine": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowLeftFromLine.svg"
@@ -244,7 +244,7 @@
         ]
       }
     },
-    "arrow-left-to-line": {
+    "ArrowLeftToLine": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowLeftToLine.svg"
@@ -257,7 +257,7 @@
         "legacyNames": []
       }
     },
-    "arrow-out-up": {
+    "ArrowOutUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowOutUp.svg"
@@ -270,7 +270,7 @@
         "legacyNames": ["upload--16", "upload--24"]
       }
     },
-    "arrow-reply": {
+    "ArrowReply": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowReply.svg"
@@ -283,7 +283,7 @@
         "legacyNames": ["reply--16"]
       }
     },
-    "arrow-right": {
+    "ArrowRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowRight.svg"
@@ -303,7 +303,7 @@
         ]
       }
     },
-    "arrow-right-from-line": {
+    "ArrowRightFromLine": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowRightFromLine.svg"
@@ -316,7 +316,7 @@
         "legacyNames": []
       }
     },
-    "arrow-right-to-line": {
+    "ArrowRightToLine": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowRightToLine.svg"
@@ -329,7 +329,7 @@
         "legacyNames": ["attach--16"]
       }
     },
-    "arrow-rotation": {
+    "ArrowRotation": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowRotation.svg"
@@ -349,7 +349,7 @@
         ]
       }
     },
-    "arrow-rotation-dot": {
+    "ArrowRotationDot": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowRotationDot.svg"
@@ -362,7 +362,7 @@
         "legacyNames": ["recovery-point--24", "recovery-point--16"]
       }
     },
-    "arrow-rotation-time": {
+    "ArrowRotationTime": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowRotationTime.svg"
@@ -375,7 +375,7 @@
         "legacyNames": ["history--16", "history--24", "show-version-ab--32"]
       }
     },
-    "arrow-rotation-warning": {
+    "ArrowRotationWarning": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowRotationWarning.svg"
@@ -388,7 +388,7 @@
         "legacyNames": ["hard-reboot--16"]
       }
     },
-    "arrow-trend-down": {
+    "ArrowTrendDown": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowTrendDown.svg"
@@ -401,7 +401,7 @@
         "legacyNames": []
       }
     },
-    "arrow-trend-up": {
+    "ArrowTrendUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowTrendUp.svg"
@@ -414,7 +414,7 @@
         "legacyNames": ["calendar-trend--32"]
       }
     },
-    "arrow-up": {
+    "ArrowUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowUp.svg"
@@ -431,7 +431,7 @@
         ]
       }
     },
-    "arrow-up-right": {
+    "ArrowUpRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowUpRight.svg"
@@ -444,7 +444,7 @@
         "legacyNames": ["arrow-upper-right-o--24"]
       }
     },
-    "arrow-uturn": {
+    "ArrowUturn": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowUturn.svg"
@@ -464,7 +464,7 @@
         ]
       }
     },
-    "arrows-circle": {
+    "ArrowsCircle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowsCircle.svg"
@@ -489,7 +489,7 @@
         ]
       }
     },
-    "arrows-collapse": {
+    "ArrowsCollapse": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowsCollapse.svg"
@@ -506,7 +506,7 @@
         ]
       }
     },
-    "arrows-down-up": {
+    "ArrowsDownUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowsDownUp.svg"
@@ -519,7 +519,7 @@
         "legacyNames": ["sort--16"]
       }
     },
-    "arrows-expand": {
+    "ArrowsExpand": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowsExpand.svg"
@@ -538,7 +538,7 @@
         ]
       }
     },
-    "arrows-left-right": {
+    "ArrowsLeftRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowsLeftRight.svg"
@@ -551,7 +551,7 @@
         "legacyNames": ["move--16", "move--24", "routing--24", "routing-o--24"]
       }
     },
-    "arrows-loop": {
+    "ArrowsLoop": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowsLoop.svg"
@@ -564,7 +564,7 @@
         "legacyNames": ["reinstall--16", "recurring-ticket--16"]
       }
     },
-    "arrows-move": {
+    "ArrowsMove": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ArrowsMove.svg"
@@ -577,7 +577,7 @@
         "legacyNames": ["placement--24"]
       }
     },
-    "asterisk": {
+    "Asterisk": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Asterisk.svg"
@@ -590,7 +590,7 @@
         "legacyNames": ["star--16", "mandatory--16"]
       }
     },
-    "award": {
+    "Award": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Award.svg"
@@ -608,7 +608,7 @@
         ]
       }
     },
-    "badge-arrow-up": {
+    "BadgeArrowUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BadgeArrowUp.svg"
@@ -621,7 +621,7 @@
         "legacyNames": ["upsell--16", "adv--16", "upsell--32"]
       }
     },
-    "badge-check": {
+    "BadgeCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BadgeCheck.svg"
@@ -658,7 +658,7 @@
         ]
       }
     },
-    "badge-key": {
+    "BadgeKey": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BadgeKey.svg"
@@ -671,7 +671,7 @@
         "legacyNames": ["license-keys--32"]
       }
     },
-    "badge-percent": {
+    "BadgePercent": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BadgePercent.svg"
@@ -702,7 +702,7 @@
         ]
       }
     },
-    "bars": {
+    "Bars": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Bars.svg"
@@ -720,7 +720,7 @@
         ]
       }
     },
-    "bars-filter": {
+    "BarsFilter": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BarsFilter.svg"
@@ -733,7 +733,7 @@
         "legacyNames": []
       }
     },
-    "bars-vertical": {
+    "BarsVertical": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BarsVertical.svg"
@@ -746,7 +746,7 @@
         "legacyNames": ["edit-columns--16"]
       }
     },
-    "bell": {
+    "Bell": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Bell.svg"
@@ -766,7 +766,7 @@
         ]
       }
     },
-    "bell-off": {
+    "BellOff": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BellOff.svg"
@@ -779,7 +779,7 @@
         "legacyNames": ["bell-off-o--24"]
       }
     },
-    "bin": {
+    "Bin": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Bin.svg"
@@ -801,7 +801,7 @@
         ]
       }
     },
-    "bluetooth": {
+    "Bluetooth": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Bluetooth.svg"
@@ -817,7 +817,7 @@
         ]
       }
     },
-    "bolt": {
+    "Bolt": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Bolt.svg"
@@ -830,7 +830,7 @@
         "legacyNames": ["add-action--16", "automation--24"]
       }
     },
-    "book": {
+    "Book": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Book.svg"
@@ -852,7 +852,7 @@
         "legacyNames": ["file-onenote--32", "devices-ebook-reader--24"]
       }
     },
-    "book-play": {
+    "BookPlay": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BookPlay.svg"
@@ -865,7 +865,7 @@
         "legacyNames": ["execute-runbook--24", "execute-runbook-o--24"]
       }
     },
-    "book-user": {
+    "BookUser": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BookUser.svg"
@@ -884,7 +884,7 @@
         "legacyNames": ["address-book--32"]
       }
     },
-    "box": {
+    "Box": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Box.svg"
@@ -967,7 +967,7 @@
         ]
       }
     },
-    "box-dashed": {
+    "BoxDashed": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BoxDashed.svg"
@@ -993,7 +993,7 @@
         ]
       }
     },
-    "box-shield": {
+    "BoxShield": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BoxShield.svg"
@@ -1019,7 +1019,7 @@
         ]
       }
     },
-    "box-stack": {
+    "BoxStack": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BoxStack.svg"
@@ -1032,7 +1032,7 @@
         "legacyNames": ["vm-replication-plan-ab--32", "hc3-replica-ab--32"]
       }
     },
-    "boxes": {
+    "Boxes": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Boxes.svg"
@@ -1055,7 +1055,7 @@
         ]
       }
     },
-    "briefcase": {
+    "Briefcase": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Briefcase.svg"
@@ -1092,7 +1092,7 @@
         ]
       }
     },
-    "brush-cleaning": {
+    "BrushCleaning": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BrushCleaning.svg"
@@ -1125,7 +1125,7 @@
         ]
       }
     },
-    "brush-painting": {
+    "BrushPainting": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BrushPainting.svg"
@@ -1143,7 +1143,7 @@
         ]
       }
     },
-    "bucket": {
+    "Bucket": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Bucket.svg"
@@ -1156,7 +1156,7 @@
         "legacyNames": ["bucket--24", "bucket--32", "bucket--16"]
       }
     },
-    "bug": {
+    "Bug": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Bug.svg"
@@ -1186,7 +1186,7 @@
         ]
       }
     },
-    "building": {
+    "Building": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Building.svg"
@@ -1217,7 +1217,7 @@
         ]
       }
     },
-    "bulb": {
+    "Bulb": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Bulb.svg"
@@ -1235,7 +1235,7 @@
         ]
       }
     },
-    "bulb-crossed": {
+    "BulbCrossed": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/BulbCrossed.svg"
@@ -1253,7 +1253,7 @@
         ]
       }
     },
-    "calculator": {
+    "Calculator": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Calculator.svg"
@@ -1266,7 +1266,7 @@
         "legacyNames": ["calculator--16"]
       }
     },
-    "calendar": {
+    "Calendar": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Calendar.svg"
@@ -1285,7 +1285,7 @@
         ]
       }
     },
-    "calendar-clock": {
+    "CalendarClock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CalendarClock.svg"
@@ -1310,7 +1310,7 @@
         ]
       }
     },
-    "camera": {
+    "Camera": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Camera.svg"
@@ -1331,7 +1331,7 @@
         "legacyNames": ["devices-photo-camera--24"]
       }
     },
-    "car": {
+    "Car": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Car.svg"
@@ -1351,7 +1351,7 @@
         "legacyNames": ["devices-car--24"]
       }
     },
-    "cctv": {
+    "Cctv": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Cctv.svg"
@@ -1372,7 +1372,7 @@
         "legacyNames": ["devices-camera--24"]
       }
     },
-    "chart-bar-horizontal": {
+    "ChartBarHorizontal": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChartBarHorizontal.svg"
@@ -1385,7 +1385,7 @@
         "legacyNames": []
       }
     },
-    "chart-bar-vertical": {
+    "ChartBarVertical": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChartBarVertical.svg"
@@ -1406,7 +1406,7 @@
         "legacyNames": ["empty-widget--32"]
       }
     },
-    "chart-growth": {
+    "ChartGrowth": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChartGrowth.svg"
@@ -1428,7 +1428,7 @@
         "legacyNames": ["growth--16", "project-profit--32"]
       }
     },
-    "chart-pie": {
+    "ChartPie": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChartPie.svg"
@@ -1461,7 +1461,7 @@
         ]
       }
     },
-    "chart-trend": {
+    "ChartTrend": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChartTrend.svg"
@@ -1487,7 +1487,7 @@
         ]
       }
     },
-    "check": {
+    "Check": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Check.svg"
@@ -1506,7 +1506,7 @@
         ]
       }
     },
-    "check-double": {
+    "CheckDouble": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CheckDouble.svg"
@@ -1519,7 +1519,7 @@
         "legacyNames": ["check-double--16"]
       }
     },
-    "chevron-down": {
+    "ChevronDown": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChevronDown.svg"
@@ -1538,7 +1538,7 @@
         ]
       }
     },
-    "chevron-first": {
+    "ChevronFirst": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChevronFirst.svg"
@@ -1551,7 +1551,7 @@
         "legacyNames": ["next-range--16", "next-range-o--16"]
       }
     },
-    "chevron-last": {
+    "ChevronLast": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChevronLast.svg"
@@ -1564,7 +1564,7 @@
         "legacyNames": ["last-range--16", "last-range-o--16"]
       }
     },
-    "chevron-left": {
+    "ChevronLeft": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChevronLeft.svg"
@@ -1585,7 +1585,7 @@
         ]
       }
     },
-    "chevron-right": {
+    "ChevronRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChevronRight.svg"
@@ -1603,7 +1603,7 @@
         ]
       }
     },
-    "chevron-up": {
+    "ChevronUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChevronUp.svg"
@@ -1616,7 +1616,7 @@
         "legacyNames": ["chevron-up--16", "chevron-big-up--16", "arrow-up--32"]
       }
     },
-    "chevrons-left": {
+    "ChevronsLeft": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChevronsLeft.svg"
@@ -1633,7 +1633,7 @@
         ]
       }
     },
-    "chevrons-right": {
+    "ChevronsRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ChevronsRight.svg"
@@ -1646,7 +1646,7 @@
         "legacyNames": ["expand-menu--16", "chevron-double-right--16"]
       }
     },
-    "circle-arrow-down": {
+    "CircleArrowDown": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleArrowDown.svg"
@@ -1667,7 +1667,7 @@
         ]
       }
     },
-    "circle-arrow-left": {
+    "CircleArrowLeft": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleArrowLeft.svg"
@@ -1680,7 +1680,7 @@
         "legacyNames": []
       }
     },
-    "circle-arrow-right": {
+    "CircleArrowRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleArrowRight.svg"
@@ -1702,7 +1702,7 @@
         ]
       }
     },
-    "circle-arrow-up": {
+    "CircleArrowUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleArrowUp.svg"
@@ -1715,7 +1715,7 @@
         "legacyNames": ["unshelve-o--16"]
       }
     },
-    "circle-ban": {
+    "CircleBan": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleBan.svg"
@@ -1743,7 +1743,7 @@
         ]
       }
     },
-    "circle-check": {
+    "CircleCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleCheck.svg"
@@ -1772,7 +1772,7 @@
         ]
       }
     },
-    "circle-clock": {
+    "CircleClock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleClock.svg"
@@ -1792,7 +1792,7 @@
         ]
       }
     },
-    "circle-connect": {
+    "CircleConnect": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleConnect.svg"
@@ -1816,7 +1816,7 @@
         ]
       }
     },
-    "circle-dollar": {
+    "CircleDollar": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleDollar.svg"
@@ -1829,7 +1829,7 @@
         "legacyNames": ["subscriptions--24", "money-tree--32"]
       }
     },
-    "circle-ellipsis": {
+    "CircleEllipsis": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleEllipsis.svg"
@@ -1842,7 +1842,7 @@
         "legacyNames": ["actions-o--16", "connecting--16"]
       }
     },
-    "circle-help": {
+    "CircleHelp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleHelp.svg"
@@ -1872,7 +1872,7 @@
         ]
       }
     },
-    "circle-info": {
+    "CircleInfo": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleInfo.svg"
@@ -1892,7 +1892,7 @@
         ]
       }
     },
-    "circle-ip": {
+    "CircleIp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleIp.svg"
@@ -1910,7 +1910,7 @@
         ]
       }
     },
-    "circle-key": {
+    "CircleKey": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleKey.svg"
@@ -1928,7 +1928,7 @@
         ]
       }
     },
-    "circle-lightning": {
+    "CircleLightning": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleLightning.svg"
@@ -1952,7 +1952,7 @@
         ]
       }
     },
-    "circle-lock": {
+    "CircleLock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleLock.svg"
@@ -1965,7 +1965,7 @@
         "legacyNames": ["locked--32", "locked--16"]
       }
     },
-    "circle-minus": {
+    "CircleMinus": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleMinus.svg"
@@ -1985,7 +1985,7 @@
         ]
       }
     },
-    "circle-pause": {
+    "CirclePause": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CirclePause.svg"
@@ -2005,7 +2005,7 @@
         ]
       }
     },
-    "circle-pirate": {
+    "CirclePirate": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CirclePirate.svg"
@@ -2027,7 +2027,7 @@
         "legacyNames": ["pirate-tray--16", "pirate-clr--16"]
       }
     },
-    "circle-play": {
+    "CirclePlay": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CirclePlay.svg"
@@ -2053,7 +2053,7 @@
         ]
       }
     },
-    "circle-plus": {
+    "CirclePlus": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CirclePlus.svg"
@@ -2079,7 +2079,7 @@
         ]
       }
     },
-    "circle-small": {
+    "CircleSmall": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleSmall.svg"
@@ -2101,7 +2101,7 @@
         ]
       }
     },
-    "circle-stop": {
+    "CircleStop": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleStop.svg"
@@ -2122,7 +2122,7 @@
         ]
       }
     },
-    "circle-times": {
+    "CircleTimes": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleTimes.svg"
@@ -2143,7 +2143,7 @@
         ]
       }
     },
-    "circle-user": {
+    "CircleUser": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleUser.svg"
@@ -2176,7 +2176,7 @@
         ]
       }
     },
-    "circle-warning": {
+    "CircleWarning": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CircleWarning.svg"
@@ -2197,7 +2197,7 @@
         ]
       }
     },
-    "circles": {
+    "Circles": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Circles.svg"
@@ -2210,7 +2210,7 @@
         "legacyNames": []
       }
     },
-    "circles-blend": {
+    "CirclesBlend": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CirclesBlend.svg"
@@ -2223,7 +2223,7 @@
         "legacyNames": ["compare--32"]
       }
     },
-    "clipboard": {
+    "Clipboard": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Clipboard.svg"
@@ -2241,7 +2241,7 @@
         ]
       }
     },
-    "clipboard-arrow": {
+    "ClipboardArrow": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ClipboardArrow.svg"
@@ -2260,7 +2260,7 @@
         ]
       }
     },
-    "clipboard-check": {
+    "ClipboardCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ClipboardCheck.svg"
@@ -2273,7 +2273,7 @@
         "legacyNames": ["policy--24", "policy-o--24"]
       }
     },
-    "clipboard-cog": {
+    "ClipboardCog": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ClipboardCog.svg"
@@ -2286,7 +2286,7 @@
         "legacyNames": ["clipboard-custom-o--32", "settings-default--32"]
       }
     },
-    "clipboard-help": {
+    "ClipboardHelp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ClipboardHelp.svg"
@@ -2299,7 +2299,7 @@
         "legacyNames": ["clipboard-doubt--24", "clipboard-question--24"]
       }
     },
-    "clipboard-text": {
+    "ClipboardText": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ClipboardText.svg"
@@ -2326,7 +2326,7 @@
         ]
       }
     },
-    "cloud": {
+    "Cloud": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Cloud.svg"
@@ -2354,7 +2354,7 @@
         ]
       }
     },
-    "cloud-arrow-up": {
+    "CloudArrowUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudArrowUp.svg"
@@ -2373,7 +2373,7 @@
         ]
       }
     },
-    "cloud-bolt": {
+    "CloudBolt": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudBolt.svg"
@@ -2386,7 +2386,7 @@
         "legacyNames": []
       }
     },
-    "cloud-box": {
+    "CloudBox": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudBox.svg"
@@ -2406,7 +2406,7 @@
         ]
       }
     },
-    "cloud-database": {
+    "CloudDatabase": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudDatabase.svg"
@@ -2422,7 +2422,7 @@
         ]
       }
     },
-    "cloud-grid2": {
+    "CloudGrid2": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudGrid2.svg"
@@ -2441,7 +2441,7 @@
         ]
       }
     },
-    "cloud-server": {
+    "CloudServer": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudServer.svg"
@@ -2469,7 +2469,7 @@
         ]
       }
     },
-    "cloud-shield": {
+    "CloudShield": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudShield.svg"
@@ -2489,7 +2489,7 @@
         ]
       }
     },
-    "cloud-sun": {
+    "CloudSun": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudSun.svg"
@@ -2502,7 +2502,7 @@
         "legacyNames": ["devices-weather-station--24"]
       }
     },
-    "cloud-user": {
+    "CloudUser": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CloudUser.svg"
@@ -2522,7 +2522,7 @@
         ]
       }
     },
-    "clouds": {
+    "Clouds": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Clouds.svg"
@@ -2541,7 +2541,7 @@
         ]
       }
     },
-    "cog": {
+    "Cog": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Cog.svg"
@@ -2570,7 +2570,7 @@
         ]
       }
     },
-    "coins": {
+    "Coins": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Coins.svg"
@@ -2592,7 +2592,7 @@
         ]
       }
     },
-    "cpu": {
+    "Cpu": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Cpu.svg"
@@ -2624,10 +2624,10 @@
         ]
       }
     },
-    "creadit-card": {
+    "CreditCard": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-mono/CreaditCard.svg"
+          "$file": "./packs/icons-stroke-mono/CreditCard.svg"
         }
       },
       "platforms": ["PD"],
@@ -2646,7 +2646,7 @@
         "legacyNames": ["devices-pos--24"]
       }
     },
-    "crosshair": {
+    "Crosshair": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Crosshair.svg"
@@ -2664,7 +2664,7 @@
         ]
       }
     },
-    "crosshair-moving": {
+    "CrosshairMoving": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/CrosshairMoving.svg"
@@ -2682,7 +2682,7 @@
         ]
       }
     },
-    "database": {
+    "Database": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Database.svg"
@@ -2705,7 +2705,7 @@
         ]
       }
     },
-    "database-cluster": {
+    "DatabaseCluster": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/DatabaseCluster.svg"
@@ -2724,7 +2724,7 @@
         ]
       }
     },
-    "database-fire": {
+    "DatabaseFire": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/DatabaseFire.svg"
@@ -2737,7 +2737,7 @@
         "legacyNames": ["storage-hot--16", "storage-hot--24"]
       }
     },
-    "database-group": {
+    "DatabaseGroup": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/DatabaseGroup.svg"
@@ -2754,7 +2754,7 @@
         ]
       }
     },
-    "database-snowflake": {
+    "DatabaseSnowflake": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/DatabaseSnowflake.svg"
@@ -2767,7 +2767,7 @@
         "legacyNames": ["storage-cold--16", "storage-cold--24"]
       }
     },
-    "diamond-warning": {
+    "DiamondWarning": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/DiamondWarning.svg"
@@ -2780,7 +2780,7 @@
         "legacyNames": []
       }
     },
-    "dollar-sign": {
+    "DollarSign": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/DollarSign.svg"
@@ -2793,7 +2793,7 @@
         "legacyNames": ["money-magnet--32"]
       }
     },
-    "drive": {
+    "Drive": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Drive.svg"
@@ -2849,7 +2849,7 @@
         ]
       }
     },
-    "ellipsis": {
+    "Ellipsis": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Ellipsis.svg"
@@ -2876,7 +2876,7 @@
         ]
       }
     },
-    "ellipsis-moving": {
+    "EllipsisMoving": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/EllipsisMoving.svg"
@@ -2889,7 +2889,7 @@
         "legacyNames": ["typing--16"]
       }
     },
-    "envelope": {
+    "Envelope": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Envelope.svg"
@@ -2912,7 +2912,7 @@
         ]
       }
     },
-    "envelope-shield": {
+    "EnvelopeShield": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/EnvelopeShield.svg"
@@ -2932,7 +2932,7 @@
         ]
       }
     },
-    "ethernet": {
+    "Ethernet": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Ethernet.svg"
@@ -2958,7 +2958,7 @@
         ]
       }
     },
-    "eye": {
+    "Eye": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Eye.svg"
@@ -2988,7 +2988,7 @@
         ]
       }
     },
-    "eye-closed": {
+    "EyeClosed": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/EyeClosed.svg"
@@ -3001,7 +3001,7 @@
         "legacyNames": ["hide--16", "hide--32"]
       }
     },
-    "eye-crossed": {
+    "EyeCrossed": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/EyeCrossed.svg"
@@ -3020,7 +3020,7 @@
         ]
       }
     },
-    "file": {
+    "File": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/File.svg"
@@ -3040,7 +3040,7 @@
         ]
       }
     },
-    "file-audio": {
+    "FileAudio": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileAudio.svg"
@@ -3053,7 +3053,7 @@
         "legacyNames": ["file-audio--32", "file-audio--16", "music-clr--32"]
       }
     },
-    "file-badge": {
+    "FileBadge": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileBadge.svg"
@@ -3079,7 +3079,7 @@
         ]
       }
     },
-    "file-check": {
+    "FileCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileCheck.svg"
@@ -3107,7 +3107,7 @@
         ]
       }
     },
-    "file-code": {
+    "FileCode": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileCode.svg"
@@ -3132,7 +3132,7 @@
         ]
       }
     },
-    "file-cog": {
+    "FileCog": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileCog.svg"
@@ -3145,7 +3145,7 @@
         "legacyNames": ["file-process--32", "exe-clr--32", "sys-clr--32"]
       }
     },
-    "file-dollar": {
+    "FileDollar": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileDollar.svg"
@@ -3162,7 +3162,7 @@
         ]
       }
     },
-    "file-image": {
+    "FileImage": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileImage.svg"
@@ -3183,7 +3183,7 @@
         ]
       }
     },
-    "file-lock": {
+    "FileLock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileLock.svg"
@@ -3196,7 +3196,7 @@
         "legacyNames": ["encrypted-ab--32"]
       }
     },
-    "file-presentation": {
+    "FilePresentation": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FilePresentation.svg"
@@ -3223,7 +3223,7 @@
         ]
       }
     },
-    "file-search": {
+    "FileSearch": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileSearch.svg"
@@ -3249,7 +3249,7 @@
         ]
       }
     },
-    "file-signature": {
+    "FileSignature": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileSignature.svg"
@@ -3277,7 +3277,7 @@
         ]
       }
     },
-    "file-sparkle": {
+    "FileSparkle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileSparkle.svg"
@@ -3297,7 +3297,7 @@
         ]
       }
     },
-    "file-spreadsheet": {
+    "FileSpreadsheet": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileSpreadsheet.svg"
@@ -3315,7 +3315,7 @@
         ]
       }
     },
-    "file-terminal": {
+    "FileTerminal": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileTerminal.svg"
@@ -3343,7 +3343,7 @@
         ]
       }
     },
-    "file-text": {
+    "FileText": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileText.svg"
@@ -3368,7 +3368,7 @@
         ]
       }
     },
-    "file-times": {
+    "FileTimes": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileTimes.svg"
@@ -3394,7 +3394,7 @@
         ]
       }
     },
-    "file-video": {
+    "FileVideo": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileVideo.svg"
@@ -3407,7 +3407,7 @@
         "legacyNames": ["file-video--32", "file-video--16", "video-clr--32"]
       }
     },
-    "file-zip": {
+    "FileZip": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FileZip.svg"
@@ -3420,7 +3420,7 @@
         "legacyNames": ["file-zip--32", "file-zip--16", "archive-clr--32"]
       }
     },
-    "files": {
+    "Files": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Files.svg"
@@ -3433,7 +3433,7 @@
         "legacyNames": ["files-o--24", "files-o--16"]
       }
     },
-    "firewall": {
+    "Firewall": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Firewall.svg"
@@ -3456,7 +3456,7 @@
         ]
       }
     },
-    "flag": {
+    "Flag": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Flag.svg"
@@ -3469,7 +3469,7 @@
         "legacyNames": ["finish-flag--16", "milestone--16"]
       }
     },
-    "flash-drive": {
+    "FlashDrive": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FlashDrive.svg"
@@ -3491,7 +3491,7 @@
         ]
       }
     },
-    "flask": {
+    "Flask": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Flask.svg"
@@ -3504,7 +3504,7 @@
         "legacyNames": ["test-replica-ab--32", "test-replica-ab-o--32"]
       }
     },
-    "folder": {
+    "Folder": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Folder.svg"
@@ -3532,7 +3532,7 @@
         ]
       }
     },
-    "folder-arrow-down": {
+    "FolderArrowDown": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderArrowDown.svg"
@@ -3545,7 +3545,7 @@
         "legacyNames": ["one-way-sync-folder--24"]
       }
     },
-    "folder-arrows-up-down": {
+    "FolderArrowsUpDown": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderArrowsUpDown.svg"
@@ -3570,7 +3570,7 @@
         ]
       }
     },
-    "folder-cloud": {
+    "FolderCloud": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderCloud.svg"
@@ -3583,7 +3583,7 @@
         "legacyNames": ["shared-folder--24"]
       }
     },
-    "folder-house": {
+    "FolderHouse": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderHouse.svg"
@@ -3601,7 +3601,7 @@
         ]
       }
     },
-    "folder-infinity": {
+    "FolderInfinity": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderInfinity.svg"
@@ -3614,7 +3614,7 @@
         "legacyNames": ["folder-all--16", "folder-all--24", "folder-all--32"]
       }
     },
-    "folder-opened": {
+    "FolderOpened": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderOpened.svg"
@@ -3627,7 +3627,7 @@
         "legacyNames": []
       }
     },
-    "folder-plus": {
+    "FolderPlus": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderPlus.svg"
@@ -3640,7 +3640,7 @@
         "legacyNames": ["add-to-group-ab--32"]
       }
     },
-    "folder-search": {
+    "FolderSearch": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderSearch.svg"
@@ -3657,7 +3657,7 @@
         ]
       }
     },
-    "folder-shield": {
+    "FolderShield": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderShield.svg"
@@ -3670,7 +3670,7 @@
         "legacyNames": ["protect-group-ab--32", "protect-group-ab-o--32"]
       }
     },
-    "folder-user": {
+    "FolderUser": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/FolderUser.svg"
@@ -3683,7 +3683,7 @@
         "legacyNames": []
       }
     },
-    "funnel": {
+    "Funnel": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Funnel.svg"
@@ -3696,7 +3696,7 @@
         "legacyNames": ["funnel--16"]
       }
     },
-    "gamepad": {
+    "Gamepad": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Gamepad.svg"
@@ -3709,7 +3709,7 @@
         "legacyNames": ["devices-gaming-console--24"]
       }
     },
-    "gauge": {
+    "Gauge": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Gauge.svg"
@@ -3722,7 +3722,7 @@
         "legacyNames": ["dashboard--24", "dashboard--32", "dashboard-o--32"]
       }
     },
-    "globe": {
+    "Globe": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Globe.svg"
@@ -3753,7 +3753,7 @@
         ]
       }
     },
-    "gpu": {
+    "Gpu": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Gpu.svg"
@@ -3773,7 +3773,7 @@
         "legacyNames": []
       }
     },
-    "graduation-cap": {
+    "GraduationCap": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/GraduationCap.svg"
@@ -3802,7 +3802,7 @@
         ]
       }
     },
-    "handle-grip": {
+    "HandleGrip": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/HandleGrip.svg"
@@ -3815,7 +3815,7 @@
         "legacyNames": ["grip-dots--16"]
       }
     },
-    "handle-resize": {
+    "HandleResize": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/HandleResize.svg"
@@ -3828,7 +3828,7 @@
         "legacyNames": ["resize-handle--32", "col-expand--16"]
       }
     },
-    "headset": {
+    "Headset": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Headset.svg"
@@ -3860,7 +3860,7 @@
         ]
       }
     },
-    "headset-cog": {
+    "HeadsetCog": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/HeadsetCog.svg"
@@ -3873,7 +3873,7 @@
         "legacyNames": ["acronis-support--24"]
       }
     },
-    "headset-lock": {
+    "HeadsetLock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/HeadsetLock.svg"
@@ -3891,7 +3891,7 @@
         ]
       }
     },
-    "headset-sparkle": {
+    "HeadsetSparkle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/HeadsetSparkle.svg"
@@ -3911,7 +3911,7 @@
         "legacyNames": ["ai-agent--16", "ai-agent--24"]
       }
     },
-    "home-appliances": {
+    "HomeAppliances": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/HomeAppliances.svg"
@@ -3937,7 +3937,7 @@
         ]
       }
     },
-    "house": {
+    "House": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/House.svg"
@@ -3950,7 +3950,7 @@
         "legacyNames": []
       }
     },
-    "house-server": {
+    "HouseServer": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/HouseServer.svg"
@@ -3963,7 +3963,7 @@
         "legacyNames": ["server-room--24", "server-room-o--24"]
       }
     },
-    "house-wifi": {
+    "HouseWifi": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/HouseWifi.svg"
@@ -3990,7 +3990,7 @@
         ]
       }
     },
-    "inbox": {
+    "Inbox": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Inbox.svg"
@@ -4011,7 +4011,7 @@
         ]
       }
     },
-    "inbox-full": {
+    "InboxFull": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/InboxFull.svg"
@@ -4024,7 +4024,7 @@
         "legacyNames": []
       }
     },
-    "inbox-lock": {
+    "InboxLock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/InboxLock.svg"
@@ -4037,7 +4037,7 @@
         "legacyNames": ["mailbox-encrypted-ab--32"]
       }
     },
-    "inbox-user": {
+    "InboxUser": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/InboxUser.svg"
@@ -4062,7 +4062,7 @@
         ]
       }
     },
-    "infiniband": {
+    "Infiniband": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Infiniband.svg"
@@ -4075,7 +4075,7 @@
         "legacyNames": ["infiniband--24", "infiniband-o--24"]
       }
     },
-    "infinity": {
+    "Infinity": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Infinity.svg"
@@ -4088,7 +4088,7 @@
         "legacyNames": ["infinity--32"]
       }
     },
-    "key": {
+    "Key": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Key.svg"
@@ -4118,7 +4118,7 @@
         ]
       }
     },
-    "laptop": {
+    "Laptop": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Laptop.svg"
@@ -4159,7 +4159,7 @@
         ]
       }
     },
-    "laptop-phone": {
+    "LaptopPhone": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/LaptopPhone.svg"
@@ -4179,7 +4179,7 @@
         "legacyNames": ["resources-o--32"]
       }
     },
-    "layout": {
+    "Layout": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Layout.svg"
@@ -4204,7 +4204,7 @@
         ]
       }
     },
-    "layout-blocks": {
+    "LayoutBlocks": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/LayoutBlocks.svg"
@@ -4217,7 +4217,7 @@
         "legacyNames": ["ratios--32", "layout-o--32"]
       }
     },
-    "layout-cards": {
+    "LayoutCards": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/LayoutCards.svg"
@@ -4236,7 +4236,7 @@
         ]
       }
     },
-    "layout-grid": {
+    "LayoutGrid": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/LayoutGrid.svg"
@@ -4273,7 +4273,7 @@
         ]
       }
     },
-    "layout-table": {
+    "LayoutTable": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/LayoutTable.svg"
@@ -4286,7 +4286,7 @@
         "legacyNames": ["table--32", "table-rows--32", "table-view--16"]
       }
     },
-    "link": {
+    "Link": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Link.svg"
@@ -4299,7 +4299,7 @@
         "legacyNames": []
       }
     },
-    "list": {
+    "List": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/List.svg"
@@ -4318,7 +4318,7 @@
         ]
       }
     },
-    "list-check": {
+    "ListCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ListCheck.svg"
@@ -4331,7 +4331,7 @@
         "legacyNames": ["checkbox-list--32", "tasks--32"]
       }
     },
-    "list-folder-tree": {
+    "ListFolderTree": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ListFolderTree.svg"
@@ -4344,7 +4344,7 @@
         "legacyNames": []
       }
     },
-    "lock": {
+    "Lock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Lock.svg"
@@ -4366,7 +4366,7 @@
         ]
       }
     },
-    "lock-opened": {
+    "LockOpened": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/LockOpened.svg"
@@ -4379,7 +4379,7 @@
         "legacyNames": []
       }
     },
-    "lock-wifi": {
+    "LockWifi": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/LockWifi.svg"
@@ -4392,7 +4392,7 @@
         "legacyNames": ["devices-smart-lock--24"]
       }
     },
-    "magnifier": {
+    "Magnifier": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Magnifier.svg"
@@ -4413,7 +4413,7 @@
         ]
       }
     },
-    "magnifier-check": {
+    "MagnifierCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MagnifierCheck.svg"
@@ -4435,7 +4435,7 @@
         "legacyNames": ["verify--32"]
       }
     },
-    "magnifier-minus": {
+    "MagnifierMinus": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MagnifierMinus.svg"
@@ -4448,7 +4448,7 @@
         "legacyNames": ["zoom-out--16"]
       }
     },
-    "magnifier-plus": {
+    "MagnifierPlus": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MagnifierPlus.svg"
@@ -4461,7 +4461,7 @@
         "legacyNames": ["zoom-in--16"]
       }
     },
-    "magnifier-warning": {
+    "MagnifierWarning": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MagnifierWarning.svg"
@@ -4498,7 +4498,7 @@
         ]
       }
     },
-    "map-pin": {
+    "MapPin": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MapPin.svg"
@@ -4518,7 +4518,7 @@
         ]
       }
     },
-    "media-eject": {
+    "MediaEject": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MediaEject.svg"
@@ -4531,7 +4531,7 @@
         "legacyNames": ["eject-ab--32", "eject-ab-o--32"]
       }
     },
-    "media-fast-forward": {
+    "MediaFastForward": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MediaFastForward.svg"
@@ -4544,7 +4544,7 @@
         "legacyNames": ["migrate--16", "migrate-o--16"]
       }
     },
-    "media-pause": {
+    "MediaPause": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MediaPause.svg"
@@ -4557,7 +4557,7 @@
         "legacyNames": ["suspend-o--16", "state-pause-d--16", "pause-mix--32"]
       }
     },
-    "media-play": {
+    "MediaPlay": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MediaPlay.svg"
@@ -4570,7 +4570,7 @@
         "legacyNames": ["play-o--16", "play--24"]
       }
     },
-    "media-skip-back": {
+    "MediaSkipBack": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MediaSkipBack.svg"
@@ -4583,7 +4583,7 @@
         "legacyNames": ["go-to-start--16", "go-to-start-o--16"]
       }
     },
-    "media-skip-forward": {
+    "MediaSkipForward": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MediaSkipForward.svg"
@@ -4596,7 +4596,7 @@
         "legacyNames": ["go-to-end--16", "go-to-end-o--16"]
       }
     },
-    "media-step-back": {
+    "MediaStepBack": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MediaStepBack.svg"
@@ -4609,7 +4609,7 @@
         "legacyNames": ["reverse-o--16"]
       }
     },
-    "media-step-forward": {
+    "MediaStepForward": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MediaStepForward.svg"
@@ -4622,7 +4622,7 @@
         "legacyNames": ["resume--16", "resume-o--16"]
       }
     },
-    "megaphone": {
+    "Megaphone": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Megaphone.svg"
@@ -4644,7 +4644,7 @@
         "legacyNames": ["ipn--16", "ipn--24", "megaphone--32", "ipn--32"]
       }
     },
-    "memory-card": {
+    "MemoryCard": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MemoryCard.svg"
@@ -4657,7 +4657,7 @@
         "legacyNames": ["devices-memory-card--24"]
       }
     },
-    "memory-stick": {
+    "MemoryStick": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MemoryStick.svg"
@@ -4670,7 +4670,7 @@
         "legacyNames": ["ram--16", "ram-o--24", "ram-o--16"]
       }
     },
-    "message": {
+    "Message": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Message.svg"
@@ -4683,7 +4683,7 @@
         "legacyNames": []
       }
     },
-    "message-dots": {
+    "MessageDots": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MessageDots.svg"
@@ -4696,7 +4696,7 @@
         "legacyNames": []
       }
     },
-    "message-sparkle": {
+    "MessageSparkle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MessageSparkle.svg"
@@ -4718,7 +4718,7 @@
         ]
       }
     },
-    "message-text": {
+    "MessageText": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MessageText.svg"
@@ -4738,7 +4738,7 @@
         ]
       }
     },
-    "messages": {
+    "Messages": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Messages.svg"
@@ -4760,7 +4760,7 @@
         ]
       }
     },
-    "microphone": {
+    "Microphone": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Microphone.svg"
@@ -4791,7 +4791,7 @@
         ]
       }
     },
-    "minus": {
+    "Minus": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Minus.svg"
@@ -4815,7 +4815,7 @@
         ]
       }
     },
-    "monitor": {
+    "Monitor": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Monitor.svg"
@@ -4881,7 +4881,7 @@
         ]
       }
     },
-    "monitor-check": {
+    "MonitorCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MonitorCheck.svg"
@@ -4910,7 +4910,7 @@
         ]
       }
     },
-    "monitor-cloud": {
+    "MonitorCloud": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MonitorCloud.svg"
@@ -4931,7 +4931,7 @@
         "legacyNames": []
       }
     },
-    "monitor-cog": {
+    "MonitorCog": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MonitorCog.svg"
@@ -4958,7 +4958,7 @@
         ]
       }
     },
-    "monitor-lock": {
+    "MonitorLock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MonitorLock.svg"
@@ -4990,7 +4990,7 @@
         ]
       }
     },
-    "monitor-star": {
+    "MonitorStar": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MonitorStar.svg"
@@ -5019,7 +5019,7 @@
         ]
       }
     },
-    "monitor-times": {
+    "MonitorTimes": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/MonitorTimes.svg"
@@ -5044,7 +5044,7 @@
         "legacyNames": ["connect-failed--24", "connect-failed-o--24"]
       }
     },
-    "monitors": {
+    "Monitors": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Monitors.svg"
@@ -5069,7 +5069,7 @@
         ]
       }
     },
-    "moon": {
+    "Moon": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Moon.svg"
@@ -5082,7 +5082,7 @@
         "legacyNames": ["devices-sleep-tech--24"]
       }
     },
-    "nas": {
+    "Nas": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Nas.svg"
@@ -5106,7 +5106,7 @@
         ]
       }
     },
-    "network-cloud": {
+    "NetworkCloud": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NetworkCloud.svg"
@@ -5124,7 +5124,7 @@
         ]
       }
     },
-    "network-database": {
+    "NetworkDatabase": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NetworkDatabase.svg"
@@ -5137,7 +5137,7 @@
         "legacyNames": ["lun--24", "lun-status--24", "lun-o--24", "lun-s-o--24"]
       }
     },
-    "network-folder": {
+    "NetworkFolder": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NetworkFolder.svg"
@@ -5166,7 +5166,7 @@
         ]
       }
     },
-    "network-server": {
+    "NetworkServer": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NetworkServer.svg"
@@ -5191,7 +5191,7 @@
         ]
       }
     },
-    "network-tape": {
+    "NetworkTape": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NetworkTape.svg"
@@ -5210,7 +5210,7 @@
         ]
       }
     },
-    "node-bridge": {
+    "NodeBridge": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeBridge.svg"
@@ -5223,7 +5223,7 @@
         "legacyNames": ["bridge--24", "bridge-o--24"]
       }
     },
-    "node-cluster": {
+    "NodeCluster": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeCluster.svg"
@@ -5236,7 +5236,7 @@
         "legacyNames": []
       }
     },
-    "node-compare": {
+    "NodeCompare": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeCompare.svg"
@@ -5253,7 +5253,7 @@
         ]
       }
     },
-    "node-network": {
+    "NodeNetwork": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeNetwork.svg"
@@ -5266,7 +5266,7 @@
         "legacyNames": ["network--32", "network-3th--24", "networks-o--32"]
       }
     },
-    "node-network2": {
+    "NodeNetwork2": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeNetwork2.svg"
@@ -5279,7 +5279,7 @@
         "legacyNames": []
       }
     },
-    "node-path": {
+    "NodePath": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodePath.svg"
@@ -5292,7 +5292,7 @@
         "legacyNames": ["show-way--16", "show-way-o--16"]
       }
     },
-    "node-pyramid": {
+    "NodePyramid": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodePyramid.svg"
@@ -5305,7 +5305,7 @@
         "legacyNames": ["active-directory--16", "active-directory--24"]
       }
     },
-    "node-share": {
+    "NodeShare": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeShare.svg"
@@ -5318,7 +5318,7 @@
         "legacyNames": ["share--16", "share--32", "share-o--32"]
       }
     },
-    "node-sliders": {
+    "NodeSliders": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeSliders.svg"
@@ -5338,7 +5338,7 @@
         "legacyNames": ["filter--16", "tune--32", "tune--16"]
       }
     },
-    "node-tree": {
+    "NodeTree": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeTree.svg"
@@ -5351,7 +5351,20 @@
         "legacyNames": []
       }
     },
-    "node-tree-left": {
+    "NodeTree2": {
+      "values": {
+        "24": {
+          "$file": "./packs/icons-stroke-mono/NodeTree2.svg"
+        }
+      },
+      "platforms": ["PD"],
+      "metadata": {
+        "category": ["Symbols"],
+        "tags": ["accounts", "tree", "fork", "network"],
+        "legacyNames": ["manage-accounts-ab--32"]
+      }
+    },
+    "NodeTreeLeft": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeTreeLeft.svg"
@@ -5364,7 +5377,7 @@
         "legacyNames": ["bond--24", "bond-o--24"]
       }
     },
-    "node-tree-right": {
+    "NodeTreeRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeTreeRight.svg"
@@ -5384,20 +5397,7 @@
         ]
       }
     },
-    "node-tree2": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-stroke-mono/NodeTree2.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Symbols"],
-        "tags": ["accounts", "tree", "fork", "network"],
-        "legacyNames": ["manage-accounts-ab--32"]
-      }
-    },
-    "node-triangle": {
+    "NodeTriangle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeTriangle.svg"
@@ -5418,7 +5418,7 @@
         ]
       }
     },
-    "node-web": {
+    "NodeWeb": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodeWeb.svg"
@@ -5431,7 +5431,7 @@
         "legacyNames": ["universal-quota--16", "universal-quota--24"]
       }
     },
-    "nodes-circle": {
+    "NodesCircle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NodesCircle.svg"
@@ -5449,7 +5449,7 @@
         ]
       }
     },
-    "note": {
+    "Note": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Note.svg"
@@ -5462,7 +5462,7 @@
         "legacyNames": ["devices-audio-player--24"]
       }
     },
-    "note-play": {
+    "NotePlay": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/NotePlay.svg"
@@ -5475,7 +5475,7 @@
         "legacyNames": ["devices-av-receiver--24"]
       }
     },
-    "optical-disk": {
+    "OpticalDisk": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/OpticalDisk.svg"
@@ -5504,7 +5504,7 @@
         ]
       }
     },
-    "panel-left": {
+    "PanelLeft": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/PanelLeft.svg"
@@ -5522,7 +5522,7 @@
         ]
       }
     },
-    "panel-left-close": {
+    "PanelLeftClose": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/PanelLeftClose.svg"
@@ -5535,7 +5535,7 @@
         "legacyNames": ["hide-panel--24", "hide-panel-o--24"]
       }
     },
-    "panel-left-open": {
+    "PanelLeftOpen": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/PanelLeftOpen.svg"
@@ -5548,7 +5548,7 @@
         "legacyNames": ["show-panel--24", "show-panel-o--24"]
       }
     },
-    "panel-right": {
+    "PanelRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/PanelRight.svg"
@@ -5565,7 +5565,7 @@
         ]
       }
     },
-    "patch": {
+    "Patch": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Patch.svg"
@@ -5578,7 +5578,7 @@
         "legacyNames": []
       }
     },
-    "paw": {
+    "Paw": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Paw.svg"
@@ -5591,7 +5591,7 @@
         "legacyNames": ["devices-pet-monitor--24"]
       }
     },
-    "pc-tower": {
+    "PcTower": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/PcTower.svg"
@@ -5611,7 +5611,7 @@
         "legacyNames": ["devices-pc--24", "pc-clr--32"]
       }
     },
-    "pc-tower-small": {
+    "PcTowerSmall": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/PcTowerSmall.svg"
@@ -5631,7 +5631,7 @@
         ]
       }
     },
-    "pencil": {
+    "Pencil": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Pencil.svg"
@@ -5661,7 +5661,7 @@
         ]
       }
     },
-    "phone": {
+    "Phone": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Phone.svg"
@@ -5689,7 +5689,7 @@
         ]
       }
     },
-    "phone-waves": {
+    "PhoneWaves": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/PhoneWaves.svg"
@@ -5702,7 +5702,7 @@
         "legacyNames": ["phone--16", "devices-ip-phone--24"]
       }
     },
-    "pin": {
+    "Pin": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Pin.svg"
@@ -5715,7 +5715,7 @@
         "legacyNames": ["pin-default--16", "pin-circle--16"]
       }
     },
-    "pin-disabled": {
+    "PinDisabled": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/PinDisabled.svg"
@@ -5728,7 +5728,7 @@
         "legacyNames": ["unpin--16"]
       }
     },
-    "plus": {
+    "Plus": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Plus.svg"
@@ -5746,7 +5746,7 @@
         ]
       }
     },
-    "power": {
+    "Power": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Power.svg"
@@ -5766,7 +5766,7 @@
         ]
       }
     },
-    "present": {
+    "Present": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Present.svg"
@@ -5784,7 +5784,7 @@
         ]
       }
     },
-    "presentation": {
+    "Presentation": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Presentation.svg"
@@ -5816,7 +5816,7 @@
         ]
       }
     },
-    "printer": {
+    "Printer": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Printer.svg"
@@ -5836,7 +5836,7 @@
         ]
       }
     },
-    "progress": {
+    "Progress": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Progress.svg"
@@ -5854,7 +5854,7 @@
         ]
       }
     },
-    "progress-check": {
+    "ProgressCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ProgressCheck.svg"
@@ -5867,7 +5867,7 @@
         "legacyNames": ["cyberfit--16", "cyberfit-o--16"]
       }
     },
-    "projector": {
+    "Projector": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Projector.svg"
@@ -5880,7 +5880,7 @@
         "legacyNames": ["devices-projector--24"]
       }
     },
-    "pulse": {
+    "Pulse": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Pulse.svg"
@@ -5900,7 +5900,7 @@
         ]
       }
     },
-    "puzzle": {
+    "Puzzle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Puzzle.svg"
@@ -5913,7 +5913,7 @@
         "legacyNames": ["plugin-ab--32", "plugin-ab--24", "devices-toy--24"]
       }
     },
-    "quotes": {
+    "Quotes": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Quotes.svg"
@@ -5926,7 +5926,7 @@
         "legacyNames": ["quote-mark--32"]
       }
     },
-    "raid": {
+    "Raid": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Raid.svg"
@@ -5939,7 +5939,7 @@
         "legacyNames": ["raid-status--24", "raid--24", "raid-s--24"]
       }
     },
-    "receipt": {
+    "Receipt": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Receipt.svg"
@@ -5968,7 +5968,7 @@
         ]
       }
     },
-    "rectangle-image": {
+    "RectangleImage": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/RectangleImage.svg"
@@ -5987,7 +5987,7 @@
         ]
       }
     },
-    "rectangle-pulse": {
+    "RectanglePulse": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/RectanglePulse.svg"
@@ -6017,7 +6017,7 @@
         ]
       }
     },
-    "rectangle-wifi": {
+    "RectangleWifi": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/RectangleWifi.svg"
@@ -6035,7 +6035,7 @@
         ]
       }
     },
-    "rectangles": {
+    "Rectangles": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Rectangles.svg"
@@ -6070,7 +6070,7 @@
         ]
       }
     },
-    "robot": {
+    "Robot": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Robot.svg"
@@ -6083,7 +6083,7 @@
         "legacyNames": ["devices-robot--24"]
       }
     },
-    "rocket": {
+    "Rocket": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Rocket.svg"
@@ -6096,7 +6096,7 @@
         "legacyNames": ["rocket--24", "rocket--16", "rocket--32"]
       }
     },
-    "router": {
+    "Router": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Router.svg"
@@ -6116,7 +6116,7 @@
         ]
       }
     },
-    "san": {
+    "San": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/San.svg"
@@ -6136,10 +6136,10 @@
         ]
       }
     },
-    "satelite-dish": {
+    "SatelliteDish": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-mono/SateliteDish.svg"
+          "$file": "./packs/icons-stroke-mono/SatelliteDish.svg"
         }
       },
       "platforms": ["PD"],
@@ -6149,7 +6149,7 @@
         "legacyNames": ["devices-satellite--24"]
       }
     },
-    "scanner": {
+    "Scanner": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Scanner.svg"
@@ -6162,7 +6162,7 @@
         "legacyNames": ["devices-scanner--24"]
       }
     },
-    "scissors": {
+    "Scissors": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Scissors.svg"
@@ -6175,7 +6175,7 @@
         "legacyNames": ["scissors-ab--32", "scissors-ab-o--32"]
       }
     },
-    "scroll": {
+    "Scroll": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Scroll.svg"
@@ -6202,7 +6202,7 @@
         ]
       }
     },
-    "send": {
+    "Send": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Send.svg"
@@ -6227,7 +6227,7 @@
         ]
       }
     },
-    "sensor": {
+    "Sensor": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Sensor.svg"
@@ -6244,7 +6244,7 @@
         ]
       }
     },
-    "server": {
+    "Server": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Server.svg"
@@ -6284,7 +6284,7 @@
         ]
       }
     },
-    "server-cluster": {
+    "ServerCluster": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ServerCluster.svg"
@@ -6302,7 +6302,7 @@
         ]
       }
     },
-    "server-cog": {
+    "ServerCog": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ServerCog.svg"
@@ -6315,7 +6315,7 @@
         "legacyNames": ["server-master--24", "master-server-o--24"]
       }
     },
-    "server-envelope": {
+    "ServerEnvelope": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ServerEnvelope.svg"
@@ -6328,7 +6328,7 @@
         "legacyNames": ["devices-mail-server--24"]
       }
     },
-    "server-lock": {
+    "ServerLock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ServerLock.svg"
@@ -6347,7 +6347,7 @@
         ]
       }
     },
-    "servers": {
+    "Servers": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Servers.svg"
@@ -6367,7 +6367,7 @@
         ]
       }
     },
-    "shield-bolt": {
+    "ShieldBolt": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShieldBolt.svg"
@@ -6400,7 +6400,7 @@
         ]
       }
     },
-    "shield-check": {
+    "ShieldCheck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShieldCheck.svg"
@@ -6433,7 +6433,7 @@
         ]
       }
     },
-    "shield-key": {
+    "ShieldKey": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShieldKey.svg"
@@ -6463,7 +6463,7 @@
         ]
       }
     },
-    "shield-lock": {
+    "ShieldLock": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShieldLock.svg"
@@ -6483,7 +6483,7 @@
         ]
       }
     },
-    "shield-sparkle": {
+    "ShieldSparkle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShieldSparkle.svg"
@@ -6496,7 +6496,7 @@
         "legacyNames": []
       }
     },
-    "shield-times": {
+    "ShieldTimes": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShieldTimes.svg"
@@ -6517,7 +6517,7 @@
         ]
       }
     },
-    "shield-warning": {
+    "ShieldWarning": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShieldWarning.svg"
@@ -6530,7 +6530,7 @@
         "legacyNames": ["protection-status-warning--32"]
       }
     },
-    "shopping-bag": {
+    "ShoppingBag": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShoppingBag.svg"
@@ -6543,7 +6543,7 @@
         "legacyNames": []
       }
     },
-    "shopping-bags": {
+    "ShoppingBags": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShoppingBags.svg"
@@ -6556,7 +6556,7 @@
         "legacyNames": ["bundle-tray--32"]
       }
     },
-    "shopping-cart": {
+    "ShoppingCart": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ShoppingCart.svg"
@@ -6585,7 +6585,7 @@
         ]
       }
     },
-    "sigma": {
+    "Sigma": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Sigma.svg"
@@ -6603,7 +6603,7 @@
         ]
       }
     },
-    "signature": {
+    "Signature": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Signature.svg"
@@ -6616,7 +6616,7 @@
         "legacyNames": ["esign-o--16"]
       }
     },
-    "signpost": {
+    "Signpost": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Signpost.svg"
@@ -6629,7 +6629,7 @@
         "legacyNames": ["sign--32"]
       }
     },
-    "skull": {
+    "Skull": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Skull.svg"
@@ -6649,7 +6649,7 @@
         "legacyNames": ["skull--32"]
       }
     },
-    "smartphone": {
+    "Smartphone": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Smartphone.svg"
@@ -6675,7 +6675,7 @@
         ]
       }
     },
-    "solar-panel": {
+    "SolarPanel": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SolarPanel.svg"
@@ -6688,7 +6688,7 @@
         "legacyNames": ["devices-solar-panel--24"]
       }
     },
-    "sparkle": {
+    "Sparkle": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Sparkle.svg"
@@ -6701,7 +6701,7 @@
         "legacyNames": []
       }
     },
-    "sparkles": {
+    "Sparkles": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Sparkles.svg"
@@ -6714,7 +6714,7 @@
         "legacyNames": ["ai-sparkles-line--24", "ai-sparkles-line--32"]
       }
     },
-    "speaker": {
+    "Speaker": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Speaker.svg"
@@ -6744,7 +6744,7 @@
         ]
       }
     },
-    "square": {
+    "Square": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Square.svg"
@@ -6763,7 +6763,7 @@
         ]
       }
     },
-    "square-arrow-up-right": {
+    "SquareArrowUpRight": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SquareArrowUpRight.svg"
@@ -6776,7 +6776,7 @@
         "legacyNames": ["external-link--16", "external-link-o--16"]
       }
     },
-    "square-bolt": {
+    "SquareBolt": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SquareBolt.svg"
@@ -6794,7 +6794,7 @@
         ]
       }
     },
-    "square-dashed": {
+    "SquareDashed": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SquareDashed.svg"
@@ -6813,7 +6813,7 @@
         ]
       }
     },
-    "square-dashed-line": {
+    "SquareDashedLine": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SquareDashedLine.svg"
@@ -6838,7 +6838,7 @@
         ]
       }
     },
-    "square-dashed-plus": {
+    "SquareDashedPlus": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SquareDashedPlus.svg"
@@ -6851,7 +6851,7 @@
         "legacyNames": ["create-snapshot--24", "create-snapshot--16"]
       }
     },
-    "square-pen": {
+    "SquarePen": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SquarePen.svg"
@@ -6869,7 +6869,7 @@
         ]
       }
     },
-    "square-play": {
+    "SquarePlay": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SquarePlay.svg"
@@ -6897,7 +6897,7 @@
         ]
       }
     },
-    "squares-backup": {
+    "SquaresBackup": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SquaresBackup.svg"
@@ -6929,7 +6929,7 @@
         ]
       }
     },
-    "ssd-stick": {
+    "SsdStick": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/SsdStick.svg"
@@ -6951,7 +6951,7 @@
         ]
       }
     },
-    "star": {
+    "Star": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Star.svg"
@@ -6972,7 +6972,7 @@
         ]
       }
     },
-    "stopwatch": {
+    "Stopwatch": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Stopwatch.svg"
@@ -6985,7 +6985,7 @@
         "legacyNames": ["stopwatch--16", "stopwatch--24"]
       }
     },
-    "tablet": {
+    "Tablet": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Tablet.svg"
@@ -7004,7 +7004,7 @@
         ]
       }
     },
-    "tablet-phone": {
+    "TabletPhone": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/TabletPhone.svg"
@@ -7025,7 +7025,7 @@
         ]
       }
     },
-    "tag": {
+    "Tag": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Tag.svg"
@@ -7038,7 +7038,7 @@
         "legacyNames": ["label--24", "general-info--32", "label-o--24"]
       }
     },
-    "tags": {
+    "Tags": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Tags.svg"
@@ -7051,7 +7051,7 @@
         "legacyNames": ["price-tags--32"]
       }
     },
-    "tape": {
+    "Tape": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Tape.svg"
@@ -7073,7 +7073,7 @@
         ]
       }
     },
-    "tapes": {
+    "Tapes": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Tapes.svg"
@@ -7093,7 +7093,7 @@
         ]
       }
     },
-    "target": {
+    "Target": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Target.svg"
@@ -7106,7 +7106,7 @@
         "legacyNames": ["hitmap--16", "hitmap-o--16"]
       }
     },
-    "terminal": {
+    "Terminal": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Terminal.svg"
@@ -7126,7 +7126,7 @@
         "legacyNames": ["console--16", "devices-terminal--24", "console-o--16"]
       }
     },
-    "text": {
+    "Text": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Text.svg"
@@ -7139,7 +7139,7 @@
         "legacyNames": ["text-sign--16"]
       }
     },
-    "thermometer": {
+    "Thermometer": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Thermometer.svg"
@@ -7160,7 +7160,7 @@
         "legacyNames": ["devices-thermostat--24", "devices-heating-cooling--24"]
       }
     },
-    "thumbs-down": {
+    "ThumbsDown": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ThumbsDown.svg"
@@ -7173,7 +7173,7 @@
         "legacyNames": ["dislikes--16", "dislike-o--16", "dislike--16"]
       }
     },
-    "thumbs-up": {
+    "ThumbsUp": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/ThumbsUp.svg"
@@ -7186,7 +7186,7 @@
         "legacyNames": ["likes--16", "like-o--16", "like--16", "likes--32"]
       }
     },
-    "ticket": {
+    "Ticket": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Ticket.svg"
@@ -7207,7 +7207,7 @@
         "legacyNames": []
       }
     },
-    "tickets": {
+    "Tickets": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Tickets.svg"
@@ -7228,7 +7228,7 @@
         "legacyNames": []
       }
     },
-    "times": {
+    "Times": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Times.svg"
@@ -7256,7 +7256,7 @@
         ]
       }
     },
-    "tower": {
+    "Tower": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Tower.svg"
@@ -7285,7 +7285,7 @@
         ]
       }
     },
-    "tower-cell": {
+    "TowerCell": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/TowerCell.svg"
@@ -7298,7 +7298,7 @@
         "legacyNames": ["devices-network-cell--24"]
       }
     },
-    "translate": {
+    "Translate": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Translate.svg"
@@ -7311,7 +7311,7 @@
         "legacyNames": ["translate-o--16"]
       }
     },
-    "triangle-warning": {
+    "TriangleWarning": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/TriangleWarning.svg"
@@ -7324,7 +7324,7 @@
         "legacyNames": []
       }
     },
-    "truck": {
+    "Truck": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Truck.svg"
@@ -7347,7 +7347,7 @@
         ]
       }
     },
-    "tv": {
+    "Tv": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Tv.svg"
@@ -7360,7 +7360,7 @@
         "legacyNames": ["devices-tv--24"]
       }
     },
-    "tv-remote": {
+    "TvRemote": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/TvRemote.svg"
@@ -7373,7 +7373,7 @@
         "legacyNames": ["devices-remote-control--24"]
       }
     },
-    "user": {
+    "User": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/User.svg"
@@ -7394,7 +7394,7 @@
         ]
       }
     },
-    "user-cog": {
+    "UserCog": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/UserCog.svg"
@@ -7413,7 +7413,7 @@
         ]
       }
     },
-    "user-star": {
+    "UserStar": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/UserStar.svg"
@@ -7426,7 +7426,7 @@
         "legacyNames": ["referee--16", "referee-o--16"]
       }
     },
-    "user-tie": {
+    "UserTie": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/UserTie.svg"
@@ -7439,7 +7439,7 @@
         "legacyNames": ["executive--16"]
       }
     },
-    "users": {
+    "Users": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Users.svg"
@@ -7461,7 +7461,7 @@
         ]
       }
     },
-    "vacuum-robot": {
+    "VacuumRobot": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/VacuumRobot.svg"
@@ -7474,7 +7474,7 @@
         "legacyNames": ["devices-smart-cleaner--24"]
       }
     },
-    "video-camera": {
+    "VideoCamera": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/VideoCamera.svg"
@@ -7487,7 +7487,7 @@
         "legacyNames": ["devices-network-video-recorder--24"]
       }
     },
-    "watch": {
+    "Watch": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Watch.svg"
@@ -7512,7 +7512,7 @@
         ]
       }
     },
-    "water-drop": {
+    "WaterDrop": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/WaterDrop.svg"
@@ -7525,7 +7525,7 @@
         "legacyNames": ["devices-water-sensor--24"]
       }
     },
-    "water-sprinkler": {
+    "WaterSprinkler": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/WaterSprinkler.svg"
@@ -7538,7 +7538,7 @@
         "legacyNames": ["devices-sprinkler--24"]
       }
     },
-    "wifi": {
+    "Wifi": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Wifi.svg"
@@ -7561,7 +7561,7 @@
         ]
       }
     },
-    "wifi-low": {
+    "WifiLow": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/WifiLow.svg"
@@ -7574,7 +7574,7 @@
         "legacyNames": ["connection-wifi-weak--32"]
       }
     },
-    "wifi-medium": {
+    "WifiMedium": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/WifiMedium.svg"
@@ -7587,7 +7587,7 @@
         "legacyNames": ["connection-wifi-medium--32"]
       }
     },
-    "wrench": {
+    "Wrench": {
       "values": {
         "24": {
           "$file": "./packs/icons-stroke-mono/Wrench.svg"

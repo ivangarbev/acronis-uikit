@@ -31,7 +31,7 @@
     },
     "assets": {
       "type": "object",
-      "propertyNames": { "pattern": "^[a-z0-9][a-z0-9-]*$" },
+      "propertyNames": { "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*$" },
       "additionalProperties": { "$ref": "#/$defs/Asset" },
       "description": "Flat map of asset id -> Asset. Categorization lives in metadata, not in structure. Asset ids MAY start with a digit (illustrations pack uses 4-digit catalog ids)."
     }

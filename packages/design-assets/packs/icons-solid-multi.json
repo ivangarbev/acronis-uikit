@@ -12,10 +12,10 @@
     }
   },
   "assets": {
-    "sparkles-multi": {
+    "Sparkles": {
       "values": {
         "24": {
-          "$file": "./packs/icons-solid-multi/SparklesMulti.svg"
+          "$file": "./packs/icons-solid-multi/Sparkles.svg"
         }
       },
       "platforms": ["PD"],
