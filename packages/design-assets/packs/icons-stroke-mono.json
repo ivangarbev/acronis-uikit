@@ -826,7 +826,14 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Symbols"],
-        "tags": ["action", "automation", "lightning"],
+        "tags": [
+          "action",
+          "automation",
+          "lightning",
+          "power",
+          "energy",
+          "quick"
+        ],
         "legacyNames": ["add-action--16", "automation--24"]
       }
     },
@@ -2422,10 +2429,10 @@
         ]
       }
     },
-    "CloudGrid2": {
+    "CloudGrid": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-mono/CloudGrid2.svg"
+          "$file": "./packs/icons-stroke-mono/CloudGrid.svg"
         }
       },
       "platforms": ["PD"],
@@ -4251,7 +4258,8 @@
           "apps",
           "plans",
           "services",
-          "vendor portal"
+          "vendor portal",
+          "squares"
         ],
         "legacyNames": [
           "plans-ab--32",
@@ -5262,21 +5270,8 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Symbols"],
-        "tags": [],
+        "tags": ["network"],
         "legacyNames": ["network--32", "network-3th--24", "networks-o--32"]
-      }
-    },
-    "NodeNetwork2": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-stroke-mono/NodeNetwork2.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Symbols"],
-        "tags": [],
-        "legacyNames": []
       }
     },
     "NodePath": {
@@ -5347,20 +5342,7 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Symbols"],
-        "tags": ["organisation", "structure", "network"],
-        "legacyNames": []
-      }
-    },
-    "NodeTree2": {
-      "values": {
-        "24": {
-          "$file": "./packs/icons-stroke-mono/NodeTree2.svg"
-        }
-      },
-      "platforms": ["PD"],
-      "metadata": {
-        "category": ["Symbols"],
-        "tags": ["accounts", "tree", "fork", "network"],
+        "tags": ["accounts", "tree", "fork", "network", "organisation"],
         "legacyNames": ["manage-accounts-ab--32"]
       }
     },
@@ -6410,7 +6392,7 @@
       "metadata": {
         "category": ["Objects"],
         "tags": [
-          "protection",
+          "protection management",
           "status",
           "protected",
           "cybersecurity",
@@ -6752,7 +6734,7 @@
       },
       "platforms": ["PD"],
       "metadata": {
-        "category": ["Shapes"],
+        "category": ["Shapes", "Symbols"],
         "tags": ["media", "stop", "frame", "position fullscreen"],
         "legacyNames": [
           "frame--16",
@@ -6785,7 +6767,16 @@
       "platforms": ["PD"],
       "metadata": {
         "category": ["Shapes"],
-        "tags": ["electric device", "smart plug", "ups"],
+        "tags": [
+          "electric device",
+          "smart plug",
+          "ups",
+          "power",
+          "electricity",
+          "energy",
+          "asset",
+          "bolt"
+        ],
         "legacyNames": [
           "devices-UPS--24",
           "devices-electric--24",

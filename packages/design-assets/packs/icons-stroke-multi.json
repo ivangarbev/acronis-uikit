@@ -12,10 +12,10 @@
     }
   },
   "assets": {
-    "CircleCheck": {
+    "CircleCheckGreen": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleCheck.svg"
+          "$file": "./packs/icons-stroke-multi/CircleCheckGreen.svg"
         }
       },
       "platforms": ["PD"],
@@ -34,10 +34,10 @@
         ]
       }
     },
-    "CircleClock": {
+    "CircleClockBlue": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleClock.svg"
+          "$file": "./packs/icons-stroke-multi/CircleClockBlue.svg"
         }
       },
       "platforms": ["PD"],
@@ -73,10 +73,10 @@
         ]
       }
     },
-    "CircleInfo": {
+    "CircleInfoBlue": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleInfo.svg"
+          "$file": "./packs/icons-stroke-multi/CircleInfoBlue.svg"
         }
       },
       "platforms": ["PD"],
@@ -86,10 +86,10 @@
         "legacyNames": ["info--16", "info--32", "info-mix--32"]
       }
     },
-    "CircleMinus": {
+    "CircleMinusGray": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleMinus.svg"
+          "$file": "./packs/icons-stroke-multi/CircleMinusGray.svg"
         }
       },
       "platforms": ["PD"],
@@ -99,10 +99,10 @@
         "legacyNames": ["unknown--16", "unknown--32"]
       }
     },
-    "CircleTimes": {
+    "CircleTimesRed": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleTimes.svg"
+          "$file": "./packs/icons-stroke-multi/CircleTimesRed.svg"
         }
       },
       "platforms": ["PD"],
@@ -121,10 +121,10 @@
         ]
       }
     },
-    "CircleWarning": {
+    "CircleWarningOrange": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/CircleWarning.svg"
+          "$file": "./packs/icons-stroke-multi/CircleWarningOrange.svg"
         }
       },
       "platforms": ["PD"],
@@ -144,10 +144,10 @@
         ]
       }
     },
-    "Circles": {
+    "CirclesMulti": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/Circles.svg"
+          "$file": "./packs/icons-stroke-multi/CirclesMulti.svg"
         }
       },
       "platforms": ["PD"],
@@ -157,10 +157,10 @@
         "legacyNames": ["multiple-mix--32", "multiple--16"]
       }
     },
-    "DiamondWarning": {
+    "DiamondWarningRed": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/DiamondWarning.svg"
+          "$file": "./packs/icons-stroke-multi/DiamondWarningRed.svg"
         }
       },
       "platforms": ["PD"],
@@ -267,10 +267,10 @@
         "legacyNames": ["dot-chart-warning--16", "dot-warning--16"]
       }
     },
-    "TriangleWarning": {
+    "TriangleWarningYellow": {
       "values": {
         "24": {
-          "$file": "./packs/icons-stroke-multi/TriangleWarning.svg"
+          "$file": "./packs/icons-stroke-multi/TriangleWarningYellow.svg"
         }
       },
       "platforms": ["PD"],

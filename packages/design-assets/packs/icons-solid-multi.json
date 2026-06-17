@@ -12,16 +12,16 @@
     }
   },
   "assets": {
-    "Sparkles": {
+    "AcronisAiMulti": {
       "values": {
         "24": {
-          "$file": "./packs/icons-solid-multi/Sparkles.svg"
+          "$file": "./packs/icons-solid-multi/AcronisAiMulti.svg"
         }
       },
       "platforms": ["PD"],
       "metadata": {
         "category": ["Multicolor"],
-        "tags": [],
+        "tags": ["ai", "magic", "artificial intelligence"],
         "legacyNames": [
           "ai-sparkles-tag--16",
           "ai-sparkles-color--16",
